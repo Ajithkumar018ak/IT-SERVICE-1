@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ANTIGRAVITY Command Center</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-page {
+            background: #05070f;
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem;
+            font-family: 'Space Grotesk', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        .admin-glow {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(123, 44, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .admin-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo-symbol {
+            width: 40px;
+            height: 40px;
+        }
+        .admin-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.1rem;
+            margin: 0;
+        }
+        .admin-title span {
+            font-size: 0.8rem;
+            color: var(--clr-cyan);
+            font-family: var(--font-mono);
+        }
+        .admin-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .admin-profile {
+            text-align: right;
+        }
+        .admin-profile h4 {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .admin-profile span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .btn-logout {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ff007f;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-logout:hover {
+            background: rgba(255, 0, 127, 0.05);
+            border-color: #ff007f;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.1);
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .glass-card-admin {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        .stat-header {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+        }
+        .stat-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--clr-cyan);
+            margin-bottom: 0.5rem;
+        }
+        .stat-change {
+            font-size: 0.8rem;
+            color: #00ff7f;
+        }
+        .server-status-list {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .server-status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            padding-bottom: 0.5rem;
+        }
+        .server-name {
+            font-size: 0.85rem;
+        }
+        .status-badge {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: rgba(0, 255, 127, 0.1);
+            color: #00ff7f;
+            border: 1px solid rgba(0, 255, 127, 0.2);
+        }
+        .status-badge.critical {
+            background: rgba(255, 0, 127, 0.1);
+            color: #ff007f;
+            border: 1px solid rgba(255, 0, 127, 0.2);
+        }
+    </style>
+</head>
+<body class="admin-page">
+    <div class="admin-glow"></div>
+    
+    <div class="dashboard-container">
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <div class="admin-logo">
+                <svg class="logo-symbol" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20L80 72H20L50 20Z" stroke="#00f0ff" stroke-width="6" stroke-linejoin="round" />
+                    <circle cx="50" cy="55" r="10" fill="#8a2be2" />
+                </svg>
+                <div class="admin-title">
+                    <h1>ANTIGRAVITY</h1>
+                    <span>Enterprise System Control</span>
+                </div>
+            </div>
+
+            <div class="admin-meta">
+                <div class="admin-profile">
+                    <h4 id="adminName">System Administrator</h4>
+                    <span id="adminEmail">admin@antigravity.io</span>
+                </div>
+                <button class="btn-logout" id="logoutBtn">LOGOUT COMMAND</button>
+            </div>
+        </header>
+
+        <!-- STATS GRID -->
+        <main class="dashboard-grid">
+            <div class="glass-card-admin">
+                <div class="stat-header">Network Database Requests</div>
+                <div class="stat-value">2,840,105</div>
+                <div class="stat-change">↑ 14.5% vs last hour</div>
+            </div>
+
+            <div class="glass-card-admin">
+                <div class="stat-header">Global System CPU Load</div>
+                <div class="stat-value">34.2%</div>
+                <div class="stat-change">Optimal execution status</div>
+            </div>
+
+            <div class="glass-card-admin">
+                <div class="stat-header">Zero-Trust Active Tunnels</div>
+                <div class="stat-value">1,482</div>
+                <div class="stat-change">0 encryption violations</div>
+            </div>
+        </main>
+
+        <!-- SERVER LIST -->
+        <section class="glass-card-admin">
+            <h3>Enterprise Node Clusters</h3>
+            <div class="server-status-list">
+                <div class="server-status-item">
+                    <span class="server-name">Singapore Node (SG-HQ-01)</span>
+                    <span class="status-badge">ONLINE</span>
+                </div>
+                <div class="server-status-item">
+                    <span class="server-name">Dubai Node (AE-DIFC-01)</span>
+                    <span class="status-badge">ONLINE</span>
+                </div>
+                <div class="server-status-item">
+                    <span class="server-name">London Node (UK-GHRK-01)</span>
+                    <span class="status-badge">ONLINE</span>
+                </div>
+                <div class="server-status-item">
+                    <span class="server-name">Chennai Node (IN-MNT-01)</span>
+                    <span class="status-badge">ONLINE</span>
+                </div>
+                <div class="server-status-item">
+                    <span class="server-name">Silicon Valley Backup (US-SV-02)</span>
+                    <span class="status-badge critical">STANDBY</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Dashboard Protection Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const role = localStorage.getItem('role') || sessionStorage.getItem('role');
+            const isLoggedIn = localStorage.getItem('isLoggedIn') || sessionStorage.getItem('isLoggedIn');
+            
+            if (isLoggedIn !== 'true' || role !== 'admin') {
+                // Access Denied
+                alert('Access Denied. Admin credentials required.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Populate metadata
+            const name = localStorage.getItem('userName') || sessionStorage.getItem('userName') || 'Admin Console';
+            const email = localStorage.getItem('userEmail') || sessionStorage.getItem('userEmail') || 'admin@antigravity.io';
+            
+            document.getElementById('adminName').innerText = name;
+            document.getElementById('adminEmail').innerText = email;
+
+            // Logout actions
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                const usersData = localStorage.getItem('users');
+                localStorage.clear();
+                sessionStorage.clear();
+                if (usersData) {
+                    localStorage.setItem('users', usersData);
+                }
+                // Auto seed check
+                let usersList = JSON.parse(localStorage.getItem('users')) || [];
+                const adminExists = usersList.some(u => u.email === 'admin@antigravity.io');
+                if (!adminExists) {
+                    usersList.push({
+                        name: "System Administrator",
+                        email: "admin@antigravity.io",
+                        password: "AdminSecure2026!",
+                        role: "admin",
+                        phone: "+65 8888 8888",
+                        company: "ANTIGRAVITY Group",
+                        country: "Singapore"
+                    });
+                    localStorage.setItem('users', JSON.stringify(usersList));
+                }
+                alert('Secure Session Cleared. Redirecting to terminal homepage...');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

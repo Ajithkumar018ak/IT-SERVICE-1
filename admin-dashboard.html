@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Administrative Command Enclave | STACKLY IT SERVICE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <!-- Preloader Gate -->
+    <div class="dashboard-loader" id="dashboardPreloader">
+        <div class="loader-logo-ring"></div>
+        <div class="loader-text">INITIALIZING SECURE COMMAND CENTER</div>
+    </div>
+
+    <!-- Glowing Background Atmosphere -->
+    <div class="bg-mesh"></div>
+    <div class="aurora-glow-1"></div>
+    <div class="aurora-glow-2"></div>
+
+    <div class="dashboard-wrapper">
+        <!-- ========================== LEFT SIDEBAR ========================== -->
+        <aside class="sidebar-panel" id="sidebarPanel">
+            <div class="sidebar-logo">
+                <svg class="sidebar-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 20L80 72H20L50 20Z" stroke="url(#sidebarLogoGrad)" stroke-width="6" stroke-linejoin="round" />
+                    <circle cx="50" cy="55" r="10" fill="#8a2be2" />
+                    <defs>
+                        <linearGradient id="sidebarLogoGrad" x1="20" y1="20" x2="80" y2="72" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#00f0ff" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h2>STACKLY</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" data-tab="dashboardSection">
+                    <i>🏠</i>
+                    <span>Dashboard Home</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="projectsSection">
+                    <i>📂</i>
+                    <span>Recent Projects</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="clientsSection">
+                    <i>👥</i>
+                    <span>Client Management</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="employeesSection">
+                    <i>👨‍💻</i>
+                    <span>Employee Overview</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="analyticsSection">
+                    <i>📊</i>
+                    <span>Business Analytics</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="infraSection">
+                    <i>🖥</i>
+                    <span>Infrastructure Status</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="securitySection">
+                    <i>🛡</i>
+                    <span>Security Center</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="financialsSection">
+                    <i>💳</i>
+                    <span>Financial Overview</span>
+                </a>
+                <a href="#" class="menu-item" data-tab="supportSection">
+                    <i>💬</i>
+                    <span>Support Center</span>
+                </a>
+                <a href="#" class="menu-item logout-item" id="logoutBtn">
+                    <i>🚪</i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- ========================== MAIN CONTAINER ========================== -->
+        <main class="main-panel">
+            
+            <!-- TOP HEADER -->
+            <header class="top-header">
+                <div class="menu-hamburger" id="hamburgerBtn">☰</div>
+                
+                <div class="header-welcome">
+                    <h1>Welcome Back, <span class="admin-name-display">Administrator</span></h1>
+                    <span>Secure Enclave Authorization Node Level 5 Active</span>
+                </div>
+
+                <div class="header-actions">
+                    <!-- Search Wrapper -->
+                    <div class="search-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="dashboardSearch" placeholder="Search parameters...">
+                    </div>
+
+                    <!-- Notification Button -->
+                    <button class="icon-badge-btn" onclick="alert('Viewing audit alarms...')">
+                        <span>🔔</span>
+                        <div class="badge-dot"></div>
+                    </button>
+
+                    <!-- User Profile Quick Link -->
+                    <div class="header-profile">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80" alt="Admin Profile">
+                        <div class="header-profile-info">
+                            <h4 class="admin-name-display">System Administrator</h4>
+                            <span class="admin-email-display">admin@stackly.io</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========================== SPA TAB SECTIONS ========================== -->
+
+            <!-- 1. DASHBOARD HOME -->
+            <div class="tab-section active" id="dashboardSection">
+                <!-- Welcome Banner -->
+                <div class="hero-banner">
+                    <div class="hero-banner-content">
+                        <h2>Welcome Back, <span class="admin-name-display">Administrator</span></h2>
+                        <p>Monitor your organization, clients, employees, infrastructure, and business performance from one centralized control center.</p>
+                        <div class="banner-actions">
+                            <button class="btn-quick primary" data-action="create-project">➕ Create Project</button>
+                            <button class="btn-quick secondary" data-action="add-client">👥 Add Client</button>
+                            <button class="btn-quick secondary" data-action="add-employee">👨‍💻 Add Employee</button>
+                            <button class="btn-quick secondary" data-action="generate-report">📊 Generate Report</button>
+                        </div>
+                    </div>
+                    <div class="hero-banner-decor"></div>
+                </div>
+
+                <!-- 10 Statistics Cards Grid -->
+                <div class="stats-grid-ten">
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">👥</span>
+                            <span class="stat-growth">↑ 8.2%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="324">0</h3>
+                            <p>Active Clients</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">📂</span>
+                            <span class="stat-growth">↑ 12.4%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="98">0</h3>
+                            <p>Total Projects</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">⚡</span>
+                            <span class="stat-growth">↑ 4.1%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="24">0</h3>
+                            <p>Running Projects</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">✓</span>
+                            <span class="stat-growth">↑ 15.2%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="74">0</h3>
+                            <p>Completed Projects</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">💳</span>
+                            <span class="stat-growth">↑ 19.8%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3>$<span class="counter-val" data-target="184200">0</span></h3>
+                            <p>Monthly Revenue</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">💬</span>
+                            <span class="stat-growth negative">↓ 6.2%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="14">0</h3>
+                            <p>Support Tickets</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">👨‍💻</span>
+                            <span class="stat-growth">↑ 11.2%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="156">0</h3>
+                            <p>Employees</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">🖥</span>
+                            <span class="stat-growth">Stable</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="42">0</h3>
+                            <p>Cloud Servers</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">🧠</span>
+                            <span class="stat-growth">↑ 25.0%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="8">0</h3>
+                            <p>AI Systems</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-premium">
+                        <div class="stat-card-top">
+                            <span class="stat-card-icon">🛡</span>
+                            <span class="stat-growth negative">↓ 94.2%</span>
+                        </div>
+                        <div class="stat-card-middle">
+                            <h3 class="counter-val" data-target="0">0</h3>
+                            <p>Security Alerts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content Split -->
+                <div class="dashboard-content-split">
+                    <!-- Left: Recent Highlights -->
+                    <div class="split-left">
+                        <div class="glass-table-card">
+                            <div class="card-header-split">
+                                <h3>Recent System Logs</h3>
+                                <a href="#" class="header-link" onclick="document.querySelector('[data-tab=projectsSection]').click()">View Projects</a>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">👥</div>
+                                    <div class="activity-details">
+                                        <h4>New Client Registered: Global Health Corp</h4>
+                                        <p>Industry: Biotech Services • Valuation: $340,000 Contract • 10m ago</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="color:var(--clr-green);">✓</div>
+                                    <div class="activity-details">
+                                        <h4>Project Completed: E-Commerce Platform</h4>
+                                        <p>Client: ShopperNode Ltd • Delivered in 42 days under budget • 1h ago</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="color:var(--clr-purple);">💳</div>
+                                    <div class="activity-details">
+                                        <h4>Invoice Generated: #INV-8802</h4>
+                                        <p>Client: CyberShield Solutions • Amount: $14,900.00 • 3h ago</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon" style="color:var(--clr-cyan);">👨‍💻</div>
+                                    <div class="activity-details">
+                                        <h4>Employee Onboarded: Sarah Connor</h4>
+                                        <p>Role: Senior AI Engineer • Allocated to Biometrics Core Enclave • 1d ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live System Health -->
+                    <div class="split-right">
+                        <div class="glass-table-card">
+                            <h3>Live Infrastructure Health</h3>
+                            <div style="margin-top:1.5rem;" class="infra-health-list">
+                                <div class="infra-item">
+                                    <div class="infra-meta">
+                                        <span class="infra-label">Cloud Servers CPU Utilization</span>
+                                        <span class="infra-val">34%</span>
+                                    </div>
+                                    <div class="infra-track">
+                                        <div class="infra-fill" data-width="34%" style="width:34%"></div>
+                                    </div>
+                                </div>
+                                <div class="infra-item">
+                                    <div class="infra-meta">
+                                        <span class="infra-label">Database Transactions / Sec</span>
+                                        <span class="infra-val">76%</span>
+                                    </div>
+                                    <div class="infra-track">
+                                        <div class="infra-fill" data-width="76%" style="width:76%; background:var(--grad-neon-pink);"></div>
+                                    </div>
+                                </div>
+                                <div class="infra-item">
+                                    <div class="infra-meta">
+                                        <span class="infra-label">Active API Route Bindings</span>
+                                        <span class="infra-val">94%</span>
+                                    </div>
+                                    <div class="infra-track">
+                                        <div class="infra-fill" data-width="94%" style="width:94%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. RECENT PROJECTS -->
+            <div class="tab-section" id="projectsSection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Enterprise Project Grid</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Client Entity</th>
+                                    <th>Progress Level</th>
+                                    <th>Deadline</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                    <th>Assigned Team</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Enterprise Web Platform</strong></td>
+                                    <td>Global Logistics Corp</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 85%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>July 28, 2026</td>
+                                    <td><span class="priority-badge high">High</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>Web Core Group</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>AI Customer Assistant</strong></td>
+                                    <td>ShopperNode Ltd</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 100%; background:var(--clr-green)"></div>
+                                        </div>
+                                    </td>
+                                    <td>Delivered</td>
+                                    <td><span class="priority-badge medium">Medium</span></td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                    <td>AI Cognitive Unit</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hospital Management System</strong></td>
+                                    <td>Apex Health Enclave</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 45%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>August 30, 2026</td>
+                                    <td><span class="priority-badge high">High</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>Systems Team</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cloud Migration Phase 2</strong></td>
+                                    <td>Enterprise Financials</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 10%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>September 15, 2026</td>
+                                    <td><span class="priority-badge high">High</span></td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td>Cloud Engineering</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>E-Commerce Mobile Portal</strong></td>
+                                    <td>Retail Node Corp</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 90%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>July 10, 2026</td>
+                                    <td><span class="priority-badge low">Low</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                    <td>Mobile Platform Group</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cyber Security Hardening Audit</strong></td>
+                                    <td>Defense Security Node</td>
+                                    <td>
+                                        <div class="progress-bar-mini">
+                                            <div class="progress-fill-mini" style="width: 100%; background:var(--clr-green)"></div>
+                                        </div>
+                                    </td>
+                                    <td>Delivered</td>
+                                    <td><span class="priority-badge high">High</span></td>
+                                    <td><span class="status-badge completed">Completed</span></td>
+                                    <td>Zero-Trust Audit Unit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. CLIENT MANAGEMENT -->
+            <div class="tab-section" id="clientsSection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Client Partner Registry</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Client Entity</th>
+                                    <th>Industry Sectors</th>
+                                    <th>Operational Country</th>
+                                    <th>Active System Projects</th>
+                                    <th>Contract Valuation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Apex Health Enclave</strong></td>
+                                    <td>Biotech Services</td>
+                                    <td>United States</td>
+                                    <td>Hospital Management System</td>
+                                    <td>$450,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ShopperNode Ltd</strong></td>
+                                    <td>Digital Commerce</td>
+                                    <td>Singapore</td>
+                                    <td>AI Customer Assistant</td>
+                                    <td>$180,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Global Logistics Corp</strong></td>
+                                    <td>Supply Chain Systems</td>
+                                    <td>Germany</td>
+                                    <td>Enterprise Web Platform</td>
+                                    <td>$620,000</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Enterprise Financials</strong></td>
+                                    <td>Banking & Cloud Cryptography</td>
+                                    <td>United Kingdom</td>
+                                    <td>Cloud Migration Phase 2</td>
+                                    <td>$850,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. EMPLOYEE OVERVIEW -->
+            <div class="tab-section" id="employeesSection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Allocated Engineering Nodes</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Onboarded Engineer</th>
+                                    <th>Department Unit</th>
+                                    <th>Assigned Role</th>
+                                    <th>Level Experience</th>
+                                    <th>Performance Score</th>
+                                    <th>Attendance Ratio</th>
+                                    <th>Current Task</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Alan Turing</strong></td>
+                                    <td>AI Cognitive Unit</td>
+                                    <td>Lead Architect</td>
+                                    <td>12 Years</td>
+                                    <td><span style="color:var(--clr-cyan)">98%</span></td>
+                                    <td>100%</td>
+                                    <td>Fine-tuning LLM Weights</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ada Lovelace</strong></td>
+                                    <td>Web Core Group</td>
+                                    <td>Senior Developer</td>
+                                    <td>8 Years</td>
+                                    <td><span style="color:var(--clr-green)">94%</span></td>
+                                    <td>99%</td>
+                                    <td>Optimizing CSS Render Tree</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Linus Torvalds</strong></td>
+                                    <td>Cloud Engineering</td>
+                                    <td>Infrastructure Architect</td>
+                                    <td>15 Years</td>
+                                    <td><span style="color:var(--clr-cyan)">99%</span></td>
+                                    <td>100%</td>
+                                    <td>Serverless Route Isolation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Grace Hopper</strong></td>
+                                    <td>Zero-Trust Audit Unit</td>
+                                    <td>Principal Auditor</td>
+                                    <td>14 Years</td>
+                                    <td><span style="color:var(--clr-green)">96%</span></td>
+                                    <td>98%</td>
+                                    <td>Audit Log Verification</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. BUSINESS ANALYTICS -->
+            <div class="tab-section" id="analyticsSection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Corporate Business Indicators</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Indicator Parameter</th>
+                                    <th>Target Value</th>
+                                    <th>Current Value</th>
+                                    <th>Monthly Variance</th>
+                                    <th>Health Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly Revenue Yield</td>
+                                    <td>$150,000</td>
+                                    <td><strong>$184,200</strong></td>
+                                    <td><span style="color:var(--clr-green)">+19.8%</span></td>
+                                    <td><span class="status-badge completed">Optimal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Project Completion Ratio</td>
+                                    <td>90.0%</td>
+                                    <td><strong>92.5%</strong></td>
+                                    <td><span style="color:var(--clr-green)">+2.5%</span></td>
+                                    <td><span class="status-badge completed">Optimal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Client Partner Satisfaction</td>
+                                    <td>95.0%</td>
+                                    <td><strong>96.8%</strong></td>
+                                    <td><span style="color:var(--clr-green)">+1.8%</span></td>
+                                    <td><span class="status-badge completed">Optimal</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Engineering Team Productivity</td>
+                                    <td>88.0%</td>
+                                    <td><strong>91.2%</strong></td>
+                                    <td><span style="color:var(--clr-green)">+3.2%</span></td>
+                                    <td><span class="status-badge completed">Optimal</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. INFRASTRUCTURE STATUS -->
+            <div class="tab-section" id="infraSection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Node Health & Ingress Services</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Infrastructure Node</th>
+                                    <th>Type / Function</th>
+                                    <th>Uptime (30d)</th>
+                                    <th>Current Health Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Singapore Gateway (SG-HQ-01)</strong></td>
+                                    <td>Core Ingress API Endpoint</td>
+                                    <td>99.99%</td>
+                                    <td><span class="status-badge completed">ONLINE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dubai Gateway (AE-DIFC-01)</strong></td>
+                                    <td>Biometric Identity Hub</td>
+                                    <td>99.98%</td>
+                                    <td><span class="status-badge completed">ONLINE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>London Gateway (UK-GHRK-01)</strong></td>
+                                    <td>Cloud Database Sync</td>
+                                    <td>99.95%</td>
+                                    <td><span class="status-badge completed">ONLINE</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Silicon Valley Node (US-SV-02)</strong></td>
+                                    <td>Failover Enclave Storage</td>
+                                    <td>99.90%</td>
+                                    <td><span class="status-badge pending">STANDBY</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. SECURITY CENTER -->
+            <div class="tab-section" id="securitySection">
+                <div class="glass-table-card">
+                    <div class="card-header-split">
+                        <h3>Threat Monitoring & Shield States</h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="custom-table">
+                            <thead>
+                                <tr>
+                                    <th>Security Parameter</th>
+                                    <th>Configuration Setting</th>
+                                    <th>Last Threat Scan Date</th>
+                                    <th>Audit State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AI Active Threat Detection</td>
+                                    <td>Zero-Trust Isolation Enabled</td>
+                                    <td>June 30, 2026 15:30 SGT</td>
+                                    <td><span style="color:var(--clr-green); font-weight:600;">APPROVED</span></td>
+                                </tr>
+                                <tr>
+                                    <td>SSL Certificate Registry</td>
+                                    <td>ECDSA 256-bit Elliptic Key</td>
+                                    <td>Auto-Renew Active</td>
+                                    <td><span style="color:var(--clr-green); font-weight:600;">SECURE</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Cloud Datastore Backups</td>
+                                    <td>Geographically Redundant 3x</td>
+                                    <td>June 30, 2026 04:00 SGT</td>
+                                    <td><span style="color:var(--clr-green); font-weight:600;">SYNCED</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. FINANCIAL OVERVIEW -->
+            <div class="tab-section" id="financialsSection">
+                <div class="financial-split">
+                    <div class="financial-metric-card">
+                        <span class="fin-title">Outstanding Payments</span>
+                        <span class="fin-value" style="color:var(--clr-pink)">$14,900.00</span>
+                        
+                        <div class="fin-details-list">
+                            <div class="fin-detail-item">
+                                <span>Quarter Revenue:</span>
+                                <span>$524,000.00</span>
+                            </div>
+                            <div class="fin-detail-item">
+                                <span>Annual Projection:</span>
+                                <span>$2,200,000.00</span>
+                            </div>
+                            <div class="fin-detail-item">
+                                <span>Outstanding Invoices:</span>
+                                <span>1 Invoice Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-table-card">
+                        <div class="card-header-split">
+                            <h3>Ledger Statements</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Statement ID</th>
+                                        <th>Date Logged</th>
+                                        <th>Category Type</th>
+                                        <th>Net Amount</th>
+                                        <th>Audit Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#LED-9801</td>
+                                        <td>June 30, 2026</td>
+                                        <td>Subscription Income</td>
+                                        <td><span style="color:var(--clr-green)">+$184,200.00</span></td>
+                                        <td>Verified</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#LED-9742</td>
+                                        <td>June 28, 2026</td>
+                                        <td>Cloud Compute Outlay</td>
+                                        <td><span style="color:var(--clr-pink)">-$18,400.00</span></td>
+                                        <td>Verified</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#LED-9602</td>
+                                        <td>June 15, 2026</td>
+                                        <td>Marketing Campaigns</td>
+                                        <td><span style="color:var(--clr-pink)">-$4,500.00</span></td>
+                                        <td>Verified</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. SUPPORT CENTER -->
+            <div class="tab-section" id="supportSection">
+                <div class="tickets-grid">
+                    <div class="ticket-card">
+                        <div class="ticket-info">
+                            <div class="ticket-meta">
+                                <span class="ticket-number">#TCK-9902</span>
+                                <span class="priority-badge high">High Priority</span>
+                            </div>
+                            <h4>Biometric Handshake Protocol Failure</h4>
+                            <div class="ticket-details">
+                                <span>Client: Apex Health Enclave</span>
+                                <span>Open Ticket: 2 Hours Ago</span>
+                            </div>
+                        </div>
+                        <button class="btn-route">💬 Re-Route</button>
+                    </div>
+
+                    <div class="ticket-card">
+                        <div class="ticket-info">
+                            <div class="ticket-meta">
+                                <span class="ticket-number">#TCK-9781</span>
+                                <span class="priority-badge medium">Normal Priority</span>
+                            </div>
+                            <h4>DNS Address Re-routing Query</h4>
+                            <div class="ticket-details">
+                                <span>Client: ShopperNode Ltd</span>
+                                <span>Open Ticket: 1 Day Ago</span>
+                            </div>
+                        </div>
+                        <button class="btn-route">💬 Re-Route</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========================== FOOTER ========================== -->
+            <footer class="dashboard-footer">
+                <p>&copy; 2026 STACKLY IT SERVICE. System Version 5.2.0-secure. Enterprise Admin Enclave.</p>
+                <div class="footer-links">
+                    <a href="#">Support Enclave</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ========================== ACTION MODALS CONTAINER ========================== -->
+    <div class="admin-modal-overlay" id="adminModalOverlay">
+        <div class="admin-modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Administrative Dialog</h3>
+                <span class="modal-close" id="modalCloseBtn">&times;</span>
+            </div>
+            <form id="adminActionForm">
+                <div id="modalFormContainer">
+                    <!-- Javascript populates form elements dynamically -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

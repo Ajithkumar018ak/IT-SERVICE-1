@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers </title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Explore open engineering positions at ANTIGRAVITY. Build high-performance AI implementations, cloud platforms, and modern enterprise software systems with us.">
+    <meta name="keywords"
+        content="Careers in IT, Software Engineering Jobs, AI Engineer Postings, Cloud Architect Careers, DevOps Jobs, Cyber Security Vacancies">
+    <meta name="author" content="ANTIGRAVITY Group">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading careers-page">
+
+    <!-- Custom Cursor & Background Glow Spotlights -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- PREMIUM LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="loader-aurora"></div>
+        <div class="loader-noise"></div>
+        <div class="loader-particles" id="loaderParticles"></div>
+
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <div class="loader-glow-ring"></div>
+                <svg class="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L85 75H15L50 15Z" stroke="url(#logoGlow)" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M50 35L70 70H30L50 35Z" fill="url(#logoFill)" />
+                    <circle cx="50" cy="50" r="8" fill="#00f0ff" class="logo-core" />
+                    <defs>
+                        <linearGradient id="logoGlow" x1="15" y1="15" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00f0ff" />
+                            <stop offset="50%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <linearGradient id="logoFill" x1="30" y1="35" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                            <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2 class="loader-title">ANTIGRAVITY</h2>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="loader-stats">
+                <span class="loader-percentage" id="loaderPercentage">0%</span>
+                <span class="loader-status-text" id="loaderStatusText">Loading Experience...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM NAVBAR -->
+    <header class="navbar" id="mainNavbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                  <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link active">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-noise"></div>
+        <div class="mobile-overlay-container">
+            <nav class="mobile-nav">
+                <ul class="mobile-list">
+                    <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
+                    <li class="mobile-item"><a href="about.html" class="mobile-link">About</a></li>
+                    <li class="mobile-item"><a href="services.html" class="mobile-link">Services</a></li>
+                    <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
+                    <li class="mobile-item"><a href="careers.html" class="mobile-link active">Careers</a></li>
+                    <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAREERS HERO -->
+    <main class="hero-section" id="heroSection">
+        <div class="hero-aurora-bg"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow-spotlight" id="heroSpotlight"></div>
+        <div class="hero-noise-texture"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="hero-badge">JOIN THE LEADING EDGE</span>
+                <h1 class="hero-heading">
+                    <span class="word-wrapper"><span class="word">SHAPING</span></span>
+                    <span class="word-wrapper"><span class="word-glow">TRANSFORMATIVE</span></span>
+                    <span class="word-wrapper"><span class="word">CAREERS.</span></span>
+                    <span class="word-wrapper"><span class="word">CODING</span></span>
+                    <span class="word-wrapper"><span class="word">THE</span></span>
+                    <span class="word-wrapper"><span class="word">COGNITIVE</span></span>
+                    <span class="word-wrapper"><span class="word">TOMORROW.</span></span>
+                </h1>
+
+                <p class="hero-subheading">
+                    At IT SERVICE, innovation is a foundational core. We integrate advanced computer science research
+                    with physical workflows, designing solutions that optimize complex transaction cycles.
+                </p>
+                <p class="hero-subheading">
+                    Our developers configure high-throughput microservice models and self-healing container networks. We
+                    prioritize zero-trust compliance standards to protect critical files and ledger records safely.
+                </p>
+                <p class="hero-subheading">
+                    We champion professional career growth paths. Our teams build scalable products, collaborating
+                    directly with industry leaders to expand corporate technical capabilities.
+                </p>
+                <p class="hero-subheading">
+                    Operating across multiple international offices, we support a diverse learning environment. We offer
+                    annual budgets for certifications to help you scale your skills.
+                </p>
+
+                <div class="hero-button-group">
+                    <a href="#positionsSection" class="btn btn-primary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">VIEW OPEN POSITIONS</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">APPLY NOW</span>
+                    </a>
+                    <a href="#lifeSection" class="btn btn-outline btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">MEET OUR TEAM</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+
+                        <div class="hero-core-graphic">
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="quantum-node-svg">
+                                <circle cx="200" cy="200" r="100" stroke="url(#careersHeroGrad)" stroke-width="3" />
+                                <circle cx="200" cy="200" r="60" stroke="#ff007f" stroke-width="1.5"
+                                    stroke-dasharray="5 5" />
+                                <path d="M100 200 H300 M200 100 V300" stroke="rgba(255,255,255,0.05)"
+                                    stroke-width="1.5" />
+                                <circle cx="200" cy="200" r="12" fill="#00f0ff" />
+                                <defs>
+                                    <linearGradient id="careersHeroGrad" x1="100" y1="100" x2="300" y2="300">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#8a2be2" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WHY JOIN US Section -->
+    <section class="why-join-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">CULTURE & ADVANTAGES</span>
+                <h2 class="section-title">WHY JOIN IT SERVICES?</h2>
+                <p class="section-subtitle">Accelerate your career in an environment built for high-performance software
+                    engineering.</p>
+            </div>
+
+            <div class="why-join-grid">
+                <!-- Card 1: Innovation First -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad1)" />
+                    </svg>
+                    <h3>Innovation First</h3>
+                    <p>Contribute to cutting-edge research in private vector custody and advanced AI architectures.</p>
+                </div>
+
+                <!-- Card 2: Global Projects -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad2)" />
+                    </svg>
+                    <h3>Global Projects</h3>
+                    <p>Deploy large-scale architectures that coordinate millions of operations across global networks.
+                    </p>
+                </div>
+
+                <!-- Card 3: Flexible Work -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad3)" />
+                    </svg>
+                    <h3>Flexible Work</h3>
+                    <p>Orchestrate your hours dynamically, using remote-friendly workflows that prioritize productivity.
+                    </p>
+                </div>
+
+                <!-- Card 4: Learning Programs -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad1)" />
+                    </svg>
+                    <h3>Learning Programs</h3>
+                    <p>Expand your technology knowledge base with dedicated learning times and annual budgets.</p>
+                </div>
+
+                <!-- Card 5: Career Growth -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad2)" />
+                    </svg>
+                    <h3>Career Growth</h3>
+                    <p>Map your progression structure cleanly, transitioning into senior architects and research roles.
+                    </p>
+                </div>
+
+                <!-- Card 6: Tech Stack -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#whyGrad3)" />
+                    </svg>
+                    <h3>Modern Tech Stack</h3>
+                    <p>Code in modern languages like Go, Rust, and Python, leveraging Docker and Kubernetes clusters.
+                    </p>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="whyGrad1" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#0f2027" />
+                    <stop offset="100%" stop-color="#2c5364" />
+                </linearGradient>
+                <linearGradient id="whyGrad2" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#1f4037" />
+                    <stop offset="100%" stop-color="#99f2c8" />
+                </linearGradient>
+                <linearGradient id="whyGrad3" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#654ea3" />
+                    <stop offset="100%" stop-color="#eaafc8" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- LIFE AT ANTIGRAVITY Section -->
+    <section class="life-section section-padding reveal-on-scroll" id="lifeSection">
+        <div class="section-container grid-two-col">
+            <!-- Left Side: Custom illustration -->
+            <div class="life-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <rect x="100" y="100" width="120" height="80" rx="8" fill="rgba(0, 240, 255, 0.1)" />
+                        <rect x="280" y="100" width="120" height="80" rx="8" fill="rgba(138, 43, 226, 0.1)" />
+                        <rect x="190" y="220" width="120" height="80" rx="8" fill="rgba(255, 0, 127, 0.1)" />
+                        <line x1="160" y1="180" x2="250" y2="220" stroke="#00f0ff" stroke-width="2" />
+                        <line x1="340" y1="180" x2="250" y2="220" stroke="#ff007f" stroke-width="2" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Side: Narrative Content -->
+            <div class="life-right">
+                <span class="section-badge">WORKSPACE ATMOSPHERE</span>
+                <h2 class="section-title">LIFE AT IT</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We cultivate a workplace model founded on trust, communication, and engineering excellence. We
+                        avoid micromanagement setups, focusing instead on milestone achievements and clean code
+                        execution.
+                    </p>
+                    <p class="about-paragraph">
+                        Creative exploration is encouraged. Developers allocate weekly times to research new libraries,
+                        vector models, or database optimizations that enhance active enterprise software platforms.
+                    </p>
+                    <p class="about-paragraph">
+                        Collaboration links our global locations. Teams coordinates operations via secure,
+                        latency-minimized API channels, holding workshop sessions to solve database schema issues.
+                    </p>
+                    <p class="about-paragraph">
+                        Employee success is mapped continuously. We reward performance with bonuses and technical
+                        growth, helping individuals scale their potential alongside ANTIGRAVITY's market achievements.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Remote-first flexible schedule configurations</li>
+                        <li>Premium health benefits coverage packages</li>
+                        <li>Annual learning and certification budget support</li>
+                        <li>Latest high-performance workspace equipment</li>
+                        <li>Collaborative global team workshop events</li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Join Our
+                            Culture</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRENT OPEN POSITIONS Section -->
+    <section class="positions-section section-padding reveal-on-scroll" id="positionsSection">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">OPEN ROLES</span>
+                <h2 class="section-title">CURRENT OPEN POSITIONS</h2>
+                <p class="section-subtitle">Explore our technical positions and help us build tomorrow's cognitive
+                    software networks.</p>
+            </div>
+
+            <div class="positions-grid">
+                <!-- 01 Frontend Developer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">ENGINEERING • FULL-TIME</span>
+                            <h3>Frontend Developer</h3>
+                        </div>
+                        <span class="job-loc">Hyderabad</span>
+                    </div>
+                    <p class="job-desc">Assemble premium, interactive visual layouts using React, Vue, and
+                        high-performance WebGL motion paths.</p>
+                    <div class="job-skills">
+                        <span>React</span><span>Vue</span><span>JavaScript</span><span>CSS3</span><span>WebGL</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$120k - $150k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Backend Developer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">ENGINEERING • FULL-TIME</span>
+                            <h3>Backend Developer</h3>
+                        </div>
+                        <span class="job-loc">Bengaluru</span>
+                    </div>
+                    <p class="job-desc">Program robust, modular query platforms and transaction database systems that
+                        handle massive traffic scales.</p>
+                    <div class="job-skills">
+                        <span>Java</span><span>Spring
+                            Boot</span><span>PostgreSQL</span><span>Go</span><span>Kafka</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$130k - $160k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 Full Stack Developer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">ENGINEERING • FULL-TIME</span>
+                            <h3>Full Stack Developer</h3>
+                        </div>
+                        <span class="job-loc">Chennai</span>
+                    </div>
+                    <p class="job-desc">Bridge front-end application elements with back-end database nodes to maintain
+                        clean API transactions.</p>
+                    <div class="job-skills">
+                        <span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>React</span><span>Docker</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$140k - $170k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 UI / UX Designer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">DESIGN • FULL-TIME</span>
+                            <h3>UI / UX Designer</h3>
+                        </div>
+                        <span class="job-loc">Dubai</span>
+                    </div>
+                    <p class="job-desc">Design premium typography scales, luxury glassmorphism layouts, and interactive
+                        UI component prototypes.</p>
+                    <div class="job-skills">
+                        <span>Figma</span><span>Design Systems</span><span>Prototyping</span><span>Motion
+                            Design</span><span>UX Research</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$110k - $140k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05 AI Engineer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">AI RESEARCH • FULL-TIME</span>
+                            <h3>AI Engineer</h3>
+                        </div>
+                        <span class="job-loc">Singapore</span>
+                    </div>
+                    <p class="job-desc">Deploy private vector databases and fine-tune custom LLM models for cognitive
+                        classification queries.</p>
+                    <div class="job-skills">
+                        <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>Vector
+                            DBs</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$160k - $200k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 06 Cloud Engineer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">INFRASTRUCTURE • FULL-TIME</span>
+                            <h3>Cloud Engineer</h3>
+                        </div>
+                        <span class="job-loc">London</span>
+                    </div>
+                    <p class="job-desc">Orchestrate highly available multi-region server layouts on AWS and Azure cloud
+                        platforms dynamically.</p>
+                    <div class="job-skills">
+                        <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Docker</span><span>IAM
+                            Security</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$130k - $160k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 07 DevOps Engineer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">INFRASTRUCTURE • FULL-TIME</span>
+                            <h3>DevOps Engineer</h3>
+                        </div>
+                        <span class="job-loc">Bengaluru</span>
+                    </div>
+                    <p class="job-desc">Maintain automated CI/CD code compile structures and real-time container
+                        workloads metrics pipelines.</p>
+                    <div class="job-skills">
+                        <span>Jenkins</span><span>Kubernetes</span><span>Prometheus</span><span>Ansible</span><span>GitLab
+                            CI</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$130k - $160k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 08 Cyber Security Engineer -->
+                <div class="job-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="job-card-header">
+                        <div>
+                            <span class="job-dept">SECURITY • FULL-TIME</span>
+                            <h3>Cyber Security Engineer</h3>
+                        </div>
+                        <span class="job-loc">Chennai</span>
+                    </div>
+                    <p class="job-desc">Implement zero-trust database key checks and encrypt communication channels
+                        across server node levels.</p>
+                    <div class="job-skills">
+                        <span>Vault</span><span>TLS 1.3</span><span>Penetration
+                            Tests</span><span>Wireshark</span><span>SOC 2 Compliance</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <span class="job-salary">$145k - $180k</span>
+                        <div class="job-actions">
+                            <button class="btn btn-outline btn-magnetic"><span class="btn-inner">Save
+                                    Job</span></button>
+                            <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Apply
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIRING PROCESS Section -->
+    <section class="timeline-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">ROADMAP</span>
+                <h2 class="section-title">OUR HIRING PROCESS</h2>
+                <p class="section-subtitle">Examine our standard engineering selection milestones and onboarding
+                    timeline tracks.</p>
+            </div>
+
+            <!-- Steps list -->
+            <div class="process-timeline-steps">
+                <div class="timeline-progress-line" id="timelineProgressLine"></div>
+
+                <div class="timeline-step active" data-step="1">
+                    <div class="step-num-circle">1</div>
+                    <h4>Application</h4>
+                    <p>Submit your resume details and portfolio link logs.</p>
+                </div>
+
+                <div class="timeline-step" data-step="2">
+                    <div class="step-num-circle">2</div>
+                    <h4>Resume Review</h4>
+                    <p>Engineering leads inspect your code profile databases.</p>
+                </div>
+
+                <div class="timeline-step" data-step="3">
+                    <div class="step-num-circle">3</div>
+                    <h4>Technical Assessment</h4>
+                    <p>Complete a latency-optimization software assessment.</p>
+                </div>
+
+                <div class="timeline-step" data-step="4">
+                    <div class="step-num-circle">4</div>
+                    <h4>Interview Loops</h4>
+                    <p>Review system designs with senior software architects.</p>
+                </div>
+
+                <div class="timeline-step" data-step="5">
+                    <div class="step-num-circle">5</div>
+                    <h4>Final Discussion</h4>
+                    <p>Sync on compensation scales and operational structures.</p>
+                </div>
+
+                <div class="timeline-step" data-step="6">
+                    <div class="step-num-circle">6</div>
+                    <h4>Offer Letter</h4>
+                    <p>Receive your formal contract agreement document.</p>
+                </div>
+
+                <div class="timeline-step" data-step="7">
+                    <div class="step-num-circle">7</div>
+                    <h4>Onboarding</h4>
+                    <p>Initialize workspace integrations and cluster setups.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPLOYEE BENEFITS Section -->
+    <section class="benefits-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">PERKS & AWARDS</span>
+                <h2 class="section-title">EMPLOYEE BENEFITS</h2>
+                <p class="section-subtitle">We secure corporate employee liability protection packages and support
+                    technical skill scales.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg>
+                    <h4>Health Insurance</h4>
+                    <p>Premium medical plans securing absolute health check protections globally.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v12M6 12h12" />
+                    </svg>
+                    <h4>Performance Bonus</h4>
+                    <p>Annual financial rewards scaling alongside software system query achievements.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                    </svg>
+                    <h4>Paid Leave</h4>
+                    <p>Flexible annual holiday quotas allowing teams proper downtime reserves.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>
+                    <h4>Remote Work</h4>
+                    <p>Standard home-office scheduling configurations to match physical locations.</p>
+                </div>
+                <!-- Benefit 5 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                    <h4>Learning Budget</h4>
+                    <p>Generous learning budget funds assigned to code workshops and directories.</p>
+                </div>
+                <!-- Benefit 6 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <h4>Certification Support</h4>
+                    <p>Paid technical exams coverages (AWS, Kubernetes, Cyber Security pathways).</p>
+                </div>
+                <!-- Benefit 7 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                    <h4>Latest Equipment</h4>
+                    <p>High-end laptops and edge monitors calibrated for complex rendering tasks.</p>
+                </div>
+                <!-- Benefit 8 -->
+                <div class="benefit-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <h4>Career Development</h4>
+                    <p>Dedicated tracking intervals helping developers scale into architect ranks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICE LOCATIONS Section -->
+    <section class="locations-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">GLOBAL PRESENCE</span>
+                <h2 class="section-title">OUR OFFICE LOCATIONS</h2>
+                <p class="section-subtitle">Coordinate operations across our technical headquarters and modern
+                    workspaces.</p>
+            </div>
+
+            <div class="locations-grid">
+                <!-- Chennai -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad1)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Chennai</h3>
+                        <p>Enterprise database orchestration core and zero-trust security compliance teams.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>120+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bengaluru -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad2)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Bengaluru</h3>
+                        <p>Core backend coding grids and automated CI/CD cloud configuration hubs.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>200+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hyderabad -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad3)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Hyderabad</h3>
+                        <p>Premium UI visual architectures designs and user interface libraries coding.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>150+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad1)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Dubai</h3>
+                        <p>Client relationship settlements hub and regional project configuration audits.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>80+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singapore -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad2)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Singapore</h3>
+                        <p>AI machine learning labs and isolated vector databases training node grids.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>100+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- London -->
+                <div class="office-card">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#offGrad3)" />
+                        <circle cx="150" cy="75" r="20" fill="rgba(255,255,255,0.05)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>London</h3>
+                        <p>Multi-region cloud infrastructure operations and server scaling nodes diagnostics.</p>
+                        <div class="office-stats">
+                            <span>Team Size: <strong>90+</strong></span>
+                            <a href="contact.html" class="btn btn-outline btn-magnetic"><span class="btn-inner">Explore
+                                    Office</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="offGrad1" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#0f2027" />
+                    <stop offset="100%" stop-color="#2c5364" />
+                </linearGradient>
+                <linearGradient id="offGrad2" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#1f4037" />
+                    <stop offset="100%" stop-color="#99f2c8" />
+                </linearGradient>
+                <linearGradient id="offGrad3" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#654ea3" />
+                    <stop offset="100%" stop-color="#eaafc8" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+     <!-- 13. PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="section-container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                       <a href="#" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                </a>
+                <p class="footer-desc">
+                    Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
+                    hyper-scalable multi-cloud architectures.
+                </p>
+                <!-- Social Icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Enterprise Software</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Cloud Integration</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">UI UX Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+<div class="footer-links-col">
+    <h4>Contact Information</h4>
+
+    <ul class="contact-info">
+        <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@stacklyroboticsautomation.com">
+                📧 info@stacklyITSERVICE.com
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+919876543210">
+               📞 +91 98765 43210
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="map-pin"></i>
+           📍 Bengaluru, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+            <!-- Newsletter -->
+            <div class="footer-news-col">
+                <h4>Subscribe</h4>
+                <p>Stay informed with our latest research and cognitive breakthroughs.</p>
+                <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Subscribed to insights.');">
+                    <input type="email" class="news-input" placeholder="name@company.com" required>
+                    <button type="submit" class="btn btn-primary news-btn" aria-label="Subscribe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div class="sub-footer">
+            <div class="section-container sub-footer-container">
+                <span class="copyright">© 2026 Stackly IT Service. All rights reserved.</span>
+                <div class="sub-footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="auth-modal" id="loginModal">
+
+        <div class="auth-box">
+
+            <div class="auth-left">
+
+                <span class="close" onclick="closeAuth()">&times;</span>
+
+                <h2>Welcome Back</h2>
+
+                <!-- LOGIN -->
+                <div id="loginBox">
+
+                    <select id="loginRole">
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" id="loginEmail" placeholder="Email Address">
+
+                    <input type="password" id="loginPassword" placeholder="Password">
+
+                    <div class="remember-wrap">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button onclick="loginUser()">
+                        Log In
+                    </button>
+
+                    <p onclick="showForgot()">
+                        Forgot Password?
+                    </p>
+
+                    <p onclick="showSignup()">
+                        Don't have an account? Sign Up
+                    </p>
+
+                </div>
+
+                <!-- SIGNUP -->
+                <div id="signupBox" style="display:none;">
+
+                    <input type="text" id="signupName" placeholder="Full Name">
+
+                    <input type="email" id="signupEmail" placeholder="Email Address">
+
+                    <input type="password" id="signupPassword" placeholder="Password">
+
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button onclick="signupUser()">
+                        Create Account
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+                <!-- FORGOT PASSWORD -->
+                <div id="forgotBox" style="display:none;">
+
+                    <input type="email" id="forgotEmail" placeholder="Enter Your Email">
+
+                    <button onclick="forgotPassword()">
+                        Reset Password
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+
+</html>

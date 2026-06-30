@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Get in touch with the ANTIGRAVITY team. Discuss enterprise software development, private AI deployments, cloud transformation, and zero-trust cybersecurity networks.">
+    <meta name="keywords"
+        content="Contact IT Company, Hire AI Developers, Enterprise Software Consulting, Cloud Architects Contact, Cybersecurity Audit">
+    <meta name="author" content="ANTIGRAVITY Group">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading contact-page">
+
+    <!-- Custom Cursor & Background Glow Spotlights -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- PREMIUM LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="loader-aurora"></div>
+        <div class="loader-noise"></div>
+        <div class="loader-particles" id="loaderParticles"></div>
+
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <div class="loader-glow-ring"></div>
+                <svg class="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L85 75H15L50 15Z" stroke="url(#logoGlow)" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M50 35L70 70H30L50 35Z" fill="url(#logoFill)" />
+                    <circle cx="50" cy="50" r="8" fill="#00f0ff" class="logo-core" />
+                    <defs>
+                        <linearGradient id="logoGlow" x1="15" y1="15" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00f0ff" />
+                            <stop offset="50%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <linearGradient id="logoFill" x1="30" y1="35" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                            <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2 class="loader-title">ANTIGRAVITY</h2>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="loader-stats">
+                <span class="loader-percentage" id="loaderPercentage">0%</span>
+                <span class="loader-status-text" id="loaderStatusText">Loading Experience...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM NAVBAR -->
+    <header class="navbar" id="mainNavbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+              <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-noise"></div>
+        <div class="mobile-overlay-container">
+            <nav class="mobile-nav">
+                <ul class="mobile-list">
+                    <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
+                    <li class="mobile-item"><a href="about.html" class="mobile-link">About</a></li>
+                    <li class="mobile-item"><a href="services.html" class="mobile-link">Services</a></li>
+                    <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
+                    <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
+                    <li class="mobile-item"><a href="contact.html" class="mobile-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT HERO -->
+    <main class="hero-section" id="heroSection">
+        <div class="hero-aurora-bg"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow-spotlight" id="heroSpotlight"></div>
+        <div class="hero-noise-texture"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="hero-badge">GET IN TOUCH</span>
+                <h1 class="hero-heading">
+                    <span class="word-wrapper"><span class="word">CONVERGING</span></span>
+                    <span class="word-wrapper"><span class="word-glow">VISION</span></span>
+                    <span class="word-wrapper"><span class="word">AND</span></span>
+                    <span class="word-wrapper"><span class="word-glow">INTELLIGENCE.</span></span>
+                    <span class="word-wrapper"><span class="word">ENGINEERING</span></span>
+                    <span class="word-wrapper"><span class="word">EXTRAORDINARY</span></span>
+                    <span class="word-wrapper"><span class="word">FUTURES.</span></span>
+                </h1>
+
+                <p class="hero-subheading">
+                    We build secure, low-latency microservice architectures and distributed databases that scale to meet
+                    massive query demands. Our solutions prioritize database reliability and high throughput across
+                    multi-region server arrays.
+                </p>
+                <p class="hero-subheading">
+                    Our team integrates private vector layers and fine-tunes custom LLM systems to analyze transaction
+                    files. We optimize machine learning telemetry pipelines to support instant decisions safely.
+                </p>
+                <p class="hero-subheading">
+                    We orchestrate containerized workloads and self-healing Kubernetes clusters, reducing resource
+                    bottlenecks and automating deployment workflows cleanly.
+                </p>
+                <p class="hero-subheading">
+                    Operating with zero-trust credentials, we deploy encrypted communication tunnels and automated
+                    compliance scanners to protect sensitive networks against intrusion threats.
+                </p>
+
+                <div class="hero-button-group">
+                    <a href="#formSection" class="btn btn-primary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">START YOUR PROJECT</span>
+                    </a>
+                    <a href="#formSection" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">BOOK CONSULTATION</span>
+                    </a>
+                    <a href="#infoSection" class="btn btn-outline btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">TALK WITH EXPERTS</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+
+                        <div class="hero-core-graphic">
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="quantum-node-svg">
+                                <circle cx="200" cy="200" r="110" stroke="url(#contactHeroGrad)" stroke-width="2" />
+                                <circle cx="200" cy="200" r="80" stroke="url(#contactHeroGrad)" stroke-width="1"
+                                    stroke-dasharray="8 4" />
+                                <line x1="90" y1="200" x2="310" y2="200" stroke="rgba(0, 240, 255, 0.2)"
+                                    stroke-width="2" />
+                                <line x1="200" y1="90" x2="200" y2="310" stroke="rgba(123, 44, 255, 0.2)"
+                                    stroke-width="2" />
+                                <circle cx="200" cy="200" r="16" fill="#00f0ff" class="logo-core" />
+                                <circle cx="90" cy="200" r="8" fill="#8a2be2" />
+                                <circle cx="310" cy="200" r="8" fill="#8a2be2" />
+                                <circle cx="200" cy="90" r="8" fill="#ff007f" />
+                                <circle cx="200" cy="310" r="8" fill="#ff007f" />
+                                <defs>
+                                    <linearGradient id="contactHeroGrad" x1="90" y1="90" x2="310" y2="310">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="50%" stop-color="#8a2be2" />
+                                        <stop offset="100%" stop-color="#ff007f" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CONTACT INFORMATION Section -->
+    <section class="info-section section-padding reveal-on-scroll" id="infoSection">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">QUICK CHANNELS</span>
+                <h2 class="section-title">CONTACT INFORMATION</h2>
+                <p class="section-subtitle">Reach out directly through our specialized communication pipelines.</p>
+            </div>
+
+            <div class="info-grid">
+                <!-- Head Office -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad1)" />
+                    </svg>
+                    <h3>Head Office</h3>
+                    <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
+                    <span class="info-details">Singapore HQ</span>
+                </div>
+
+                <!-- Phone Support -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad2)" />
+                    </svg>
+                    <h3>Phone Support</h3>
+                    <p>Access our high-priority support hotlines around the clock.</p>
+                    <span class="info-details">+65 6789 0122</span>
+                </div>
+
+                <!-- Business Email -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad3)" />
+                    </svg>
+                    <h3>Business Email</h3>
+                    <p>Send details of your database schemas or request direct RFPs.</p>
+                    <span class="info-details">solutions@antigravity.io</span>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad1)" />
+                    </svg>
+                    <h3>Working Hours</h3>
+                    <p>Our engineering support and sales hubs operate continuously.</p>
+                    <span class="info-details">Mon - Fri: 24 Hours</span>
+                </div>
+
+                <!-- Global Offices -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad2)" />
+                    </svg>
+                    <h3>Global Offices</h3>
+                    <p>6 international offices located across major technological centers.</p>
+                    <span class="info-details">Singapore, Dubai, London</span>
+                </div>
+
+                <!-- Emergency Support -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#infoGrad3)" />
+                    </svg>
+                    <h3>Emergency Support</h3>
+                    <p>High-priority security response coordinates and system hot-patches.</p>
+                    <span class="info-details">24/7 Security Hotline</span>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="infoGrad1" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#051923" />
+                    <stop offset="100%" stop-color="#006494" />
+                </linearGradient>
+                <linearGradient id="infoGrad2" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#140152" />
+                    <stop offset="100%" stop-color="#22007c" />
+                </linearGradient>
+                <linearGradient id="infoGrad3" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#220117" />
+                    <stop offset="100%" stop-color="#4a0033" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM Section -->
+    <section class="form-section section-padding reveal-on-scroll" id="formSection">
+        <div class="section-container grid-two-col">
+            <!-- Left Side: Copywriting -->
+            <div class="form-left">
+                <span class="section-badge">PARTNERSHIP ROADMAP</span>
+                <h2 class="section-title">START A PROJECT WITH ANTIGRAVITY</h2>
+
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We cooperate with international enterprises to engineer highly available transaction pipelines,
+                        private machine learning layers, and cloud infrastructure operations.
+                    </p>
+                    <p class="about-paragraph">
+                        Let's translate your business parameters into modular architectures. Submit your software
+                        specifications, and our senior database coordinators will review your design logs.
+                    </p>
+                    <p class="about-paragraph">
+                        Our zero-trust systems guarantee transaction privacy. We deploy fully isolated data pipelines
+                        and container networks to protect your information securely.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Average response time below 12 hours</li>
+                        <li>Dedicated engineering coordinator assignments</li>
+                        <li>Free conceptual database architecture review</li>
+                        <li>Comprehensive enterprise SLA options</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="form-right">
+                <div class="contact-form-card">
+                    <div class="card-glow-border"></div>
+                    <form class="enterprise-contact-form" id="contactForm"
+                        onsubmit="event.preventDefault(); alert('Message successfully logged. A coordinator will sync within 12 hours.');">
+                        <div class="form-grid">
+                            <!-- Full Name -->
+                            <div class="input-group">
+                                <input type="text" id="fullName" class="form-input" required placeholder=" ">
+                                <label for="fullName" class="form-label">Full Name</label>
+                            </div>
+
+                            <!-- Company Name -->
+                            <div class="input-group">
+                                <input type="text" id="companyName" class="form-input" required placeholder=" ">
+                                <label for="companyName" class="form-label">Company Name</label>
+                            </div>
+
+                            <!-- Business Email -->
+                            <div class="input-group">
+                                <input type="email" id="businessEmail" class="form-input" required placeholder=" ">
+                                <label for="businessEmail" class="form-label">Business Email</label>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="input-group">
+                                <input type="tel" id="phoneNumber" class="form-input" required placeholder=" ">
+                                <label for="phoneNumber" class="form-label">Phone Number</label>
+                            </div>
+
+                            <!-- Country -->
+                            <div class="input-group">
+                                <input type="text" id="country" class="form-input" required placeholder=" ">
+                                <label for="country" class="form-label">Country</label>
+                            </div>
+
+                            <!-- Service dropdown -->
+                            <div class="input-group select-group">
+                                <select id="serviceRequired" class="form-input" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="ai">AI & Vector Databases</option>
+                                    <option value="software">Enterprise Software</option>
+                                    <option value="cloud">Cloud Infrastructure</option>
+                                    <option value="security">Cyber Security</option>
+                                    <option value="devops">DevOps & Automation</option>
+                                </select>
+                                <label for="serviceRequired" class="form-label">Service Required</label>
+                            </div>
+
+                            <!-- Budget -->
+                            <div class="input-group select-group">
+                                <select id="projectBudget" class="form-input" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="tier1">$50k - $100k</option>
+                                    <option value="tier2">$100k - $250k</option>
+                                    <option value="tier3">$250k - $500k</option>
+                                    <option value="tier4">$500k+</option>
+                                </select>
+                                <label for="projectBudget" class="form-label">Project Budget</label>
+                            </div>
+
+                            <!-- Timeline -->
+                            <div class="input-group select-group">
+                                <select id="projectTimeline" class="form-input" required>
+                                    <option value="" disabled selected hidden></option>
+                                    <option value="time1">1 - 3 Months</option>
+                                    <option value="time2">3 - 6 Months</option>
+                                    <option value="time3">6 - 12 Months</option>
+                                    <option value="time4">12+ Months</option>
+                                </select>
+                                <label for="projectTimeline" class="form-label">Project Timeline</label>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="input-group full-width">
+                                <input type="text" id="subject" class="form-input" required placeholder=" ">
+                                <label for="subject" class="form-label">Subject</label>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="input-group full-width">
+                                <textarea id="message" class="form-input" rows="4" required placeholder=" "></textarea>
+                                <label for="message" class="form-label">Message</label>
+                            </div>
+
+                            <!-- File upload -->
+                            <div class="input-group full-width file-upload-group">
+                                <label for="fileUpload" class="file-upload-label">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="17 8 12 3 7 8" />
+                                        <line x1="12" y1="3" x2="12" y2="15" />
+                                    </svg>
+                                    <span id="fileUploadText">Upload Requirement Document</span>
+                                </label>
+                                <input type="file" id="fileUpload" class="file-input-hidden"
+                                    onchange="const f = this.files[0]; document.getElementById('fileUploadText').innerText = f ? f.name : 'Upload Requirement Document';">
+                            </div>
+
+                            <!-- Policy checkbox -->
+                            <div class="input-group full-width checkbox-group">
+                                <input type="checkbox" id="privacyPolicy" required class="form-checkbox">
+                                <label for="privacyPolicy" class="checkbox-label">I agree to the Privacy Policy and
+                                    zero-disclosure terms.</label>
+                            </div>
+                        </div>
+
+                        <div class="form-btn-group">
+                            <button type="submit" class="btn btn-primary btn-magnetic"><span class="btn-inner">Send
+                                    Message</span></button>
+                            <button type="button" class="btn btn-outline btn-magnetic"
+                                onclick="alert('Syncing system calendar models...');"><span class="btn-inner">Schedule
+                                    Meeting</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE INQUIRY Section -->
+    <section class="inquiry-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">INTERACTIVE INQUIRY</span>
+                <h2 class="section-title">SERVICE INQUIRY</h2>
+                <p class="section-subtitle">Select which enterprise capabilities fit your current system development
+                    goals.</p>
+            </div>
+
+            <div class="inquiry-grid">
+                <!-- AI Development -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
+                    </svg>
+                    <h3>AI Development</h3>
+                    <p>Private vector LLMs and classification networks integration.</p>
+                </div>
+
+                <!-- Software Engineering -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
+                    </svg>
+                    <h3>Software Engineering</h3>
+                    <p>High-throughput backend architectures and transactional pipelines.</p>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad3)" />
+                    </svg>
+                    <h3>Web Development</h3>
+                    <p>Modern luxury web apps using responsive React/Next setups.</p>
+                </div>
+
+                <!-- Mobile Applications -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
+                    </svg>
+                    <h3>Mobile Applications</h3>
+                    <p>Native Flutter and Swift applications with biometric safety keys.</p>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
+                    </svg>
+                    <h3>Cloud Solutions</h3>
+                    <p>Highly available multi-region Kubernetes configurations.</p>
+                </div>
+
+                <!-- Cyber Security -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad3)" />
+                    </svg>
+                    <h3>Cyber Security</h3>
+                    <p>Zero-trust encrypted database tunnels and compliance audits.</p>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
+                    </svg>
+                    <h3>UI/UX Design</h3>
+                    <p>Luxury typography scales and interactive layouts mockups.</p>
+                </div>
+
+                <!-- DevOps -->
+                <div class="service-card btn-magnetic" onclick="this.classList.toggle('selected');">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
+                    </svg>
+                    <h3>DevOps</h3>
+                    <p>Automated CI/CD Jenkins systems and container metrics pipelines.</p>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="inqGrad1" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#081c15" />
+                    <stop offset="100%" stop-color="#1b4332" />
+                </linearGradient>
+                <linearGradient id="inqGrad2" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#18001e" />
+                    <stop offset="100%" stop-color="#3c004b" />
+                </linearGradient>
+                <linearGradient id="inqGrad3" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#2d0014" />
+                    <stop offset="100%" stop-color="#5c0029" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- GLOBAL OFFICES Section -->
+    <section class="locations-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">OUR NETWORK</span>
+                <h2 class="section-title">GLOBAL OFFICES</h2>
+                <p class="section-subtitle">Select office locations below to synchronize coordinate maps diagnostics.
+                </p>
+            </div>
+
+            <div class="locations-grid">
+                <!-- Chennai -->
+                <div class="office-card" id="officeChennai">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad1)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Chennai</h3>
+                        <p>100 Mount Road, Guindy, Chennai, Tamil Nadu 600032</p>
+                        <div class="office-stats">
+                            <span>+91 44 6789 0122</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('chennai');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bengaluru -->
+                <div class="office-card" id="officeBengaluru">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad2)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Bengaluru</h3>
+                        <p>80 Feet Road, Koramangala, Bengaluru, Karnataka 560034</p>
+                        <div class="office-stats">
+                            <span>+91 80 6789 0123</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('bengluru');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hyderabad -->
+                <div class="office-card" id="officeHyderabad">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad3)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Hyderabad</h3>
+                        <p>Hitec City Phase II, Madhapur, Hyderabad, Telangana 500081</p>
+                        <div class="office-stats">
+                            <span>+91 40 6789 0124</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('hyderabad');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="office-card" id="officeDubai">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad1)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Dubai</h3>
+                        <p>The Gate District, DIFC, Dubai, United Arab Emirates, PO Box 50021</p>
+                        <div class="office-stats">
+                            <span>+971 4 678 0122</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('dubai');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singapore -->
+                <div class="office-card" id="officeSingapore">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad2)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>Singapore</h3>
+                        <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
+                        <div class="office-stats">
+                            <span>+65 6789 0122</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('singapore');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- London -->
+                <div class="office-card" id="officeLondon">
+                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad3)" />
+                    </svg>
+                    <div class="office-card-content">
+                        <h3>London</h3>
+                        <p>30 St Mary Axe (The Gherkin), London EC3A 8EP, United Kingdom</p>
+                        <div class="office-stats">
+                            <span>+44 20 7890 0122</span>
+                            <button class="btn btn-outline btn-magnetic" onclick="focusMapNode('london');"><span
+                                    class="btn-inner">Get Directions</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="officeInGrad1" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#03071e" />
+                    <stop offset="100%" stop-color="#370617" />
+                </linearGradient>
+                <linearGradient id="officeInGrad2" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#13001e" />
+                    <stop offset="100%" stop-color="#3c004b" />
+                </linearGradient>
+                <linearGradient id="officeInGrad3" x1="0" y1="0" x2="300" y2="150">
+                    <stop offset="0%" stop-color="#020024" />
+                    <stop offset="100%" stop-color="#090979" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MAP Section -->
+    <section class="map-section reveal-on-scroll" id="mapSection">
+        <div class="map-container-wrapper">
+            <div class="map-dark-canvas" id="interactiveMap">
+                <!-- Custom World Map Sketch using clean background SVGs -->
+                <svg viewBox="0 0 1000 500" fill="none" class="map-svg-world" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Subtle outline grids -->
+                    <rect width="1000" height="500" fill="#070a1a" />
+                    <path
+                        d="M0 100 H1000 M0 200 H1000 M0 300 H1000 M0 400 H1000 M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500 M800 0 V500 M900 0 V500"
+                        stroke="rgba(255,255,255,0.01)" stroke-width="1" />
+
+                    <!-- Abstract continents grid blocks shapes representing world coordinates maps -->
+                    <!-- Americas -->
+                    <path d="M80 100 Q120 120 150 180 T160 280 T140 380 Q100 450 120 480 M180 320 Q220 380 250 450"
+                        stroke="rgba(255,255,255,0.03)" stroke-width="2" />
+                    <!-- Eurasia / Africa -->
+                    <path
+                        d="M420 80 Q500 120 580 100 T680 120 T780 150 Q850 200 880 250 M450 200 Q500 280 480 350 T540 420 Q600 450 620 470"
+                        stroke="rgba(255,255,255,0.03)" stroke-width="2" />
+                    <!-- Australia -->
+                    <path d="M820 350 Q880 380 920 410 T850 460 Z" stroke="rgba(255,255,255,0.03)" stroke-width="2" />
+                </svg>
+
+                <!-- Location Markers (Absolute Coordinates) -->
+                <!-- London -->
+                <div class="map-marker-node" id="nodeLondon" style="top: 28%; left: 48%;"
+                    onclick="showMapCard('london');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">London</span>
+                </div>
+
+                <!-- Dubai -->
+                <div class="map-marker-node" id="nodeDubai" style="top: 45%; left: 59%;"
+                    onclick="showMapCard('dubai');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">Dubai</span>
+                </div>
+
+                <!-- Chennai -->
+                <div class="map-marker-node" id="nodeChennai" style="top: 55%; left: 69%;"
+                    onclick="showMapCard('chennai');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">Chennai</span>
+                </div>
+
+                <!-- Bengaluru -->
+                <div class="map-marker-node" id="nodeBengluru" style="top: 53%; left: 67%;"
+                    onclick="showMapCard('bengluru');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">Bengaluru</span>
+                </div>
+
+                <!-- Hyderabad -->
+                <div class="map-marker-node" id="nodeHyderabad" style="top: 51%; left: 68%;"
+                    onclick="showMapCard('hyderabad');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">Hyderabad</span>
+                </div>
+
+                <!-- Singapore -->
+                <div class="map-marker-node" id="nodeSingapore" style="top: 60%; left: 74%;"
+                    onclick="showMapCard('singapore');">
+                    <div class="marker-pulse"></div>
+                    <div class="marker-core"></div>
+                    <span class="marker-label">Singapore</span>
+                </div>
+
+                <!-- Map Info Overlays Card -->
+                <div class="map-info-overlay-card" id="mapOverlayCard">
+                    <h4 id="mapOverlayTitle">Singapore HQ</h4>
+                    <p id="mapOverlayAddress">Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
+                    <span id="mapOverlayPhone">+65 6789 0122</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ANTIGRAVITY Section -->
+    <section class="why-choose-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">CORE STRENGTHS</span>
+                <h2 class="section-title">WHY GLOBAL BUSINESSES CHOOSE IT SERVICE</h2>
+                <p class="section-subtitle">We merge physical networks operations with mathematical intelligence to
+                    deliver resilient systems.</p>
+            </div>
+
+            <div class="why-join-grid">
+                <!-- Enterprise Experience -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad1)" />
+                    </svg>
+                    <h3>Enterprise Experience</h3>
+                    <p>Over a decade of scaling database query nodes and orchestrating multi-region servers.</p>
+                </div>
+
+                <!-- AI Innovation -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad2)" />
+                    </svg>
+                    <h3>AI Innovation</h3>
+                    <p>Fine-tuning private large language model weights to automate secure document classifications.</p>
+                </div>
+
+                <!-- Certified Engineers -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad3)" />
+                    </svg>
+                    <h3>Certified Engineers</h3>
+                    <p>Our architects hold active AWS, Kubernetes, and corporate security certifications.</p>
+                </div>
+
+                <!-- 24/7 Support -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad1)" />
+                    </svg>
+                    <h3>24/7 Support</h3>
+                    <p>Direct communication tunnels to database teams for continuous support diagnostics.</p>
+                </div>
+
+                <!-- Global Delivery -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad2)" />
+                    </svg>
+                    <h3>Global Delivery</h3>
+                    <p>Coordinated workflows across Singapore, London, Dubai, and Indian technology hubs.</p>
+                </div>
+
+                <!-- Security First -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad3)" />
+                    </svg>
+                    <h3>Security First</h3>
+                    <p>Continuous database encryption check audits matching global SOC 2 standards.</p>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="chooseGrad1" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#023e8a" />
+                    <stop offset="100%" stop-color="#0077b6" />
+                </linearGradient>
+                <linearGradient id="chooseGrad2" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#3c096c" />
+                    <stop offset="100%" stop-color="#5a189a" />
+                </linearGradient>
+                <linearGradient id="chooseGrad3" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#800f2f" />
+                    <stop offset="100%" stop-color="#a4133c" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- CLIENT SUCCESS METRICS Section -->
+    <section class="metrics-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">SYSTEM DIAGNOSTICS</span>
+                <h2 class="section-title">CORE PERFORMANCE IN NUMBERS</h2>
+                <p class="section-subtitle">Examine the scale of our active multi-region database operations.</p>
+            </div>
+
+            <div class="stats-grid">
+                <!-- Stat 1 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="500">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <p class="stat-label">Projects Delivered</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="120">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <p class="stat-label">Enterprise Clients</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="18">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <p class="stat-label">Countries Served</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path
+                                d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="99">0</span><span class="stat-suffix">.9%</span>
+                    </div>
+                    <p class="stat-label">Client Satisfaction</p>
+                </div>
+
+                <!-- Stat 5 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="24">0</span><span class="stat-suffix">/7</span>
+                    </div>
+                    <p class="stat-label">Global Support</p>
+                </div>
+
+                <!-- Stat 6 -->
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div class="stat-num-wrapper">
+                        <span class="stat-num" data-target="15">0</span><span class="stat-suffix">+ Yrs</span>
+                    </div>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT TESTIMONIALS Section -->
+    <section class="testimonials-section section-padding reveal-on-scroll" id="testimonialsSection">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">CASE FEEDBACK</span>
+                <h2 class="section-title">TRUSTED BY BUSINESSES WORLDWIDE</h2>
+                <p class="section-subtitle">Examine direct feedback details logged by our global technology partners.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">ANTIGRAVITY optimized our database cluster operations, reducing query
+                        latency by 45%. Their zero-trust structures protect our financial files safely.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#14213d" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>Sarah Jenkins</h4>
+                            <span>CTO, FinTech Solutions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">Deploying their private vector AI models enabled automated document
+                        indexing without risk of data disclosure. Absolute precision delivery.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#1c2541" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>David Vance</h4>
+                            <span>Director of AI, HealthCare Inc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">Their Kubernetes migration pipeline resolved our multi-region load
+                        limits. The DevOps automation is self-healing and operates continuously.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#0b090a" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>Elena Rostova</h4>
+                            <span>VP of Infrastructure, CloudScale</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">Zero disclosure violations were recorded during our system security
+                        audit. Highly recommend their network encryption pipelines.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#03071e" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>Marcus Aurelius</h4>
+                            <span>CISO, Global Logistics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">The conceptual design models proposed for our ERP inventory system were
+                        flawless. Spacing rhythm and code execution are pristine.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#1d3557" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>Kenji Sato</h4>
+                            <span>Director of ERP, NeoTokyo Logistics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="quote-mark">“</span>
+                    <p class="testimonial-text">Support response times are consistently under 10 minutes. Our database
+                        schema migration tasks were processed without system down-times.</p>
+                    <div class="testimonial-author">
+                        <svg viewBox="0 0 100 100" class="author-avatar-svg">
+                            <circle cx="50" cy="50" r="40" fill="#000814" />
+                        </svg>
+                        <div class="author-meta">
+                            <h4>Linus Sterling</h4>
+                            <span>Lead Architect, SecureTrade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION Accordion -->
+    <section class="faq-section section-padding reveal-on-scroll" id="faqSection">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">DIAGNOSTICS FAQ</span>
+                <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="section-subtitle">Read details about our project scheduling steps and data safety standards.
+                </p>
+            </div>
+
+            <div class="faq-accordion-wrapper">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>How quickly do you respond?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Our sales and database support hubs process inquiries within 12 hours. High-priority security
+                            tickets are reviewed in real-time under SLA agreements.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>Can I schedule a free consultation?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Yes. We assign an engineering lead to review your system topology, database queries logs, and
+                            cloud layout configurations without charge.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>Do you work with international clients?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Yes. We coordinate multi-region system migrations across Singapore, Dubai, London, and Indian
+                            technology hubs under standard international protocols.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>What industries do you specialize in?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>We build architectures primarily for FinTech transaction nodes, high-throughput Logistics
+                            ERPs, isolated HealthCare vector caches, and enterprise Cloud services.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>How long does a project take?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Project milestones typically range from 1 to 6 months depending on database migration scales,
+                            AI model training cycles, and zero-trust tunnel checks.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>Do you provide post-launch support?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Yes. We offer continuous server health diagnostics logs monitoring, load adjustments, and
+                            database security patch maintenance packages.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>Can you sign an NDA?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Yes. We prioritize absolute document safety and compile mutual non-disclosure contracts prior
+                            to inspecting any code repositories.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <button class="faq-header" aria-expanded="false">
+                        <span>Do you provide maintenance services?</span>
+                        <span class="faq-plus-icon">+</span>
+                    </button>
+                    <div class="faq-panel">
+                        <p>Yes. Our teams coordinate weekly schema optimization checks and Kubernetes workload scale
+                            resets to prevent resource bottlenecks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL MEDIA platform cards -->
+    <section class="socials-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">COMMUNITY STREAMS</span>
+                <h2 class="section-title">CONNECT WITH IT SERVICE</h2>
+                <p class="section-subtitle">Follow our software research channels and read open-source code repositories
+                    logs.</p>
+            </div>
+
+            <div class="socials-grid">
+                <!-- LinkedIn -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>LinkedIn</h4>
+                    <p>Read executive updates and corporate engineering roadmap releases.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- GitHub -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>GitHub</h4>
+                    <p>Inspect our public vector libraries and database diagnostic scripts.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- Instagram -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>Instagram</h4>
+                    <p>View visual workspace logs and design mockups mockups.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- Facebook -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>Facebook</h4>
+                    <p>Connect with local office operations and regional CSR updates.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- X (Twitter) -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>X (Twitter)</h4>
+                    <p>Get instant updates on vector databases security patches.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- YouTube -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>YouTube</h4>
+                    <p>Watch system diagnostics walkthroughs and software code guides.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- Behance -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>Behance</h4>
+                    <p>Explore high-fidelity UI/UX layouts and typography prototype diagrams.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+                <!-- Dribbble -->
+                <div class="social-follow-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <h4>Dribbble</h4>
+                    <p>Examine interactive motion designs and glassmorphism components.</p>
+                    <a href="#" class="btn btn-outline"><span class="btn-inner">Follow</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION subscription -->
+    <section class="newsletter-section section-padding reveal-on-scroll">
+        <div class="newsletter-aurora-bg"></div>
+        <div class="section-container">
+            <div class="newsletter-card">
+                <div class="card-glow-border"></div>
+                <div class="section-header-center">
+                    <span class="section-badge">RESEARCH DIGEST</span>
+                    <h2 class="section-title">STAY CONNECTED WITH IT SERVICE</h2>
+                    <p class="section-subtitle">Receive technical whitepapers and LLM database latency-reduction studies
+                        monthly.</p>
+                </div>
+
+                <form class="newsletter-subscribe-form"
+                    onsubmit="event.preventDefault(); alert('Subscribed to technical insights.');">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <input type="text" id="newsName" class="form-input" required placeholder=" ">
+                            <label for="newsName" class="form-label">Full Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="newsEmail" class="form-input" required placeholder=" ">
+                            <label for="newsEmail" class="form-label">Business Email</label>
+                        </div>
+                    </div>
+
+                    <ul class="about-list">
+                        <li>High-performance microservices diagnostic logs</li>
+                        <li>Vector database vector scaling protocols</li>
+                        <li>Kubernetes orchestration optimizations</li>
+                    </ul>
+
+                    <button type="submit" class="btn btn-primary btn-magnetic"><span class="btn-inner">Subscribe
+                            Now</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CONTACT CTA full width -->
+    <section class="cta-section section-padding reveal-on-scroll">
+        <div class="cta-image-backdrop">
+            <svg viewBox="0 0 1000 400" fill="none" class="cta-svg-graphics" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1000" height="400" fill="#070a1a" />
+                <circle cx="500" cy="200" r="180" stroke="rgba(0, 240, 255, 0.05)" stroke-width="2" />
+                <circle cx="500" cy="200" r="120" stroke="rgba(138, 43, 226, 0.05)" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="section-container cta-content-wrapper">
+            <span class="section-badge">START TOMORROW TODAY</span>
+            <h2 class="cta-heading">LET'S BUILD THE FUTURE TOGETHER</h2>
+            <p class="cta-text">Assemble secure, low-latency microservice architectures and distributed databases that
+                scale to meet massive query demands. Let's start your next digital transformation journey with
+                ANTIGRAVITY.</p>
+
+            <div class="cta-button-group">
+                <a href="#formSection" class="btn btn-primary btn-magnetic"><span class="btn-inner">Start Your
+                        Project</span></a>
+                <a href="#formSection" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Book Free
+                        Consultation</span></a>
+                <a href="#infoSection" class="btn btn-outline btn-magnetic"><span class="btn-inner">Contact
+                        Sales</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="section-container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                <a href="#" class="logo-link footer-logo">
+                        <a href="#" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                </a>
+                <p class="footer-desc">
+                    Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
+                    hyper-scalable multi-cloud architectures.
+                </p>
+                <!-- Social Icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Enterprise Software</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Cloud Integration</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">UI UX Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+<div class="footer-links-col">
+    <h4>Contact Information</h4>
+
+    <ul class="contact-info">
+        <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@stacklyroboticsautomation.com">
+                📧 info@stacklyITSERVICE.com
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+919876543210">
+               📞 +91 98765 43210
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="map-pin"></i>
+           📍 Bengaluru, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+            <!-- Newsletter -->
+            <div class="footer-news-col">
+                <h4>Subscribe</h4>
+                <p>Stay informed with our latest research and cognitive breakthroughs.</p>
+                <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Subscribed to insights.');">
+                    <input type="email" class="news-input" placeholder="name@company.com" required>
+                    <button type="submit" class="btn btn-primary news-btn" aria-label="Subscribe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div class="sub-footer">
+            <div class="section-container sub-footer-container">
+                <span class="copyright">© 2026 Stackly IT Service. All rights reserved.</span>
+                <div class="sub-footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="auth-modal" id="loginModal">
+
+        <div class="auth-box">
+
+            <div class="auth-left">
+
+                <span class="close" onclick="closeAuth()">&times;</span>
+
+                <h2>Welcome Back</h2>
+
+                <!-- LOGIN -->
+                <div id="loginBox">
+
+                    <select id="loginRole">
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" id="loginEmail" placeholder="Email Address">
+
+                    <input type="password" id="loginPassword" placeholder="Password">
+
+                    <div class="remember-wrap">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button onclick="loginUser()">
+                        Log In
+                    </button>
+
+                    <p onclick="showForgot()">
+                        Forgot Password?
+                    </p>
+
+                    <p onclick="showSignup()">
+                        Don't have an account? Sign Up
+                    </p>
+
+                </div>
+
+                <!-- SIGNUP -->
+                <div id="signupBox" style="display:none;">
+
+                    <input type="text" id="signupName" placeholder="Full Name">
+
+                    <input type="email" id="signupEmail" placeholder="Email Address">
+
+                    <input type="password" id="signupPassword" placeholder="Password">
+
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button onclick="signupUser()">
+                        Create Account
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+                <!-- FORGOT PASSWORD -->
+                <div id="forgotBox" style="display:none;">
+
+                    <input type="email" id="forgotEmail" placeholder="Enter Your Email">
+
+                    <button onclick="forgotPassword()">
+                        Reset Password
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+
+</html>

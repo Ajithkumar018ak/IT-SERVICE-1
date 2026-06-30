@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services </title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Explore our premium enterprise technology solutions. We engineer cognitive software systems, hybrid cloud infrastructures, zero-trust cybersecurity grids, and custom digital transformation pipelines.">
+    <meta name="keywords"
+        content="Enterprise Software Development, Custom Web Apps, Mobile Development, AI Solutions, Machine Learning Pipelines, Cloud Orchestration, DevOps Automation, Zero-Trust Security">
+    <meta name="author" content="ANTIGRAVITY Group">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+    <!-- Custom Cursor & Background Glow Spotlights -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- PREMIUM LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="loader-aurora"></div>
+        <div class="loader-noise"></div>
+        <div class="loader-particles" id="loaderParticles"></div>
+
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <div class="loader-glow-ring"></div>
+                <svg class="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L85 75H15L50 15Z" stroke="url(#logoGlow)" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M50 35L70 70H30L50 35Z" fill="url(#logoFill)" />
+                    <circle cx="50" cy="50" r="8" fill="#00f0ff" class="logo-core" />
+                    <defs>
+                        <linearGradient id="logoGlow" x1="15" y1="15" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00f0ff" />
+                            <stop offset="50%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <linearGradient id="logoFill" x1="30" y1="35" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                            <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2 class="loader-title">IT SERVICE</h2>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="loader-stats">
+                <span class="loader-percentage" id="loaderPercentage">0%</span>
+                <span class="loader-status-text" id="loaderStatusText">Loading Experience...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM NAVBAR -->
+    <header class="navbar" id="mainNavbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                  <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-noise"></div>
+        <div class="mobile-overlay-container">
+            <nav class="mobile-nav">
+                <ul class="mobile-list">
+                    <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
+                    <li class="mobile-item"><a href="about.html" class="mobile-link">About</a></li>
+                    <li class="mobile-item"><a href="services.html" class="mobile-link active">Services</a></li>
+                    <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
+                    <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
+                    <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES HERO -->
+    <main class="hero-section" id="heroSection">
+        <div class="hero-aurora-bg"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow-spotlight" id="heroSpotlight"></div>
+        <div class="hero-noise-texture"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="hero-badge">ENTERPRISE TECHNOLOGY SOLUTIONS</span>
+                <h1 class="hero-heading">
+                    <span class="word-wrapper"><span class="word">ENGINEERING</span></span>
+                    <span class="word-wrapper"><span class="word-glow">COGNITIVE</span></span>
+                    <span class="word-wrapper"><span class="word">ARCHITECTURES</span></span>
+                    <span class="word-wrapper"><span class="word">TO</span></span>
+                    <span class="word-wrapper"><span class="word">SCALE</span></span>
+                    <span class="word-wrapper"><span class="word">ENTERPRISE</span></span>
+                    <span class="word-wrapper"><span class="word">POTENTIAL</span></span>
+                </h1>
+                <p class="hero-subheading">
+                    IT develops next-generation cloud infrastructure designs and cognitive AI models. We combine
+                    high-performance database scaling with secure neural analytics networks, providing organizations
+                    with cognitive frameworks that accelerate decisions.
+                </p>
+                <p class="hero-subheading">
+                    Our enterprise software development merges modular software engineering with distributed systems
+                    optimization. We construct ultra-high throughput computing networks, delivering resilient data
+                    architectures that scale seamlessly to support high user volumes.
+                </p>
+                <p class="hero-subheading">
+                    Security is built into our software layers from inception. We deploy zero-trust data verification
+                    structures and quantum-resistant cryptographical pathways, safeguarding private data records against
+                    complex external threats.
+                </p>
+                <p class="hero-subheading">
+                    We guide progressive enterprises through complex digital transformations with zero system latency.
+                    By restructuring outdated databases into microservice clusters, we lay the foundations of
+                    future-proof scale.
+                </p>
+
+                <div class="hero-button-group">
+                    <a href="#ourServicesSection" class="btn btn-primary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">EXPLORE SOLUTIONS</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">START PROJECT</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">TALK TO EXPERTS</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+
+                        <div class="hero-core-graphic">
+                            <!-- SVG representing Cloud Ops Center / AI Operations -->
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="quantum-node-svg">
+                                <rect x="50" y="50" width="300" height="300" rx="20" stroke="url(#heroGrad)"
+                                    stroke-width="2" />
+                                <circle cx="200" cy="200" r="80" stroke="rgba(255,255,255,0.05)" />
+                                <circle cx="200" cy="200" r="120" stroke="rgba(255,255,255,0.02)" />
+                                <circle cx="200" cy="200" r="30" fill="url(#coreGlow)" />
+                                <line x1="200" y1="50" x2="200" y2="350" stroke="rgba(0, 240, 255, 0.2)"
+                                    stroke-width="1.5" />
+                                <line x1="50" y1="200" x2="350" y2="200" stroke="rgba(138, 43, 226, 0.2)"
+                                    stroke-width="1.5" />
+                                <defs>
+                                    <linearGradient id="heroGrad" x1="50" y1="50" x2="350" y2="350">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#8a2be2" />
+                                    </linearGradient>
+                                    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="transparent" />
+                                    </radialGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse-icon">
+                <span class="mouse-wheel"></span>
+            </div>
+            <span class="scroll-text">OUR CAPABILITIES</span>
+        </div>
+    </main>
+
+    <!-- OUR SERVICES SECTION (12 Cards Grid) -->
+    <section class="services-section section-padding reveal-on-scroll" id="ourServicesSection">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">CAPABILITIES</span>
+                <h2 class="section-title">THE CORE CAPABILITIES OF IT SERVICE</h2>
+                <p class="section-subtitle">We design, configure, and maintain premium technology architectures for
+                    global corporate brands.</p>
+            </div>
+
+            <div class="services-12-grid">
+                <!-- 01 Enterprise Software Development -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">01</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <line x1="9" y1="3" x2="9" y2="21" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                        </svg>
+                    </div>
+                    <!-- Custom styled card SVG image -->
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad1)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Enterprise Software</h3>
+                    <p>Rigorous, modular backend software designs constructed to scale alongside high user transaction
+                        rates.</p>
+                    <ul class="service-benefits">
+                        <li>High performance architectures</li>
+                        <li>Scalable database structures</li>
+                        <li>Custom systems optimization</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 02 Custom Web Development -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">02</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                            <line x1="12" y1="2" x2="12" y2="22" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad2)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Custom Web Apps</h3>
+                    <p>Highly interactive, zero-latency cloud applications styled with premium responsive designs.</p>
+                    <ul class="service-benefits">
+                        <li>Sub-second loading times</li>
+                        <li>Responsive layouts</li>
+                        <li>Secured API endpoints</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 03 Mobile App Development -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">03</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad3)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Mobile Apps</h3>
+                    <p>High-resiliency iOS and Android applications developed using native performance setups.</p>
+                    <ul class="service-benefits">
+                        <li>Native execution pipelines</li>
+                        <li>Offline synchronization</li>
+                        <li>Premium interface styling</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 04 Artificial Intelligence -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">04</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad1)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Training private vector learning layers to automate complex corporate routing operations safely.
+                    </p>
+                    <ul class="service-benefits">
+                        <li>Private data custody</li>
+                        <li>Cognitive model training</li>
+                        <li>Automated query mapping</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 05 Machine Learning -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">05</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad2)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Machine Learning</h3>
+                    <p>Custom prediction frameworks that analyze data indicators to identify commercial vectors.</p>
+                    <ul class="service-benefits">
+                        <li>Predictive analytics metrics</li>
+                        <li>Neural model deployments</li>
+                        <li>Dynamic scaling options</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 06 Cloud Solutions -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">06</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad3)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Cloud Solutions</h3>
+                    <p>High-resiliency Kubernetes orchestration and multi-region network setups avoiding data latency.
+                    </p>
+                    <ul class="service-benefits">
+                        <li>Multi-region availability</li>
+                        <li>Automated load balancing</li>
+                        <li>Docker node orchestration</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 07 Cyber Security -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">07</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad1)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Cyber Security</h3>
+                    <p>Zero-trust cryptographic setups designed to secure sensitive database registries from attacks.
+                    </p>
+                    <ul class="service-benefits">
+                        <li>Zero-trust verification</li>
+                        <li>Private key encryptions</li>
+                        <li>Continuous threat scanning</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 08 DevOps -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">08</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad2)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>DevOps Automation</h3>
+                    <p>Automated CI/CD pipelines and runtime container monitoring scripts that secure high uptime.</p>
+                    <ul class="service-benefits">
+                        <li>Fast release structures</li>
+                        <li>Continuous container tests</li>
+                        <li>Self-healing node updates</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 09 UI/UX Design -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">09</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+                            <path d="M12 6V12L16 14" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad3)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>UI UX Design</h3>
+                    <p>Luxury glassmorphism design layouts, fluid motion curves, and consistent typographic systems.</p>
+                    <ul class="service-benefits">
+                        <li>Premium visual guidelines</li>
+                        <li>Interactive micro-effects</li>
+                        <li>Figma system modeling</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 10 IoT Solutions -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">10</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad1)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>IoT Solutions</h3>
+                    <p>Secure edge calculation configurations mapping physical sensor points into database clusters.</p>
+                    <ul class="service-benefits">
+                        <li>Secure edge integrations</li>
+                        <li>Low-power network scaling</li>
+                        <li>Real-time telemetry feeds</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 11 Data Engineering -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">11</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad2)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Data Engineering</h3>
+                    <p>Automated database ETL pipelines consolidating disparate enterprise information registries.</p>
+                    <ul class="service-benefits">
+                        <li>High throughput data flow</li>
+                        <li>Database optimization</li>
+                        <li>Analytic vector modeling</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+
+                <!-- 12 Digital Transformation -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <span class="service-num">12</span>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
+                        <rect width="200" height="100" rx="8" fill="url(#cardGrad3)" />
+                        <circle cx="100" cy="50" r="20" fill="rgba(255,255,255,0.1)" />
+                    </svg>
+                    <h3>Digital Transformation</h3>
+                    <p>Comprehensive system audits, refactoring legacy databases into fluid microservice clusters.</p>
+                    <ul class="service-benefits">
+                        <li>Outdated system migration</li>
+                        <li>Automated data pipelines</li>
+                        <li>Operational cost savings</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read
+                            More</span></a>
+                </div>
+            </div>
+
+            <defs>
+                <linearGradient id="cardGrad1" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#0f2027" />
+                    <stop offset="100%" stop-color="#2c5364" />
+                </linearGradient>
+                <linearGradient id="cardGrad2" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#1f4037" />
+                    <stop offset="100%" stop-color="#99f2c8" />
+                </linearGradient>
+                <linearGradient id="cardGrad3" x1="0" y1="0" x2="200" y2="100">
+                    <stop offset="0%" stop-color="#654ea3" />
+                    <stop offset="100%" stop-color="#eaafc8" />
+                </linearGradient>
+            </defs>
+        </div>
+    </section>
+
+    <!-- FEATURED SERVICE SPOTLIGHT (AI Solutions) -->
+    <section class="featured-ai-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left: Large Image -->
+            <div class="lab-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <g class="svg-orbit-ring ring-outer">
+                            <rect x="150" y="100" width="200" height="200" rx="100" stroke="rgba(0, 240, 255, 0.2)"
+                                stroke-width="2" />
+                        </g>
+                        <circle cx="250" cy="200" r="50" fill="url(#aiSpotlightGlow)" />
+                        <line x1="250" y1="200" x2="100" y2="100" stroke="#00f0ff" stroke-width="1.5" />
+                        <line x1="250" y1="200" x2="400" y2="100" stroke="#8a2be2" stroke-width="1.5" />
+                        <circle cx="100" cy="100" r="8" fill="#00f0ff" />
+                        <circle cx="400" cy="100" r="8" fill="#8a2be2" />
+                        <defs>
+                            <radialGradient id="aiSpotlightGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="transparent" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="lab-right">
+                <span class="section-badge">SPOTLIGHT SOLUTION</span>
+                <h2 class="section-title">ARTIFICIAL INTELLIGENCE SOLUTIONS</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We deploy advanced, custom neural models designed to accelerate enterprise workflow routing. By
+                        configuring private vector systems, we enable organizations to utilize historical data reserves
+                        safely without leaking critical assets.
+                    </p>
+                    <p class="about-paragraph">
+                        Automation drives our structural designs. Our model setups automatically detect legacy process
+                        friction, routing transaction queues through high-throughput database nodes to preserve optimal
+                        operational flow.
+                    </p>
+                    <p class="about-paragraph">
+                        Security verification guidelines protect model deployment. Every system we compile isolates
+                        client data registries, utilizing zero-trust authentication tokens to verify system access keys.
+                    </p>
+                    <p class="about-paragraph">
+                        We prioritize long-term predictive value. Our engineers calibrate prediction pipelines, enabling
+                        corporate teams to identify market vectors and make computational decisions with high
+                        mathematical precision.
+                    </p>
+                </div>
+
+
+                <a href="contact.html" class="btn btn-primary btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        BOOK AI CONSULTATION
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR PROCESS TIMELINE -->
+    <section class="timeline-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">ENGINEERING TIMELINE</span>
+                <h2 class="section-title">OUR ENGINEERING PROCESS</h2>
+                <p class="section-subtitle">How we orchestrate development milestones, from initial discovery to active
+                    support loops.</p>
+            </div>
+
+            <div class="process-timeline-wrapper">
+                <div class="timeline-progress-track">
+                    <div class="timeline-progress-line" id="timelineProgressLine"></div>
+                </div>
+
+                <div class="process-timeline-steps">
+                    <!-- Step 1 -->
+                    <div class="timeline-step active" data-step="1">
+                        <div class="step-marker">Discovery</div>
+                        <h3>System Analysis</h3>
+                        <p>We audit legacy systems, mapping database query structures and server performance caps.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-step" data-step="2">
+                        <div class="step-marker">Research</div>
+                        <h3>Algorithmic Modeling</h3>
+                        <p>We research algorithmic custom choices, targeting cluster bottlenecks and security keys.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-step" data-step="3">
+                        <div class="step-marker">Architecture</div>
+                        <h3>Database Blueprinting</h3>
+                        <p>We design isolated microservice topologies and Kubernetes container models.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-step" data-step="4">
+                        <div class="step-marker">Development</div>
+                        <h3>High-Performance Coding</h3>
+                        <p>We write modular code, configuring secure API gates and data integration layers.</p>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="timeline-step" data-step="5">
+                        <div class="step-marker">Testing</div>
+                        <h3>Continuous Integration</h3>
+                        <p>We execute automated load tests and vulnerability checks to guarantee compliance.</p>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="timeline-step" data-step="6">
+                        <div class="step-marker">Deployment</div>
+                        <h3>Cluster Rollout</h3>
+                        <p>We deploy database nodes across multi-region configurations with zero downtime.</p>
+                    </div>
+                    <!-- Step 7 -->
+                    <div class="timeline-step" data-step="7">
+                        <div class="step-marker">Support</div>
+                        <h3>Continuous Optimization</h3>
+                        <p>We maintain active monitoring, updating server calibrations and model training values.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES WE USE GRID -->
+    <section class="tech-stack-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">TECH STACK</span>
+                <h2 class="section-title">TECHNOLOGIES WE USE</h2>
+                <p class="section-subtitle">We build our architectures using robust, industry-standard languages and
+                    databases.</p>
+            </div>
+
+            <div class="tech-stack-grid">
+                <!-- React -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </span>
+                    <h3>React</h3>
+                </div>
+                <!-- Vue -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 2L2 22h20L12 2z" />
+                        </svg>
+                    </span>
+                    <h3>Vue</h3>
+                </div>
+                <!-- Angular -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <polygon points="12 2 22 8.5 20 20 12 22 4 20 2 8.5 12 2" />
+                        </svg>
+                    </span>
+                    <h3>Angular</h3>
+                </div>
+                <!-- Node -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
+                        </svg>
+                    </span>
+                    <h3>Node.js</h3>
+                </div>
+                <!-- Python -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </span>
+                    <h3>Python</h3>
+                </div>
+                <!-- Java -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                        </svg>
+                    </span>
+                    <h3>Java</h3>
+                </div>
+                <!-- AWS -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </span>
+                    <h3>AWS</h3>
+                </div>
+                <!-- Azure -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        </svg>
+                    </span>
+                    <h3>Azure</h3>
+                </div>
+                <!-- Docker -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </span>
+                    <h3>Docker</h3>
+                </div>
+                <!-- Kubernetes -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2v20M2 12h20" />
+                        </svg>
+                    </span>
+                    <h3>Kubernetes</h3>
+                </div>
+                <!-- TensorFlow -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                        </svg>
+                    </span>
+                    <h3>TensorFlow</h3>
+                </div>
+                <!-- OpenAI -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="4" />
+                        </svg>
+                    </span>
+                    <h3>OpenAI</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- 1. DETAILED SERVICE SHOWCASE SECTION -->
+    <section class="service-showcase-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">DEEP DIVE</span>
+                <h2 class="section-title">DETAILED SERVICE SHOWCASE</h2>
+                <p class="section-subtitle">A detailed examination of our execution platforms, capability protocols, and
+                    technology integrations.</p>
+            </div>
+
+            <!-- Showcase 1: Enterprise Software (Image Left) -->
+            <div class="showcase-block grid-two-col">
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad1)" />
+                            <path d="M 50 150 Q 150 50 250 150 T 450 150" stroke="#00f0ff" stroke-width="4" fill="none"
+                                class="beacon-halo" />
+                            <circle cx="250" cy="150" r="10" fill="#ff007f" />
+                            <defs>
+                                <linearGradient id="shGrad1" x1="0" y1="0" x2="500" y2="300">
+                                    <stop offset="0%" stop-color="#0f2027" />
+                                    <stop offset="100%" stop-color="#2c5364" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="showcase-content-col">
+                    <h3>Enterprise Software Systems</h3>
+                    <p class="about-paragraph">We engineer custom backend architectures optimized for high transaction
+                        throughput. Our systems bypass typical speed blocks by compiling modular code lines that
+                        distribute queries dynamically across node grids.</p>
+                    <p class="about-paragraph">Security is integrated natively within our development steps. Databases
+                        pass threat scans to prevent unauthorized reads without impacting transactional processing
+                        times.</p>
+                    <p class="about-paragraph">Our teams restructure monolithic databases into microservice layers. This
+                        limits operational downtime, allowing continuous node upgrades without process latency.</p>
+                    <p class="about-paragraph">Each solution is built to sustain massive growth. We verify configuration
+                        limits through load simulation, preparing your enterprise software for market scaling.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase 2: AI (Image Right) -->
+            <div class="showcase-block grid-two-col alternate-layout">
+                <div class="showcase-content-col">
+                    <h3>Cognitive Artificial Intelligence</h3>
+                    <p class="about-paragraph">We design isolated vector architectures to train custom machine learning
+                        models safely under client custody. Our pipelines process massive private datasets to deliver
+                        accurate decision metrics in real-time.</p>
+                    <p class="about-paragraph">Hyper-automation streamlines routine administration. We implement
+                        intelligent document processing networks that parse input reports and categorize records
+                        automatically.</p>
+                    <p class="about-paragraph">Zero-trust security guides our AI configurations. Model access tokens are
+                        verified continuously to protect private parameters from external vector attacks.</p>
+                    <p class="about-paragraph">Our research team fine-tunes deep learning clusters. We optimize
+                        calculation parameters to achieve rapid training cycles and reduce compute overheads.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad2)" />
+                            <circle cx="250" cy="150" r="60" stroke="#00f0ff" stroke-width="2" />
+                            <circle cx="250" cy="150" r="80" stroke="#8a2be2" stroke-width="1.5"
+                                stroke-dasharray="5 5" />
+                            <circle cx="250" cy="150" r="10" fill="#ff007f" />
+                            <defs>
+                                <linearGradient id="shGrad2" x1="0" y1="0" x2="500" y2="300">
+                                    <stop offset="0%" stop-color="#1f4037" />
+                                    <stop offset="100%" stop-color="#99f2c8" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase 3: Cloud Infrastructure (Image Left) -->
+            <div class="showcase-block grid-two-col">
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad3)" />
+                            <circle cx="150" cy="150" r="40" fill="rgba(0, 240, 255, 0.2)" />
+                            <circle cx="350" cy="150" r="40" fill="rgba(138, 43, 226, 0.2)" />
+                            <line x1="150" y1="150" x2="350" y2="150" stroke="#ff007f" stroke-width="3" />
+                            <defs>
+                                <linearGradient id="shGrad3" x1="0" y1="0" x2="500" y2="300">
+                                    <stop offset="0%" stop-color="#654ea3" />
+                                    <stop offset="100%" stop-color="#eaafc8" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="showcase-content-col">
+                    <h3>Hybrid Cloud Orchestration</h3>
+                    <p class="about-paragraph">We configure highly available, multi-region cloud networks to protect
+                        system accessibility. Our setups balance query requests dynamically, routing data packages
+                        through the fastest edge channels.</p>
+                    <p class="about-paragraph">Automated container management prevents service drops. By deploying
+                        Kubernetes clusters with self-healing nodes, databases recover from failures within
+                        milliseconds.</p>
+                    <p class="about-paragraph">We optimize cloud resource usage profiles. By tuning processor limits and
+                        memory storage levels, we help organizations reduce active compute overhead costs.</p>
+                    <p class="about-paragraph">Our architectures support simple, incremental code integrations. Cloud
+                        pipelines are automated to trigger tests and deployment commands safely.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase 4: Cyber Security (Image Right) -->
+            <div class="showcase-block grid-two-col alternate-layout">
+                <div class="showcase-content-col">
+                    <h3>Zero-Trust Cyber Security</h3>
+                    <p class="about-paragraph">We integrate zero-trust authentication protocols across every database
+                        layer. User access keys are validated continuously to secure sensitive enterprise files against
+                        intrusion attempts.</p>
+                    <p class="about-paragraph">We encrypt communication channels using high-grade standards. Our
+                        algorithms prevent package intercepts, protecting data streams during distributed network
+                        transfers.</p>
+                    <p class="about-paragraph">Automated threat detection scans systems constantly. If anomalous file
+                        shifts are detected, nodes isolate affected registries and alert security managers.</p>
+                    <p class="about-paragraph">Our compliance audits verify data handling practices. We ensure setups
+                        satisfy strict ISO 27001 and SOC 2 requirements to protect corporate liabilities.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad1)" />
+                            <rect x="200" y="100" width="100" height="100" rx="12" stroke="#00f0ff" stroke-width="3" />
+                            <path d="M 250 80 L 250 100" stroke="#8a2be2" stroke-width="4" />
+                            <circle cx="250" cy="150" r="15" fill="#ff007f" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase 5: DevOps (Image Left) -->
+            <div class="showcase-block grid-two-col">
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad2)" />
+                            <path d="M 100 200 L 200 100 L 300 200 L 400 100" stroke="#00f0ff" stroke-width="4"
+                                fill="none" />
+                            <circle cx="200" cy="100" r="8" fill="#8a2be2" />
+                            <circle cx="300" cy="200" r="8" fill="#ff007f" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="showcase-content-col">
+                    <h3>DevOps & Automated CI/CD</h3>
+                    <p class="about-paragraph">We configure automated deployment pipelines that execute integration
+                        tests and container builds. This reduces manual configuration tasks, allowing teams to deliver
+                        updates rapidly.</p>
+                    <p class="about-paragraph">System monitoring configurations track server workloads. Real-time
+                        resource metrics alert engineers before memory saturation triggers node failure.</p>
+                    <p class="about-paragraph">Infrastructure as Code patterns simplify server setups. We write reusable
+                        setup scripts that construct identical server spaces across staging and production.</p>
+                    <p class="about-paragraph">We implement automated database migration checks. The pipelines verify
+                        that schema modifications are compatible with active data formats before applying changes.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Showcase 6: Data Engineering (Image Right) -->
+            <div class="showcase-block grid-two-col alternate-layout">
+                <div class="showcase-content-col">
+                    <h3>Data Engineering & Pipelines</h3>
+                    <p class="about-paragraph">We develop automated data integration pipelines that ingest information
+                        from disparate databases. Our processing models format records to prepare datasets for analytics
+                        studies.</p>
+                    <p class="about-paragraph">High-throughput data storage structures scale dynamically. We build
+                        database nodes that index billions of registry items without processing slowdowns.</p>
+                    <p class="about-paragraph">Real-time analytical vector maps track company indicators. Leaders check
+                        dashboards to analyze transaction values and operational margins instantly.</p>
+                    <p class="about-paragraph">Our systems maintain structural data compliance. Database configurations
+                        partition records automatically to meet geographical privacy regulations.</p>
+
+                    <div class="hero-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic"><span class="btn-inner">Book
+                                Consultation</span></a>
+                        <a href="#" class="btn btn-secondary btn-magnetic"><span class="btn-inner">Learn More</span></a>
+                    </div>
+                </div>
+                <div class="showcase-image-col">
+                    <div class="about-image-card">
+                        <div class="card-glow-border"></div>
+                        <svg viewBox="0 0 500 300" fill="none" class="about-svg-graphic"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="500" height="300" rx="16" fill="url(#shGrad3)" />
+                            <rect x="100" y="80" width="80" height="140" rx="8" fill="rgba(0, 240, 255, 0.2)" />
+                            <rect x="210" y="80" width="80" height="140" rx="8" fill="rgba(138, 43, 226, 0.2)" />
+                            <rect x="320" y="80" width="80" height="140" rx="8" fill="rgba(255, 0, 127, 0.2)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INDUSTRIES WE SERVE SECTION -->
+    <section class="industries-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">GLOBAL SECTORS</span>
+                <h2 class="section-title">INDUSTRIES WE SERVE</h2>
+                <p class="section-subtitle">We deploy custom enterprise technology solutions across key commercial
+                    sectors worldwide.</p>
+            </div>
+
+            <div class="services-grid industries-grid">
+                <!-- Healthcare -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Securing electronic medical records and configuring automated clinic workflow routing systems.
+                    </p>
+                </div>
+
+                <!-- Banking & Finance -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3>Banking & Finance</h3>
+                    <p>High-frequency transaction ledgers and zero-trust verification gateways for private assets.</p>
+                </div>
+
+                <!-- Retail & E-Commerce -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                    </div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p>Auto-scaling inventory databases, multi-region checkout nodes, and custom shopping meshes.</p>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Edge IoT device integrations and real-time telemetry monitoring for production assembly lines.
+                    </p>
+                </div>
+
+                <!-- Education -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                        </svg>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Scalable online course delivery platforms and interactive dashboard analytics for grading.</p>
+                </div>
+
+                <!-- Logistics -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                    </div>
+                    <h3>Logistics</h3>
+                    <p>Automated database routing networks tracking package shipments across international channels.</p>
+                </div>
+
+                <!-- Government -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Government</h3>
+                    <p>Secure public database configurations and compliant zero-trust access controls for files.</p>
+                </div>
+
+                <!-- Real Estate -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <p>High-volume listing database engines and interactive virtual tour rendering assets.</p>
+                </div>
+
+                <!-- Travel & Hospitality -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        </svg>
+                    </div>
+                    <h3>Travel & Hospitality</h3>
+                    <p>Real-time room reservation database systems and global payment settlement integrations.</p>
+                </div>
+
+                <!-- Media & Entertainment -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                            <line x1="7" y1="2" x2="7" y2="22" />
+                            <line x1="17" y1="2" x2="17" y2="22" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <line x1="2" y1="7" x2="7" y2="7" />
+                            <line x1="2" y1="17" x2="7" y2="17" />
+                            <line x1="17" y1="17" x2="22" y2="17" />
+                            <line x1="17" y1="7" x2="22" y2="7" />
+                        </svg>
+                    </div>
+                    <h3>Media & Entertainment</h3>
+                    <p>Low-latency video streaming pipelines and automated asset content delivery networks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SUCCESS STORIES SECTION (Case Studies) -->
+    <section class="projects-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">CASE STUDIES</span>
+                <h2 class="section-title">SUCCESS STORIES</h2>
+                <p class="section-subtitle">Examine our real-world project deployments and enterprise client
+                    satisfaction results.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Case Study 1 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-1"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">FINANCE SECTOR</span>
+                        <h3>Genesis AI Ledger</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Slow validation times of banking ledger
+                            database queries under query spikes.</p>
+                        <p class="project-result"><strong>Result:</strong> Configured a microservice cluster, decreasing
+                            validation latency to 20ms and securing SOC 2 compliance.</p>
+                        <span class="project-tags">Java • Kafka • AWS</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-2"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">HEALTHCARE</span>
+                        <h3>CloudMesh Portal</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Transfer of medical records across
+                            local clinics was slow and prone to packet losses.</p>
+                        <p class="project-result"><strong>Result:</strong> Deployed a secure, encrypted API routing
+                            mesh, accelerating data transfer speeds by 400%.</p>
+                        <span class="project-tags">React • Go • Kubernetes</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-3"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">LOGISTICS</span>
+                        <h3>Aegis Database</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Package tracking updates failed during
+                            global shipping surges.</p>
+                        <p class="project-result"><strong>Result:</strong> Programmed auto-scaling database nodes,
+                            securing 100% update delivery rates during peak load days.</p>
+                        <span class="project-tags">Python • Spark • Docker</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-4"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">RETAIL</span>
+                        <h3>OmniCheckout Mesh</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Checkout servers collapsed during
+                            online holiday sales events.</p>
+                        <p class="project-result"><strong>Result:</strong> Set up multi-region cloud load balancers,
+                            maintaining zero downtime across 10 million transactions.</p>
+                        <span class="project-tags">Node.js • PostgreSQL • Azure</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- Case Study 5 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-5"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">MANUFACTURING</span>
+                        <h3>Apex IoT Core</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Factory assembly sensors failed to
+                            route telemetry to central servers.</p>
+                        <p class="project-result"><strong>Result:</strong> Set up secure edge device clusters, allowing
+                            real-time latency monitoring of equipment.</p>
+                        <span class="project-tags">IoT • TensorFlow • GCP</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- Case Study 6 -->
+                <div class="project-card">
+                    <div class="project-gradient-bg bg-proj-6"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">GOVERNMENT</span>
+                        <h3>Secure Registry</h3>
+                        <p class="project-challenge"><strong>Challenge:</strong> Public registry databases failed
+                            security scans for citizen data access.</p>
+                        <p class="project-result"><strong>Result:</strong> Integrated end-to-end Vault key
+                            configurations, achieving ISO 27001 audit standards.</p>
+                        <span class="project-tags">Go • Vault • OpenID</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">Read Case
+                                Study</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHY OUR SERVICES SECTION -->
+    <section class="why-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left Side: Custom illustration -->
+            <div class="why-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <circle cx="250" cy="200" r="80" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" />
+                        <line x1="250" y1="120" x2="250" y2="280" stroke="#8a2be2" stroke-width="2" />
+                        <line x1="170" y1="200" x2="330" y2="200" stroke="#ff007f" stroke-width="2" />
+                        <circle cx="250" cy="200" r="12" fill="#00f0ff" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right Side: Copy -->
+            <div class="why-right">
+                <span class="section-badge">OUR ADVANTAGES</span>
+                <h2 class="section-title">WHY ORGANIZATIONS CHOOSE IT SERVICE</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We merge computer science research with creative engineering to deploy reliable software
+                        platforms. Our architectures are audited to guarantee sub-millisecond query execution speeds
+                        under load.
+                    </p>
+                    <p class="about-paragraph">
+                        Zero-trust security compliance is a baseline design rule. We configure private key validation
+                        tracks at every database layer, protecting critical registries from unexpected external leaks.
+                    </p>
+                    <p class="about-paragraph">
+                        Our hybrid cloud setups scale capacities dynamically. By writing automated node monitoring
+                        scripts, we prevent server crashes during high traffic surges to support continuous transaction
+                        rates.
+                    </p>
+                    <p class="about-paragraph">
+                        We prioritize long-term corporate relationships. We provide 24/7 technical incident coverage,
+                        database calibration updates, and recurring threat scans to keep your platforms performant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICE COMPARISON SECTION -->
+    <section class="comparison-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">COMPARISON</span>
+                <h2 class="section-title">TRADITIONAL IT VS SOLUTIONS</h2>
+                <p class="section-subtitle">Examine our speed rates, security calibrations, and node scaling structures
+                    against legacy models.</p>
+            </div>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>METRICS</th>
+                            <th>TRADITIONAL IT</th>
+                            <th>ANTIGRAVITY SOLUTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Speed</strong></td>
+                            <td class="traditional-cell">High latency database query queues during spikes.</td>
+                            <td class="antigravity-cell">Sub-millisecond query processing utilizing microservice grids.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security</strong></td>
+                            <td class="traditional-cell">Perimeter-only firewall blocks prone to internal leaks.</td>
+                            <td class="antigravity-cell">Zero-trust authentication keys verified at every database
+                                layer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scalability</strong></td>
+                            <td class="traditional-cell">Manual hardware resource configurations requiring downtime.
+                            </td>
+                            <td class="antigravity-cell">Self-healing Kubernetes node setups scaling dynamically.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Innovation</strong></td>
+                            <td class="traditional-cell">Standard legacy databases avoiding neural workflows.</td>
+                            <td class="antigravity-cell">Private vector learning configurations optimizing queue routes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Automation</strong></td>
+                            <td class="traditional-cell">Manual software installation checklists prone to user errors.
+                            </td>
+                            <td class="antigravity-cell">Automated CI/CD pipelines executing integration validation.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Support</strong></td>
+                            <td class="traditional-cell">Business-hours call ticket lists with slow response.</td>
+                            <td class="antigravity-cell">24/7 technical incident coverage and recurring security audits.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CLIENT TESTIMONIALS SECTION -->
+    <section class="testimonials-carousel-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">FEEDBACK</span>
+                <h2 class="section-title">CLIENT TESTIMONIALS</h2>
+                <p class="section-subtitle">Listen to what engineering leads and executives say about our scalable
+                    software designs.</p>
+            </div>
+
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-track" id="testimonialTrack">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"ANTIGRAVITY decreased our banking ledger queries latency to 20ms,
+                            securing zero-downtime during peak transactions."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-1"></div>
+                            <div class="client-details">
+                                <h4>Raymond Vance</h4>
+                                <p>CTO, FinBank</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"The team deployed a secure API routing mesh that simplified
+                            medical record transfers, ensuring 100% information protection."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-2"></div>
+                            <div class="client-details">
+                                <h4>Sarah Jenkins</h4>
+                                <p>Director, HealthCore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Auto-scaling database configurations prevented server crashes
+                            during our shipping rushes. Highly recommend."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-3"></div>
+                            <div class="client-details">
+                                <h4>Viktor Kross</h4>
+                                <p>Operations VP, CargoMesh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Multi-region cloud load balancing maintained checkout uptime
+                            across millions of holiday purchases. A robust partner."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-1"></div>
+                            <div class="client-details">
+                                <h4>Marcus Sterling</h4>
+                                <p>IT Architect, OmniMarket</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"Edge IoT setups allowed real-time telemetry monitoring, reducing
+                            factory assembly tracking delays."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-2"></div>
+                            <div class="client-details">
+                                <h4>Dr. Linus Cho</h4>
+                                <p>AI Lead, TechFactory</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="testimonial-card">
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-quote">"End-to-end Vault key setups enabled our public registries
+                            databases to pass strict security compliance audits."</p>
+                        <div class="client-info-row">
+                            <div class="client-avatar bg-avatar-3"></div>
+                            <div class="client-details">
+                                <h4>Elena Rostova</h4>
+                                <p>Director, SecureGov Registry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-control-btn prev-btn" id="prevBtn" aria-label="Previous Testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <button class="carousel-control-btn next-btn" id="nextBtn" aria-label="Next Testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ ACCORDION SECTION -->
+    <section class="faq-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+                <p class="section-subtitle">Find immediate answers to questions about our software development setups
+                    and database options.</p>
+            </div>
+
+            <div class="faq-accordion-grid">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How long does a typical project development cycle take?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Project timelines depend on complexity. A custom microservice migration typically takes 12 to
+                            16 weeks, while a private vector AI setup requires 8 to 12 weeks of configuration.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Do you provide full-service cloud migration?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We configure multi-region migrations on AWS, Azure, and Google Cloud, migrating legacy
+                            files into container nodes with zero uptime impact.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <button class="faq-trigger" style="display:none;"></button> <!-- Spacer/Formatting safeguard -->
+
+                <!-- FAQ 3 Real -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Can you modernize monolithic legacy software?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We audit outdated codebases and partition legacy databases into modular, API-connected
+                            Kubernetes clusters to decrease system resource costs.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Do you build custom enterprise mobile applications?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We build native iOS and Android applications incorporating offline synchronization and
+                            end-to-end data encryption pipelines.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How do you ensure cybersecurity compliance?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>We deploy zero-trust verification channels. Communication nodes authenticate data keys
+                            constantly, matching SOC 2 security compliance guidelines.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Do you provide post-deployment system maintenance?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We offer 24/7 technical incident coverage, database calibration checks, and quarterly
+                            threat reviews over the software life cycle.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>What industries do you specialize in?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>We specialize in Banking & Finance, Healthcare, E-Commerce, Manufacturing, Government,
+                            Logistics, and Media CDN networks.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Can you integrate custom AI models into existing legacy networks?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We connect private vector models to legacy database databases via secure API gateways to
+                            classify datasets automatically.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>What technologies do you use?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Our core stack includes Java, Python, Go, React, Kafka, Docker, Kubernetes, AWS, and
+                            TensorFlow.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Do you sign non-disclosure agreements (NDAs)?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes. We sign non-disclosure agreements before reviewing technical architectures to protect
+                            private trade configurations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How does your development process work?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>We follow a 7-step process: System Discovery, Model Research, Blueprints Architecture, coding
+                            Development, CI Testing, Node Deployment, and Support.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How can we get started on a project?</span>
+                        <span class="faq-icon-toggle"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Contact our engineers via our consultation form. We will schedule a system audit to review
+                            your database query requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FINAL CALL TO ACTION (CTA Banner) -->
+    <section class="cta-banner-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="cta-banner-card">
+                <div class="cta-aurora-bg"></div>
+                <div class="cta-noise-overlay"></div>
+                <div class="card-glow-border"></div>
+
+                <div class="cta-content">
+                    <h2 class="cta-heading">LET'S BUILD YOUR NEXT DIGITAL SUCCESS STORY</h2>
+                    <p class="cta-paragraph">
+                        Engage our cognitive technology teams to audit your software systems, optimize cluster setups,
+                        and implement modern cloud architectures. Let's orchestrate tomorrow.
+                    </p>
+
+                    <div class="cta-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">
+                                START YOUR PROJECT
+                                <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">SCHEDULE A CONSULTATION</span>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">CONTACT OUR TEAM</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="section-container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                         <a href="#" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                </a>
+                <p class="footer-desc">
+                    Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
+                    hyper-scalable multi-cloud architectures.
+                </p>
+                <!-- Social Icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Enterprise Software</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Cloud Integration</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">UI UX Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+<div class="footer-links-col">
+    <h4>Contact Information</h4>
+
+    <ul class="contact-info">
+        <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@stacklyroboticsautomation.com">
+                📧 info@stacklyITSERVICE.com
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+919876543210">
+               📞 +91 98765 43210
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="map-pin"></i>
+           📍 Bengaluru, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+            <!-- Newsletter -->
+            <div class="footer-news-col">
+                <h4>Subscribe</h4>
+                <p>Stay informed with our latest research and cognitive breakthroughs.</p>
+                <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Subscribed to insights.');">
+                    <input type="email" class="news-input" placeholder="name@company.com" required>
+                    <button type="submit" class="btn btn-primary news-btn" aria-label="Subscribe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div class="sub-footer">
+            <div class="section-container sub-footer-container">
+                <span class="copyright">© 2026 Stackly IT Service. All rights reserved.</span>
+                <div class="sub-footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="auth-modal" id="loginModal">
+
+        <div class="auth-box">
+
+            <div class="auth-left">
+
+                <span class="close" onclick="closeAuth()">&times;</span>
+
+                <h2>Welcome Back</h2>
+
+                <!-- LOGIN -->
+                <div id="loginBox">
+
+                    <select id="loginRole">
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" id="loginEmail" placeholder="Email Address">
+
+                    <input type="password" id="loginPassword" placeholder="Password">
+
+                    <div class="remember-wrap">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button onclick="loginUser()">
+                        Log In
+                    </button>
+
+                    <p onclick="showForgot()">
+                        Forgot Password?
+                    </p>
+
+                    <p onclick="showSignup()">
+                        Don't have an account? Sign Up
+                    </p>
+
+                </div>
+
+                <!-- SIGNUP -->
+                <div id="signupBox" style="display:none;">
+
+                    <input type="text" id="signupName" placeholder="Full Name">
+
+                    <input type="email" id="signupEmail" placeholder="Email Address">
+
+                    <input type="password" id="signupPassword" placeholder="Password">
+
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button onclick="signupUser()">
+                        Create Account
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+                <!-- FORGOT PASSWORD -->
+                <div id="forgotBox" style="display:none;">
+
+                    <input type="email" id="forgotEmail" placeholder="Enter Your Email">
+
+                    <button onclick="forgotPassword()">
+                        Reset Password
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+
+</html>

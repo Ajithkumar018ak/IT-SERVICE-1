@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio </title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Explore the ANTIGRAVITY portfolio. Inspect our high-performance AI implementations, cloud infrastructure orchestrations, secure software platforms, and robotics automation projects.">
+    <meta name="keywords"
+        content="Enterprise Technology Portfolio, AI Systems Projects, Custom Web Apps, Mobile Development Showcase, Cyber Security Implementations, DevOps Pipeline Projects">
+    <meta name="author" content="ANTIGRAVITY Group">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading portfolio-page">
+
+    <!-- Custom Cursor & Background Glow Spotlights -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- PREMIUM LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="loader-aurora"></div>
+        <div class="loader-noise"></div>
+        <div class="loader-particles" id="loaderParticles"></div>
+
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <div class="loader-glow-ring"></div>
+                <svg class="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L85 75H15L50 15Z" stroke="url(#logoGlow)" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M50 35L70 70H30L50 35Z" fill="url(#logoFill)" />
+                    <circle cx="50" cy="50" r="8" fill="#00f0ff" class="logo-core" />
+                    <defs>
+                        <linearGradient id="logoGlow" x1="15" y1="15" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00f0ff" />
+                            <stop offset="50%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <linearGradient id="logoFill" x1="30" y1="35" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                            <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2 class="loader-title">IT SERVICE</h2>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="loader-stats">
+                <span class="loader-percentage" id="loaderPercentage">0%</span>
+                <span class="loader-status-text" id="loaderStatusText">Loading Experience...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM NAVBAR -->
+    <header class="navbar" id="mainNavbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                 <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+            </a>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-noise"></div>
+        <div class="mobile-overlay-container">
+            <nav class="mobile-nav">
+                <ul class="mobile-list">
+                    <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
+                    <li class="mobile-item"><a href="about.html" class="mobile-link">About</a></li>
+                    <li class="mobile-item"><a href="services.html" class="mobile-link">Services</a></li>
+                    <li class="mobile-item"><a href="portfolio.html" class="mobile-link active">Portfolio</a></li>
+                    <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
+                    <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO HERO -->
+    <main class="hero-section" id="heroSection">
+        <div class="hero-aurora-bg"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow-spotlight" id="heroSpotlight"></div>
+        <div class="hero-noise-texture"></div>
+
+        <div class="hero-container">
+            <div class="hero-left">
+                <span class="hero-badge">PROJECT PORTFOLIO Showcase</span>
+                <h1 class="hero-heading">
+                    <span class="word-wrapper"><span class="word">VISUALIZING</span></span>
+                    <span class="word-wrapper"><span class="word-glow">ARCHITECTURAL</span></span>
+                    <span class="word-wrapper"><span class="word">INTELLECT.</span></span>
+                    <span class="word-wrapper"><span class="word">DESIGNING</span></span>
+                    <span class="word-wrapper"><span class="word">DIGITAL</span></span>
+                    <span class="word-wrapper"><span class="word">DESTINIES.</span></span>
+                </h1>
+
+                <p class="hero-subheading">
+                    IT deploys advanced cognitive artificial intelligence networks. We combine private vector
+                    data structures with custom neural models, training learning nodes safely under client custody to
+                    optimize complex transaction flows.
+                </p>
+                <p class="hero-subheading">
+                    Our hybrid cloud architectures route system assets across global regions dynamically. By configuring
+                    self-healing Kubernetes node setups and automated load balancing, we secure zero-latency performance
+                    under heavy query spikes.
+                </p>
+                <p class="hero-subheading">
+                    We engineer robust, modular enterprise software systems designed to scale alongside commercial
+                    growth. Our databases consolidate disparate registries safely, facilitating consolidated decisions
+                    and real-time telemetry.
+                </p>
+                <p class="hero-subheading">
+                    We implement industrial edge calculations and robotics automation scripts to bypass operational
+                    bottlenecks. By linking physical sensor points into database clusters, we optimize production line
+                    workflows.
+                </p>
+
+                <div class="hero-button-group">
+                    <a href="#portfolioGridSection" class="btn btn-primary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">VIEW PROJECTS</span>
+                    </a>
+                    <a href="#portfolioFilterBar" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">FILTER WORK</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">CONTACT TEAM</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+
+                        <div class="hero-core-graphic">
+                            <!-- SVG representing AI dashboard UI / control panel -->
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="quantum-node-svg">
+                                <rect x="30" y="30" width="340" height="340" rx="16" stroke="url(#heroPortGrad)"
+                                    stroke-width="2" />
+                                <rect x="50" y="50" width="80" height="80" rx="8" fill="rgba(0, 240, 255, 0.1)" />
+                                <rect x="150" y="50" width="200" height="80" rx="8" fill="rgba(255, 255, 255, 0.02)" />
+                                <rect x="50" y="150" width="200" height="200" rx="8" fill="rgba(138, 43, 226, 0.1)" />
+                                <rect x="270" y="150" width="80" height="200" rx="8" fill="rgba(255, 0, 127, 0.1)" />
+                                <defs>
+                                    <linearGradient id="heroPortGrad" x1="30" y1="30" x2="370" y2="370">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#8a2be2" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse-icon">
+                <span class="mouse-wheel"></span>
+            </div>
+            <span class="scroll-text">EXPLORE WORK</span>
+        </div>
+    </main>
+
+    <!-- FILTER BAR SECTION -->
+    <div class="filter-bar-section" id="portfolioFilterBar">
+        <div class="section-container">
+            <div class="filter-wrapper">
+                <ul class="filter-list">
+                    <li><button class="filter-btn active" data-filter="all">All</button></li>
+                    <li><button class="filter-btn" data-filter="ai-systems">AI Systems</button></li>
+                    <li><button class="filter-btn" data-filter="web-apps">Web Apps</button></li>
+                    <li><button class="filter-btn" data-filter="mobile-apps">Mobile Apps</button></li>
+                    <li><button class="filter-btn" data-filter="cloud-infrastructure">Cloud Infrastructure</button></li>
+                    <li><button class="filter-btn" data-filter="cyber-security">Cyber Security</button></li>
+                    <li><button class="filter-btn" data-filter="iot">IoT</button></li>
+                </ul>
+                <div class="filter-underline" id="filterUnderline"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT GRID SECTION -->
+    <section class="portfolio-grid-section section-padding" id="portfolioGridSection">
+        <div class="section-container">
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <!-- 01 AI Automation Platform -->
+                <div class="project-card reveal-on-scroll" data-category="ai-systems">
+                    <div class="project-gradient-bg bg-proj-1"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">AI SYSTEMS</span>
+                        <h3>AI Automation Platform</h3>
+                        <p class="project-challenge">Automating document classification and routing systems safely using
+                            secure private vector nodes.</p>
+                        <span class="project-tags">Python • PyTorch • Pinecone</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 02 Cloud Monitoring System -->
+                <div class="project-card reveal-on-scroll" data-category="cloud-infrastructure">
+                    <div class="project-gradient-bg bg-proj-2"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">CLOUD INFRASTRUCTURE</span>
+                        <h3>Cloud Monitoring System</h3>
+                        <p class="project-challenge">Real-time CPU workload analytics and container monitoring scripts
+                            for multi-region setups.</p>
+                        <span class="project-tags">Go • Prometheus • Grafana</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 03 Enterprise ERP System -->
+                <div class="project-card reveal-on-scroll" data-category="web-apps">
+                    <div class="project-gradient-bg bg-proj-3"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">WEB APPS</span>
+                        <h3>Enterprise ERP System</h3>
+                        <p class="project-challenge">Scaling inventory databases into modular, API-connected Kubernetes
+                            microservices.</p>
+                        <span class="project-tags">React • Node.js • PostgreSQL</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 04 AI Chatbot Engine -->
+                <div class="project-card reveal-on-scroll" data-category="ai-systems">
+                    <div class="project-gradient-bg bg-proj-4"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">AI SYSTEMS</span>
+                        <h3>AI Chatbot Engine</h3>
+                        <p class="project-challenge">Deploying secure private learning layers to categorize transaction
+                            queries in real-time.</p>
+                        <span class="project-tags">Python • LangChain • FastAPI</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 05 IoT Smart Factory -->
+                <div class="project-card reveal-on-scroll" data-category="iot">
+                    <div class="project-gradient-bg bg-proj-5"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">IoT</span>
+                        <h3>IoT Smart Factory</h3>
+                        <p class="project-challenge">Linking assembly line sensor points into real-time telemetry
+                            pipelines.</p>
+                        <span class="project-tags">IoT • C++ • AWS IoT</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 06 Cyber Security Platform -->
+                <div class="project-card reveal-on-scroll" data-category="cyber-security">
+                    <div class="project-gradient-bg bg-proj-6"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">CYBER SECURITY</span>
+                        <h3>Cyber Security Platform</h3>
+                        <p class="project-challenge">Integrating zero-trust key verification systems across enterprise
+                            data layers.</p>
+                        <span class="project-tags">Go • Vault • TLS 1.3</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 07 Data Analytics Engine -->
+                <div class="project-card reveal-on-scroll" data-category="web-apps">
+                    <div class="project-gradient-bg bg-proj-1"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">WEB APPS</span>
+                        <h3>Data Analytics Engine</h3>
+                        <p class="project-challenge">Consolidating disparate data pools, processing ETL flows for
+                            instant leaderboards.</p>
+                        <span class="project-tags">Apache Spark • Snowflake • dbt</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 08 Banking App UI System -->
+                <div class="project-card reveal-on-scroll" data-category="mobile-apps">
+                    <div class="project-gradient-bg bg-proj-2"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">MOBILE APPS</span>
+                        <h3>Banking App UI System</h3>
+                        <p class="project-challenge">Developing native iOS and Android apps with off-line syncing and
+                            biometric keys.</p>
+                        <span class="project-tags">Flutter • Dart • SQLite</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 09 DevOps Pipeline System -->
+                <div class="project-card reveal-on-scroll" data-category="cloud-infrastructure">
+                    <div class="project-gradient-bg bg-proj-3"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">CLOUD INFRASTRUCTURE</span>
+                        <h3>DevOps Pipeline System</h3>
+                        <p class="project-challenge">Structuring Jenkins CI/CD setups to compile and test node
+                            deployments automatically.</p>
+                        <span class="project-tags">Jenkins • Docker • Ansible</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 10 Robotics Control Dashboard -->
+                <div class="project-card reveal-on-scroll" data-category="iot">
+                    <div class="project-gradient-bg bg-proj-4"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">IoT</span>
+                        <h3>Robotics Control Dashboard</h3>
+                        <p class="project-challenge">Configuring low-latency dashboards to monitor arm positioning
+                            sensors in manufacturing.</p>
+                        <span class="project-tags">React • Node.js • WebSockets</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 11 Recommendation AI Engine -->
+                <div class="project-card reveal-on-scroll" data-category="ai-systems">
+                    <div class="project-gradient-bg bg-proj-5"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">AI SYSTEMS</span>
+                        <h3>Recommendation AI Engine</h3>
+                        <p class="project-challenge">Optimizing user product indexing metrics utilizing collaborative
+                            training algorithms.</p>
+                        <span class="project-tags">Python • TensorFlow • GCP</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+                <!-- 12 Digital Transformation Suite -->
+                <div class="project-card reveal-on-scroll" data-category="web-apps">
+                    <div class="project-gradient-bg bg-proj-6"></div>
+                    <div class="project-card-content">
+                        <span class="project-category">WEB APPS</span>
+                        <h3>Digital Transformation Suite</h3>
+                        <p class="project-challenge">Transitioning corporate file registries to secure, searchable cloud
+                            systems.</p>
+                        <span class="project-tags">Vue • Node.js • AWS</span>
+                        <a href="#" class="btn btn-outline btn-magnetic read-more-btn"><span class="btn-inner">View Case
+                                Study</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED CASE STUDY SECTION -->
+    <section class="featured-case-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left: Cinematic Image -->
+            <div class="lab-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <g class="svg-orbit-ring ring-outer">
+                            <rect x="150" y="100" width="200" height="200" rx="100" stroke="rgba(0, 240, 255, 0.2)"
+                                stroke-width="2" />
+                        </g>
+                        <circle cx="250" cy="200" r="40" fill="url(#caseSpotlightGlow)" />
+                        <!-- Core link mesh -->
+                        <line x1="250" y1="200" x2="120" y2="120" stroke="#00f0ff" stroke-width="2" />
+                        <line x1="250" y1="200" x2="380" y2="120" stroke="#8a2be2" stroke-width="2" />
+                        <circle cx="120" cy="120" r="6" fill="#00f0ff" />
+                        <circle cx="380" cy="120" r="6" fill="#8a2be2" />
+                        <defs>
+                            <radialGradient id="caseSpotlightGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="transparent" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="lab-right">
+                <span class="section-badge">FEATURED STUDY</span>
+                <h2 class="section-title">AI ENTERPRISE INTELLIGENCE PLATFORM</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We developed a comprehensive neural processing platform that automatically categorizes billing
+                        registries and routes data across cloud servers dynamically, reducing system configuration
+                        overheads.
+                    </p>
+                    <p class="about-paragraph">
+                        Our cloud structure scales resource capacity based on traffic spikes. When query loads surge,
+                        self-healing nodes spawn container units instantly to prevent performance lag.
+                    </p>
+                    <p class="about-paragraph">
+                        Zero-trust keys verify active database queries. The platform integrates end-to-end encryption
+                        standards, matching security parameters for banking ledgers and healthcare record databases.
+                    </p>
+                    <p class="about-paragraph">
+                        Our customer-first delivery guarantees reliable system integration. We configure secure API
+                        portals, helping enterprise operations transition legacy systems without operational downtime.
+                    </p>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="portfolio-metrics-grid">
+                    <div class="metric-column">
+                        <span class="metric-val">70%</span>
+                        <span class="metric-label">Efficiency Increase</span>
+                    </div>
+                    <div class="metric-column">
+                        <span class="metric-val">99.9%</span>
+                        <span class="metric-label">Uptime</span>
+                    </div>
+                    <div class="metric-column">
+                        <span class="metric-val">3x</span>
+                        <span class="metric-label">Faster Processing</span>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        EXPLORE CASE STUDY
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGIES SECTION -->
+    <section class="tech-stack-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">INTEGRATIONS</span>
+                <h2 class="section-title">TECHNOLOGIES WE EMBED</h2>
+                <p class="section-subtitle">We build scalable custom portfolios utilizing robust databases and modern
+                    coding frameworks.</p>
+            </div>
+
+            <div class="tech-stack-grid">
+                <!-- React -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </span>
+                    <h3>React</h3>
+                </div>
+                <!-- Vue -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 2L2 22h20L12 2z" />
+                        </svg>
+                    </span>
+                    <h3>Vue</h3>
+                </div>
+                <!-- Node -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M12 2L2 7v10l10 5 10-5V7L12 2z" />
+                        </svg>
+                    </span>
+                    <h3>Node.js</h3>
+                </div>
+                <!-- Python -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </span>
+                    <h3>Python</h3>
+                </div>
+                <!-- AWS -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </span>
+                    <h3>AWS</h3>
+                </div>
+                <!-- Azure -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        </svg>
+                    </span>
+                    <h3>Azure</h3>
+                </div>
+                <!-- Docker -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </span>
+                    <h3>Docker</h3>
+                </div>
+                <!-- Kubernetes -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2v20M2 12h20" />
+                        </svg>
+                    </span>
+                    <h3>Kubernetes</h3>
+                </div>
+                <!-- TensorFlow -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path
+                                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                        </svg>
+                    </span>
+                    <h3>TensorFlow</h3>
+                </div>
+                <!-- OpenAI -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="4" />
+                        </svg>
+                    </span>
+                    <h3>OpenAI</h3>
+                </div>
+                <!-- MongoDB -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <rect x="8" y="8" width="8" height="8" rx="1" />
+                        </svg>
+                    </span>
+                    <h3>MongoDB</h3>
+                </div>
+                <!-- PostgreSQL -->
+                <div class="tech-badge btn-magnetic">
+                    <span class="tech-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="M12 6v12M6 12h12" />
+                        </svg>
+                    </span>
+                    <h3>PostgreSQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- 13. PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="section-container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                        <a href="#" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                </a>
+                <p class="footer-desc">
+                    Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
+                    hyper-scalable multi-cloud architectures.
+                </p>
+                <!-- Social Icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Enterprise Software</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Cloud Integration</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">UI UX Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+<div class="footer-links-col">
+    <h4>Contact Information</h4>
+
+    <ul class="contact-info">
+        <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@stacklyroboticsautomation.com">
+                📧 info@stacklyITSERVICE.com
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+919876543210">
+               📞 +91 98765 43210
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="map-pin"></i>
+           📍 Bengaluru, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+            <!-- Newsletter -->
+            <div class="footer-news-col">
+                <h4>Subscribe</h4>
+                <p>Stay informed with our latest research and cognitive breakthroughs.</p>
+                <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Subscribed to insights.');">
+                    <input type="email" class="news-input" placeholder="name@company.com" required>
+                    <button type="submit" class="btn btn-primary news-btn" aria-label="Subscribe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div class="sub-footer">
+            <div class="section-container sub-footer-container">
+                <span class="copyright">© 2026 Stackly IT Service. All rights reserved.</span>
+                <div class="sub-footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="auth-modal" id="loginModal">
+
+        <div class="auth-box">
+
+            <div class="auth-left">
+
+                <span class="close" onclick="closeAuth()">&times;</span>
+
+                <h2>Welcome Back</h2>
+
+                <!-- LOGIN -->
+                <div id="loginBox">
+
+                    <select id="loginRole">
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" id="loginEmail" placeholder="Email Address">
+
+                    <input type="password" id="loginPassword" placeholder="Password">
+
+                    <div class="remember-wrap">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button onclick="loginUser()">
+                        Log In
+                    </button>
+
+                    <p onclick="showForgot()">
+                        Forgot Password?
+                    </p>
+
+                    <p onclick="showSignup()">
+                        Don't have an account? Sign Up
+                    </p>
+
+                </div>
+
+                <!-- SIGNUP -->
+                <div id="signupBox" style="display:none;">
+
+                    <input type="text" id="signupName" placeholder="Full Name">
+
+                    <input type="email" id="signupEmail" placeholder="Email Address">
+
+                    <input type="password" id="signupPassword" placeholder="Password">
+
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button onclick="signupUser()">
+                        Create Account
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+                <!-- FORGOT PASSWORD -->
+                <div id="forgotBox" style="display:none;">
+
+                    <input type="email" id="forgotEmail" placeholder="Enter Your Email">
+
+                    <button onclick="forgotPassword()">
+                        Reset Password
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+
+</html>

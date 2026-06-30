@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us </title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description"
+        content="Discover the ANTIGRAVITY journey. We are a premium global technology company specializing in enterprise software, cloud scaling, and cognitive AI engineering.">
+    <meta name="keywords"
+        content="About ANTIGRAVITY, Enterprise IT Company, AI Engineers, Cloud Infrastructure, Corporate Story, Technology Timeline, Company Values">
+    <meta name="author" content="ANTIGRAVITY Group">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+    <!-- Custom Cursor & Background Glow Spotlights -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- PREMIUM LOADER -->
+    <div id="loader" class="loader-container">
+        <!-- Aurora and Noise backgrounds -->
+        <div class="loader-aurora"></div>
+        <div class="loader-noise"></div>
+        <div class="loader-particles" id="loaderParticles"></div>
+
+        <div class="loader-content">
+            <!-- Rotating Glow Ring -->
+            <div class="loader-ring-wrapper">
+                <div class="loader-glow-ring"></div>
+                <!-- Animated SVG Logo -->
+                <svg class="loader-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L85 75H15L50 15Z" stroke="url(#logoGlow)" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M50 35L70 70H30L50 35Z" fill="url(#logoFill)" />
+                    <circle cx="50" cy="50" r="8" fill="#00f0ff" class="logo-core" />
+                    <defs>
+                        <linearGradient id="logoGlow" x1="15" y1="15" x2="85" y2="75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00f0ff" />
+                            <stop offset="50%" stop-color="#8a2be2" />
+                            <stop offset="100%" stop-color="#ff007f" />
+                        </linearGradient>
+                        <linearGradient id="logoFill" x1="30" y1="35" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                            <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Progress indicators -->
+            <h2 class="loader-title">IT SERVICE</h2>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar" id="progressBar"></div>
+            </div>
+            <div class="loader-stats">
+                <span class="loader-percentage" id="loaderPercentage">0%</span>
+                <span class="loader-status-text" id="loaderStatusText">Loading Experience...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PREMIUM NAVBAR -->
+    <header class="navbar" id="mainNavbar">
+        <div class="navbar-container">
+            <!-- Premium Logo -->
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+            </a>
+
+            <!-- Navigation Links (Center) -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Buttons (Right) -->
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-ripple-container"></span>
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE FULLSCREEN OVERLAY MENU -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-overlay-noise"></div>
+        <div class="mobile-overlay-container">
+            <nav class="mobile-nav">
+                <ul class="mobile-list">
+                    <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
+                    <li class="mobile-item"><a href="about.html" class="mobile-link active">About</a></li>
+                    <li class="mobile-item"><a href="services.html" class="mobile-link">Services</a></li>
+                    <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
+                    <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
+                    <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-actions">
+                <a href="login.html" class="btn btn-login btn-magnetic">
+                    <span class="btn-inner">
+                        <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                        LOGIN
+                    </span>
+                </a>
+                <a href="contact.html" class="btn btn-started btn-magnetic">
+                    <span class="btn-inner">
+                        GET STARTED
+                        <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <!-- Social Icons -->
+            <div class="mobile-socials">
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT HERO SECTION -->
+    <main class="hero-section" id="heroSection">
+        <!-- Aurora and Mesh background elements -->
+        <div class="hero-aurora-bg"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow-spotlight" id="heroSpotlight"></div>
+        <div class="hero-noise-texture"></div>
+
+        <div class="hero-container">
+            <!-- Left Side copy -->
+            <div class="hero-left">
+                <div class="reveal-wrapper">
+                    <span class="hero-badge">ABOUT THE IT SERVICE</span>
+                </div>
+                <h1 class="hero-heading">
+                    <span class="word-wrapper"><span class="word">IT SERVICE</span></span>
+                    <span class="word-wrapper"><span class="word-glow">INTELLIGENT</span></span>
+                    <span class="word-wrapper"><span class="word">INFRASTRUCTURE</span></span>
+                    <span class="word-wrapper"><span class="word">BEYOND</span></span>
+                    <span class="word-wrapper"><span class="word">SUCCESS</span></span>
+                </h1>
+
+                <p class="hero-subheading">
+                    IT SERVICE is a premium global digital engineering enterprise architecting the future of software
+                    capability. We build ultra-high throughput distributed networks, integrating advanced AI learning
+                    pipelines and next-generation cloud architectures to dissolve technological friction.
+                </p>
+                <p class="hero-subheading">
+                    Innovation is not merely a path forward—it is the baseline of modern existence. In a world defined
+                    by exponential growth rates, scaling software and intelligence determines market leadership, and we
+                    develop the custom technologies that secure this advancement.
+                </p>
+                <p class="hero-subheading">
+                    Digital transformation changes legacy systems into resilient, self-healing platforms. We integrate
+                    cognitive interfaces, neural automations, and zero-trust security grids, translating traditional
+                    operations into scalable, high-frequency value networks.
+                </p>
+                <p class="hero-subheading">
+                    Operating through a synchronized global team of computer scientists, cybersecurity leads, and cloud
+                    mesh network engineers, guarantees resilient execution. We orchestrate tomorrow's frameworks to
+                    maximize client growth and software performance.
+                </p>
+
+                <!-- Button layout -->
+                <div class="hero-button-group">
+                    <a href="contact.html" class="btn btn-primary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">
+                            CONTACT OUR TEAM
+                            <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">EXPLORE SERVICES</span>
+                    </a>
+
+                    <a href="#" class="btn btn-outline btn-magnetic">
+                        <span class="btn-ripple-container"></span>
+                        <span class="btn-inner">VIEW PORTFOLIO</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side interactive graphic -->
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+
+                        <div class="hero-core-graphic">
+                            <!-- SVG representing Cloud Ops Center / AI Lab -->
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="quantum-node-svg">
+                                <rect x="50" y="50" width="300" height="300" rx="20" stroke="url(#cardGrad)"
+                                    stroke-width="2" />
+                                <line x1="50" y1="150" x2="350" y2="150" stroke="rgba(255,255,255,0.05)" />
+                                <line x1="50" y1="250" x2="350" y2="250" stroke="rgba(255,255,255,0.05)" />
+                                <line x1="150" y1="50" x2="150" y2="350" stroke="rgba(255,255,255,0.05)" />
+                                <line x1="250" y1="50" x2="250" y2="350" stroke="rgba(255,255,255,0.05)" />
+
+                                <!-- Floating Data Cubes -->
+                                <g class="svg-orbit-ring ring-outer">
+                                    <rect x="120" y="120" width="60" height="60" rx="8" fill="url(#cubeGrad1)"
+                                        opacity="0.8" />
+                                    <circle cx="150" cy="150" r="10" fill="#00f0ff" />
+                                </g>
+                                <g class="svg-orbit-ring ring-mid">
+                                    <rect x="220" y="220" width="60" height="60" rx="8" fill="url(#cubeGrad2)"
+                                        opacity="0.8" />
+                                    <circle cx="250" cy="250" r="10" fill="#8a2be2" />
+                                </g>
+
+                                <defs>
+                                    <linearGradient id="cardGrad" x1="50" y1="50" x2="350" y2="350">
+                                        <stop offset="0%" stop-color="#00f0ff" />
+                                        <stop offset="100%" stop-color="#ff007f" />
+                                    </linearGradient>
+                                    <linearGradient id="cubeGrad1" x1="120" y1="120" x2="180" y2="180">
+                                        <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                                        <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                                    </linearGradient>
+                                    <linearGradient id="cubeGrad2" x1="220" y1="220" x2="280" y2="280">
+                                        <stop offset="0%" stop-color="rgba(138, 43, 226, 0.4)" />
+                                        <stop offset="100%" stop-color="rgba(255, 0, 127, 0.1)" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse-icon">
+                <span class="mouse-wheel"></span>
+            </div>
+            <span class="scroll-text">EXPLORE MORE</span>
+        </div>
+    </main>
+
+    <!-- OUR STORY SECTION -->
+    <section class="about-story-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left: Graphic Placeholder -->
+            <div class="story-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <!-- Strategy meeting vector graphic -->
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
+                            stroke-width="2" />
+                        <!-- Concentric Wave Graphs -->
+                        <path d="M100 250 C 150 150, 200 150, 250 250 S 350 350, 400 250" stroke="url(#storyGrad)"
+                            stroke-width="3" fill="none" />
+                        <circle cx="250" cy="250" r="10" fill="#00f0ff" />
+                        <circle cx="175" cy="200" r="6" fill="#8a2be2" />
+                        <circle cx="325" cy="300" r="6" fill="#ff007f" />
+                        <defs>
+                            <linearGradient id="storyGrad" x1="100" y1="250" x2="400" y2="250"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#00f0ff" />
+                                <stop offset="50%" stop-color="#8a2be2" />
+                                <stop offset="100%" stop-color="#ff007f" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="story-right">
+                <span class="section-badge">OUR HISTORY</span>
+                <h2 class="section-title">OUR STORY</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        IT SERVICE was founded in 2016 by a visionary cohort of distributed systems architects and
+                        machine learning researchers. Driven by the goal to bypass traditional cloud architecture
+                        bottlenecks, we set out to build software structures that liberate business processes from speed
+                        and load constraints.
+                    </p>
+                    <p class="about-paragraph">
+                        We dedicate ourselves to helping modern businesses embrace digital transformation with zero
+                        operational drag. By translating complex, monolithic legacy databases into fluid, self-healing
+                        microservice clusters, we lay the foundations of future-proof enterprise scale.
+                    </p>
+                    <p class="about-paragraph">
+                        Trust is the primary connector in our technology designs. Every architecture we compile passes
+                        through security review guidelines, ensuring absolute compliance with cryptographic standards
+                        while supporting the continuous, transparent flow of enterprise transactions.
+                    </p>
+                    <p class="about-paragraph">
+                        Our customer-first philosophy drives us to align our research with our partners' long-term
+                        commercial goals. We establish deep collaborative associations that continue beyond deployment,
+                        helping industry leaders continuously optimize their capabilities and explore new market
+                        vectors.
+                    </p>
+                </div>
+                <a href="#" class="btn btn-secondary btn-magnetic learn-more-btn">
+                    <span class="btn-inner">
+                        DISCOVER OUR JOURNEY
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE SECTION -->
+    <section class="who-we-are-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left: Content -->
+            <div class="who-right">
+                <span class="section-badge">WHO WE ARE</span>
+                <h2 class="section-title">ENGINEERING CAPABILITY AT A GLOBAL SCALE</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        IT SERVICE is a premium global technology company specializing in high-performance enterprise
+                        software systems. We combine rigorous engineering disciplines with creative research to deploy
+                        systems that secure data, accelerate workloads, and optimize processes.
+                    </p>
+                    <p class="about-paragraph">
+                        Our teams consist of distributed systems specialists, zero-trust cybersecurity leads, database
+                        engineers, and neural model developers. We work together as a synchronized mesh network,
+                        ensuring high-resiliency delivery across multiple international time zones.
+                    </p>
+                    <p class="about-paragraph">
+                        As cognitive intelligence experts, we engineer custom AI learning workflows and scalable private
+                        vector networks. Our systems enable organizations to utilize private data pools safely, creating
+                        secure prediction loops that optimize workflow routing in real-time.
+                    </p>
+                    <p class="about-paragraph">
+                        We build cloud transformations that last. Through robust, automated Kubernetes node
+                        orchestration, multi-cluster database setups, and edge network calibrations, we construct
+                        digital platforms that reliably sustain massive query spikes without downtime.
+                    </p>
+                </div>
+                <a href="#" class="btn btn-secondary btn-magnetic learn-more-btn">
+                    <span class="btn-inner">
+                        LEARN MORE
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Right: Team Placeholder -->
+            <div class="who-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <!-- Team graphic -->
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
+                            stroke-width="2" />
+                        <g transform="translate(100, 100)">
+                            <!-- Abstract node network of business team -->
+                            <circle cx="50" cy="50" r="25" fill="url(#teamNode1)" />
+                            <circle cx="150" cy="50" r="25" fill="url(#teamNode2)" />
+                            <circle cx="250" cy="50" r="25" fill="url(#teamNode3)" />
+                            <circle cx="100" cy="150" r="30" fill="url(#teamNode4)" />
+                            <circle cx="200" cy="150" r="30" fill="url(#teamNode5)" />
+                            <!-- Connections -->
+                            <line x1="50" y1="50" x2="100" y2="150" stroke="rgba(0, 240, 255, 0.3)"
+                                stroke-width="1.5" />
+                            <line x1="150" y1="50" x2="100" y2="150" stroke="rgba(0, 240, 255, 0.3)"
+                                stroke-width="1.5" />
+                            <line x1="150" y1="50" x2="200" y2="150" stroke="rgba(138, 43, 226, 0.3)"
+                                stroke-width="1.5" />
+                            <line x1="250" y1="50" x2="200" y2="150" stroke="rgba(138, 43, 226, 0.3)"
+                                stroke-width="1.5" />
+                            <line x1="100" y1="150" x2="200" y2="150" stroke="rgba(255, 0, 127, 0.3)"
+                                stroke-width="1.5" />
+                        </g>
+                        <defs>
+                            <linearGradient id="teamNode1" x1="25" y1="25" x2="75" y2="75">
+                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.5)" />
+                                <stop offset="100%" stop-color="rgba(0, 240, 255, 0.1)" />
+                            </linearGradient>
+                            <linearGradient id="teamNode2" x1="125" y1="25" x2="175" y2="75">
+                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.5)" />
+                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                            </linearGradient>
+                            <linearGradient id="teamNode3" x1="225" y1="25" x2="275" y2="75">
+                                <stop offset="0%" stop-color="rgba(255, 0, 127, 0.5)" />
+                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.1)" />
+                            </linearGradient>
+                            <linearGradient id="teamNode4" x1="70" y1="120" x2="130" y2="180">
+                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.7)" />
+                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.2)" />
+                            </linearGradient>
+                            <linearGradient id="teamNode5" x1="170" y1="120" x2="230" y2="180">
+                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.7)" />
+                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.2)" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="mission-vision-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Card One: Mission -->
+            <div class="service-card btn-magnetic mission-vision-card">
+                <div class="service-card-glow"></div>
+                <div class="service-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m4.93 4.93 4.24 4.24" />
+                        <path d="m14.83 9.17 4.24-4.24" />
+                        <path d="m14.83 14.83 4.24 4.24" />
+                        <path d="m9.17 14.83-4.24 4.24" />
+                    </svg>
+                </div>
+                <span class="section-badge">CORE MISSION</span>
+                <h3>MISSION</h3>
+                <p>To orchestrate intelligent technology layers that liberate business operations, driving scalable
+                    enterprise growth and infinite digital acceleration through high-performance software engineering.
+                </p>
+            </div>
+
+            <!-- Card Two: Vision -->
+            <div class="service-card btn-magnetic mission-vision-card">
+                <div class="service-card-glow"></div>
+                <div class="service-icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+                <span class="section-badge">FUTURE HORIZON</span>
+                <h3>VISION</h3>
+                <p>To establish the global standard for cognitive software systems, engineering resilient, zero-trust
+                    cloud frameworks that lead the world's progressive enterprises beyond today's digital gravity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION -->
+    <section class="values-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">OUR FOUNDATION</span>
+                <h2 class="section-title">THE CORE VALUES OF ANTIGRAVITY</h2>
+                <p class="section-subtitle">Six values that guide our technical research, custom development pipelines,
+                    and client relationships.</p>
+            </div>
+
+            <div class="services-grid values-grid">
+                <!-- Value 1: Innovation -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Continuously seeking algorithmic breakthroughs and new network paradigms to resolve computational
+                        limits.</p>
+                </div>
+
+                <!-- Value 2: Integrity -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>Ensuring complete transparency in audit logs, code reviews, and communication standards with our
+                        clients.</p>
+                </div>
+
+                <!-- Value 3: Customer Success -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Customer Success</h3>
+                    <p>Aligning deployment metrics with concrete business gains, securing long-term efficiency and
+                        expansion.</p>
+                </div>
+
+                <!-- Value 4: Excellence -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>Striving for optimal performance, achieving sub-millisecond query rates and zero-downtime cluster
+                        rollouts.</p>
+                </div>
+
+                <!-- Value 5: Security -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h3>Security</h3>
+                    <p>Integrating zero-trust verification systems and cryptographic pipelines at every database layer.
+                    </p>
+                </div>
+
+                <!-- Value 6: Continuous Learning -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>Supporting algorithmic research, threat modeling studies, and continuous developer training
+                        programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY WE EXIST SECTION -->
+    <section class="exist-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left Side: Content -->
+            <div class="exist-left">
+                <span class="section-badge">OUR PURPOSE</span>
+                <h2 class="section-title">WHY IT SERVICE EXISTS</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We exist to bridge the gap between human innovation and machine capability. As database query
+                        volumes grow and intelligence tasks scale, legacy infrastructure cracks. We resolve this by
+                        building modern software architectures that sustain growth without friction.
+                    </p>
+                    <p class="about-paragraph">
+                        Human-centered innovation is our design priority. We build interfaces and automations that
+                        empower corporate staff, reducing manual transaction errors and allowing engineering teams to
+                        focus on core logic updates.
+                    </p>
+                    <p class="about-paragraph">
+                        We invest in future technologies today. Our Neural Lab researches the boundaries of
+                        quantum-resistant key verification, private vector data isolation, and low-latency hybrid cloud
+                        deployments to prepare our clients for tomorrow's security challenges.
+                    </p>
+                    <p class="about-paragraph">
+                        Establishing trust is essential to our client relationship model. We align our structural
+                        planning with your long-term roadmap, guaranteeing continuous support and database maintenance
+                        to scale alongside your global enterprise.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: Graphic -->
+            <div class="exist-right">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <!-- Innovation center visual -->
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
+                            stroke-width="2" />
+                        <!-- Abstract Research Node Network -->
+                        <g class="svg-orbit-ring ring-mid">
+                            <circle cx="250" cy="200" r="100" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1.5" />
+                        </g>
+                        <!-- Grid Lines inside sphere -->
+                        <line x1="250" y1="100" x2="250" y2="300" stroke="rgba(138, 43, 226, 0.4)" stroke-width="2" />
+                        <line x1="150" y1="200" x2="350" y2="200" stroke="rgba(138, 43, 226, 0.4)" stroke-width="2" />
+                        <circle cx="250" cy="200" r="40" fill="url(#existCore)" filter="url(#glowFilter)" />
+                        <defs>
+                            <radialGradient id="existCore" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#ff007f" />
+                                <stop offset="100%" stop-color="transparent" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY TIMELINE SECTION -->
+    <section class="timeline-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">OUR JOURNEY</span>
+                <h2 class="section-title">THE PATH OF DIGITAL ACCELERATION</h2>
+                <p class="section-subtitle">Trace the milestones of ANTIGRAVITY, from initial database research to a
+                    global technology company.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="process-timeline-wrapper">
+                <div class="timeline-progress-track">
+                    <div class="timeline-progress-line" id="timelineProgressLine"></div>
+                </div>
+
+                <div class="process-timeline-steps">
+                    <!-- 2016 -->
+                    <div class="timeline-step active" data-step="1">
+                        <div class="step-marker">2016</div>
+                        <h3>Company Founded</h3>
+                        <p>ANTIGRAVITY is established by a team of elite computer scientists with a vision to bypass
+                            cloud limits.</p>
+                    </div>
+                    <!-- 2017 -->
+                    <div class="timeline-step" data-step="2">
+                        <div class="step-marker">2017</div>
+                        <h3>First Enterprise Client</h3>
+                        <p>Secured a Fortune 100 logistics company, building their primary database routing network.</p>
+                    </div>
+                    <!-- 2018 -->
+                    <div class="timeline-step" data-step="3">
+                        <div class="step-marker">2018</div>
+                        <h3>Cloud Solutions Division</h3>
+                        <p>Formalized our multi-region Kubernetes edge solutions, scaling data flow capacity by 300%.
+                        </p>
+                    </div>
+                    <!-- 2020 -->
+                    <div class="timeline-step" data-step="4">
+                        <div class="step-marker">2020</div>
+                        <h3>AI Research</h3>
+                        <p>Inception of our Neural Labs, deploying early private vector clusters for algorithmic models.
+                        </p>
+                    </div>
+                    <!-- 2022 -->
+                    <div class="timeline-step" data-step="5">
+                        <div class="step-marker">2022</div>
+                        <h3>Global Expansion</h3>
+                        <p>Scaled operations across EMEA and APAC, hiring 200+ specialized distributed systems
+                            engineers.</p>
+                    </div>
+                    <!-- 2024 -->
+                    <div class="timeline-step" data-step="6">
+                        <div class="step-marker">2024</div>
+                        <h3>Innovation Labs</h3>
+                        <p>Opened dedicated research spaces focused on quantum-safe cryptographical protection.</p>
+                    </div>
+                    <!-- Future -->
+                    <div class="timeline-step" data-step="7">
+                        <div class="step-marker">Future</div>
+                        <h3>Global Leader</h3>
+                        <p>Orchestrating cognitive automation for global infrastructures, breaking technological limits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATISTICS SECTION -->
+    <section class="stats-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">METRICS</span>
+                <h2 class="section-title">DELIVERING IMPACT BY THE NUMBERS</h2>
+                <p class="section-subtitle">Examine our deployment volume, global network boundaries, and structural
+                    efficiency ratings.</p>
+            </div>
+
+            <div class="stats-infographic-grid">
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="500">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Projects Delivered</h3>
+                    <p class="stat-desc">Successfully deployed enterprise platforms worldwide.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="120">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Enterprise Clients</h3>
+                    <p class="stat-desc">Trusted technology partnerships with sector giants.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="30">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Countries Served</h3>
+                    <p class="stat-desc">Global architectural deployments and local scaling.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="98">0</span><span class="counter-suffix">%</span>
+                    </div>
+                    <h3 class="stat-heading">Satisfaction Rate</h3>
+                    <p class="stat-desc">A commitment to scalable performance and close client partnerships.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="15">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Years Experience</h3>
+                    <p class="stat-desc">Deep integration support with key infrastructure creators.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="50">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Technology Experts</h3>
+                    <p class="stat-desc">Highly skilled technical specialists and researchers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- 1. LEADERSHIP TEAM SECTION -->
+    <section class="leadership-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">OUR EXECUTIVE LEADERSHIP</span>
+                <h2 class="section-title">MEET THE VISIONARIES BEHIND IT SERVICE</h2>
+                <p class="section-subtitle">A collective of systems architects, AI scientists, and creative leads
+                    guiding global digital strategy.</p>
+            </div>
+
+            <div class="services-grid leadership-grid">
+                <!-- Card 1: CEO -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <!-- Custom styled avatar vector representing modern corporate leader -->
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#ceoGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="ceoGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#00f0ff" />
+                                    <stop offset="100%" stop-color="#8a2be2" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Adrian Vance</h3>
+                        <span class="member-role">Chief Executive Officer</span>
+                        <p class="member-bio">Adrian has guided technology companies for 20 years, focusing on
+                            distributed systems scaling and corporate growth alignments.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: CTO -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#ctoGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="ctoGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#8a2be2" />
+                                    <stop offset="100%" stop-color="#ff007f" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Julian Kross</h3>
+                        <span class="member-role">Chief Technology Officer</span>
+                        <p class="member-bio">Julian leads our cloud research. He formerly managed database
+                            infrastructure scalability at primary network operations centers.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: COO -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#cooGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="cooGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#ff007f" />
+                                    <stop offset="100%" stop-color="#00f0ff" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophia Vance</h3>
+                        <span class="member-role">Chief Operations Officer</span>
+                        <p class="member-bio">Sophia manages our worldwide delivery pipelines, ensuring zero latency and
+                            high execution integrity across all local nodes.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: AI Director -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#aiGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="aiGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#00f0ff" />
+                                    <stop offset="100%" stop-color="#8a2be2" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Linus Cho</h3>
+                        <span class="member-role">Artificial Intelligence Director</span>
+                        <p class="member-bio">Linus directs private vector training layouts at our Neural Lab,
+                            fine-tuning configurations under client custody.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Cloud solutions Architect -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#cloudGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="cloudGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#8a2be2" />
+                                    <stop offset="100%" stop-color="#ff007f" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Marcus Sterling</h3>
+                        <span class="member-role">Cloud Solutions Architect</span>
+                        <p class="member-bio">Marcus oversees multi-region Kubernetes node networks and dynamic
+                            auto-scaling clusters, ensuring optimal performance.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Creative Director -->
+                <div class="service-card btn-magnetic member-card">
+                    <div class="service-card-glow"></div>
+                    <div class="member-image-wrapper">
+                        <svg viewBox="0 0 200 200" fill="none" class="member-vector-avatar"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="200" rx="100" fill="url(#creativeGrad)" />
+                            <circle cx="100" cy="80" r="30" fill="#fff" opacity="0.9" />
+                            <path d="M40 160 C 40 120, 160 120, 160 160" fill="#fff" opacity="0.9" />
+                            <defs>
+                                <linearGradient id="creativeGrad" x1="0" y1="0" x2="200" y2="200">
+                                    <stop offset="0%" stop-color="#ff007f" />
+                                    <stop offset="100%" stop-color="#00f0ff" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="member-info">
+                        <h3>Elena Rostova</h3>
+                        <span class="member-role">Creative Director</span>
+                        <p class="member-bio">Elena coordinates corporate design systems and fluid micro-interaction
+                            animations to craft premium interactive layouts.</p>
+                        <a href="#" class="member-linkedin" aria-label="LinkedIn Profile">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. GLOBAL PRESENCE SECTION -->
+    <section class="global-presence-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">GLOBAL EDGE NETWORK</span>
+                <h2 class="section-title">OUR WORLDWIDE DELIVERY FOOTPRINT</h2>
+                <p class="section-subtitle">With interconnected office hubs across seven continents, ANTIGRAVITY
+                    guarantees low-latency global delivery.</p>
+            </div>
+
+            <!-- Custom High-Fidelity SVG World Map containing beacon pulsators -->
+            <div class="world-map-wrapper">
+                <svg viewBox="0 0 1000 500" fill="none" class="world-map-svg" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Abstract dotted continent structures -->
+                    <rect x="50" y="50" width="900" height="400" rx="20" stroke="rgba(255,255,255,0.02)"
+                        stroke-width="2" />
+                    <!-- Grid vectors -->
+                    <line x1="250" y1="50" x2="250" y2="450" stroke="rgba(255,255,255,0.01)" />
+                    <line x1="500" y1="50" x2="500" y2="450" stroke="rgba(255,255,255,0.01)" />
+                    <line x1="750" y1="50" x2="750" y2="450" stroke="rgba(255,255,255,0.01)" />
+                    <line x1="50" y1="150" x2="950" y2="150" stroke="rgba(255,255,255,0.01)" />
+                    <line x1="50" y1="300" x2="950" y2="300" stroke="rgba(255,255,255,0.01)" />
+
+                    <!-- Dotted outline points representing continents -->
+                    <!-- North America -->
+                    <circle cx="200" cy="180" r="40" fill="rgba(255,255,255,0.02)" />
+                    <!-- Europe -->
+                    <circle cx="480" cy="160" r="35" fill="rgba(255,255,255,0.02)" />
+                    <!-- Asia -->
+                    <circle cx="750" cy="180" r="60" fill="rgba(255,255,255,0.02)" />
+                    <!-- Australia -->
+                    <circle cx="850" cy="360" r="40" fill="rgba(255,255,255,0.02)" />
+                    <!-- Africa -->
+                    <circle cx="530" cy="300" r="45" fill="rgba(255,255,255,0.02)" />
+                    <!-- South America -->
+                    <circle cx="320" cy="340" r="40" fill="rgba(255,255,255,0.02)" />
+
+                    <!-- Blinking beacons (Pulsing halo rings) -->
+                    <!-- NY -->
+                    <g class="map-beacon beacon-ny">
+                        <circle cx="220" cy="180" r="8" fill="#00f0ff" class="beacon-core" />
+                        <circle cx="220" cy="180" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- London -->
+                    <g class="map-beacon beacon-london">
+                        <circle cx="470" cy="155" r="8" fill="#8a2be2" class="beacon-core" />
+                        <circle cx="470" cy="155" r="16" stroke="#8a2be2" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- Dubai -->
+                    <g class="map-beacon beacon-dubai">
+                        <circle cx="590" cy="200" r="8" fill="#ff007f" class="beacon-core" />
+                        <circle cx="590" cy="200" r="16" stroke="#ff007f" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- Singapore -->
+                    <g class="map-beacon beacon-singapore">
+                        <circle cx="740" cy="260" r="8" fill="#00f0ff" class="beacon-core" />
+                        <circle cx="740" cy="260" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- Sydney -->
+                    <g class="map-beacon beacon-sydney">
+                        <circle cx="860" cy="360" r="8" fill="#8a2be2" class="beacon-core" />
+                        <circle cx="860" cy="360" r="16" stroke="#8a2be2" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- Cape Town -->
+                    <g class="map-beacon beacon-capetown">
+                        <circle cx="530" cy="350" r="8" fill="#ff007f" class="beacon-core" />
+                        <circle cx="530" cy="350" r="16" stroke="#ff007f" stroke-width="1" class="beacon-halo" />
+                    </g>
+                    <!-- Sao Paulo -->
+                    <g class="map-beacon beacon-saopaulo">
+                        <circle cx="330" cy="330" r="8" fill="#00f0ff" class="beacon-core" />
+                        <circle cx="330" cy="330" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
+                    </g>
+                </svg>
+            </div>
+
+            <p class="global-presence-desc">
+                Our global systems architecture distributes resource loads across local server clusters dynamically,
+                preventing single points of failure. By routing operations through our edge network, we maintain
+                database integrity and delivery speeds under heavy transaction stress.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. INNOVATION LAB SECTION -->
+    <section class="innovation-lab-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left: Graphic Placeholder -->
+            <div class="lab-left">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <!-- Custom SVG representing tech robotics/ML automation nodes -->
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <!-- Robotics node structure -->
+                        <g class="svg-orbit-ring ring-outer">
+                            <rect x="150" y="100" width="200" height="200" rx="100" stroke="rgba(0, 240, 255, 0.2)"
+                                stroke-width="2" />
+                        </g>
+                        <circle cx="250" cy="200" r="50" fill="url(#labCore)" filter="url(#glowFilter)" />
+                        <!-- Intersecting tech rays -->
+                        <line x1="250" y1="200" x2="100" y2="100" stroke="#00f0ff" stroke-width="1" />
+                        <line x1="250" y1="200" x2="400" y2="100" stroke="#8a2be2" stroke-width="1" />
+                        <line x1="250" y1="200" x2="250" y2="350" stroke="#ff007f" stroke-width="1" />
+                        <circle cx="100" cy="100" r="8" fill="#00f0ff" />
+                        <circle cx="400" cy="100" r="8" fill="#8a2be2" />
+                        <circle cx="250" cy="350" r="8" fill="#ff007f" />
+                        <defs>
+                            <radialGradient id="labCore" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#00f0ff" />
+                                <stop offset="100%" stop-color="transparent" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="lab-right">
+                <span class="section-badge">NEURAL LAB</span>
+                <h2 class="section-title">INNOVATION NEVER STOPS</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We invest in continuous technological research to prepare our clients for future software
+                        challenges. Our Neural Lab focuses on constructing private vector architectures, validating
+                        machine learning pipeline metrics, and testing automated node recovery scripts.
+                    </p>
+                    <p class="about-paragraph">
+                        Artificial intelligence demands secure environments. We build isolated vector clusters under
+                        client custody, training models on anonymous datasets to protect identity keys while ensuring
+                        local regulatory compliance.
+                    </p>
+                    <p class="about-paragraph">
+                        Hyper-automation simplifies execution bounds. By deploying self-healing CI/CD scripts, we
+                        establish automatic deployment loops that detect transaction errors and trigger rollback
+                        commands to safeguard uptime.
+                    </p>
+                    <p class="about-paragraph">
+                        We configure cloud resources with mathematical accuracy. Our engineers research hybrid cluster
+                        topologies and quantum-safe cryptographic protocols, preparing legacy operations for future
+                        compute shifts.
+                    </p>
+                </div>
+                <div class="hero-button-group">
+                    <a href="#" class="btn btn-primary btn-magnetic">
+                        <span class="btn-inner">EXPLORE TECHNOLOGIES</span>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-magnetic">
+                        <span class="btn-inner">OUR SERVICES</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. AWARDS & RECOGNITION SECTION -->
+    <section class="awards-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">RECOGNITION</span>
+                <h2 class="section-title">AWARDS & RECOGNITION</h2>
+                <p class="section-subtitle">Examine our industry accomplishments and certification rewards for code
+                    quality and security.</p>
+            </div>
+
+            <div class="services-grid awards-grid">
+                <!-- Award 1 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h3>Innovation Excellence Award</h3>
+                    <p>Recognized for development speed, modular coding standards, and cloud architectural innovations.
+                    </p>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>AI Leadership Award</h3>
+                    <p>Crowned for private vector cluster configurations and automated model training guidelines.</p>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3>Cloud Partner Excellence</h3>
+                    <p>Awarded for high-performance Kubernetes mesh rollouts and multi-cloud server setups.</p>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h3>Cyber Security Excellence</h3>
+                    <p>Honored for zero-trust compliance standards and quantum-resistant message channel
+                        implementations.</p>
+                </div>
+
+                <!-- Award 5 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8a2be2" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h3>Digital Transformation Leader</h3>
+                    <p>Recognized for transition strategies, scaling legacy databases into fluid microservice clusters.
+                    </p>
+                </div>
+
+                <!-- Award 6 -->
+                <div class="service-card btn-magnetic">
+                    <div class="service-card-glow"></div>
+                    <div class="service-icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff007f" stroke-width="2">
+                            <circle cx="12" cy="8" r="7" />
+                            <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
+                        </svg>
+                    </div>
+                    <h3>Enterprise Innovation Award</h3>
+                    <p>Rewarding our customer-first policy and strategic long-term corporate partnership alignments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CERTIFICATIONS SECTION -->
+    <section class="certifications-section reveal-on-scroll">
+        <div class="section-container">
+            <h2 class="marquee-title">COMPLIANCE & SYSTEM CERTIFICATIONS</h2>
+
+            <div class="logo-marquee-wrapper">
+                <div class="logo-marquee-track">
+                    <!-- Original set -->
+                    <div class="marquee-item"><span class="logo-text-glow">AWS PARTNER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">MICROSOFT EXPERT</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">GOOGLE CLOUD</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">ORACLE PARTNER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">CISCO CERTIFIED</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">DOCKER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">KUBERNETES</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">ISO 27001</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">SOC 2</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">AZURE EXPERT</span></div>
+                    <!-- Duplicate set for infinite loop -->
+                    <div class="marquee-item"><span class="logo-text-glow">AWS PARTNER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">MICROSOFT EXPERT</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">GOOGLE CLOUD</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">ORACLE PARTNER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">CISCO CERTIFIED</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">DOCKER</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">KUBERNETES</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">ISO 27001</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">SOC 2</span></div>
+                    <div class="marquee-item"><span class="logo-text-glow">AZURE EXPERT</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. OFFICE GALLERY SECTION -->
+    <section class="office-gallery-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">INSIDE ANTIGRAVITY</span>
+                <h2 class="section-title">OFFICE GALLERY</h2>
+                <p class="section-subtitle">Take a virtual walk through our global workspace nodes, server facilities,
+                    and research centers.</p>
+            </div>
+
+            <!-- Masonry Grid Layout -->
+            <div class="gallery-masonry-grid">
+                <!-- Reception (Slot 1) -->
+                <div class="gallery-item" data-title="Global Reception Area">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad1)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">RECEPTION AREA</text>
+                    </svg>
+                </div>
+                <!-- Innovation Lab (Slot 2) -->
+                <div class="gallery-item col-span-2" data-title="Neural AI Research Lab">
+                    <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="600" height="200" rx="12" fill="url(#galGrad2)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">INNOVATION LAB</text>
+                    </svg>
+                </div>
+                <!-- Conference Room (Slot 3) -->
+                <div class="gallery-item" data-title="Boardroom & Conference Area">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad3)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">CONFERENCE ROOM</text>
+                    </svg>
+                </div>
+                <!-- Development Floor (Slot 4) -->
+                <div class="gallery-item" data-title="Engineering Development Floor">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad1)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">DEVELOPMENT FLOOR</text>
+                    </svg>
+                </div>
+                <!-- Executive Meeting (Slot 5) -->
+                <div class="gallery-item col-span-2" data-title="Executive Collaboration Zone">
+                    <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="600" height="200" rx="12" fill="url(#galGrad2)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">EXECUTIVE MEETING ROOM</text>
+                    </svg>
+                </div>
+                <!-- Cloud Ops Center (Slot 6) -->
+                <div class="gallery-item" data-title="Network Operations Monitoring Center">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad3)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">CLOUD OPERATIONS</text>
+                    </svg>
+                </div>
+                <!-- Server Room (Slot 7) -->
+                <div class="gallery-item" data-title="Data Center & Server Nodes">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad1)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">SERVER FACILITY</text>
+                    </svg>
+                </div>
+                <!-- Open Workspace (Slot 8) -->
+                <div class="gallery-item" data-title="Co-working Area">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad2)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">OPEN WORKSPACE</text>
+                    </svg>
+                </div>
+                <!-- Collaboration Area (Slot 9) -->
+                <div class="gallery-item" data-title="Synergistic Development Zone">
+                    <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="300" height="200" rx="12" fill="url(#galGrad3)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">COLLABORATION AREA</text>
+                    </svg>
+                </div>
+                <!-- Tech Event (Slot 10) -->
+                <div class="gallery-item col-span-2" data-title="Innovation Summit Panel">
+                    <svg viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="600" height="200" rx="12" fill="url(#galGrad1)" />
+                        <text x="50%" y="50%" fill="#fff" font-size="14" font-family="var(--font-heading)"
+                            text-anchor="middle" font-weight="700">TECHNOLOGY SUMMIT EVENT</text>
+                    </svg>
+                </div>
+
+                <defs>
+                    <linearGradient id="galGrad1" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#0f2027" />
+                        <stop offset="100%" stop-color="#2c5364" />
+                    </linearGradient>
+                    <linearGradient id="galGrad2" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#1f4037" />
+                        <stop offset="100%" stop-color="#99f2c8" />
+                    </linearGradient>
+                    <linearGradient id="galGrad3" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#654ea3" />
+                        <stop offset="100%" stop-color="#eaafc8" />
+                    </linearGradient>
+                </defs>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHY CLIENTS TRUST US SECTION -->
+    <section class="trust-section section-padding reveal-on-scroll">
+        <div class="section-container grid-two-col">
+            <!-- Left Side: Content -->
+            <div class="trust-left">
+                <span class="section-badge">OUR GUARANTEES</span>
+                <h2 class="section-title">WHY CLIENTS TRUST US</h2>
+                <div class="about-content-wrapper">
+                    <p class="about-paragraph">
+                        We prioritize complete transparency across our software architectures. Code bases pass through
+                        isolated review pipelines, allowing client auditors to verify database schemas and configuration
+                        parameters before rollout.
+                    </p>
+                    <p class="about-paragraph">
+                        Security compliance guides our deployment steps. We operate zero-trust verification networks to
+                        secure private transactional data streams, preventing data leakages across distributed clusters.
+                    </p>
+                    <p class="about-paragraph">
+                        Scalability is built into our cloud frameworks natively. By configuring self-healing
+                        auto-scaling triggers, our networks adjust local computing capacities dynamically during
+                        high-speed traffic surges.
+                    </p>
+                    <p class="about-paragraph">
+                        Our commitment is rooted in long-term alignment. We offer 24/7 technical incident response
+                        coverage, database updates, and regular optimization audits to sustain system performance over
+                        the project lifecycle.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side: SVG Graphic -->
+            <div class="trust-right">
+                <div class="about-image-card">
+                    <div class="card-glow-border"></div>
+                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
+                            stroke-width="2" />
+                        <g transform="translate(100, 100)">
+                            <!-- Handshake abstract nodes vector connection -->
+                            <rect x="30" y="50" width="100" height="80" rx="8" fill="url(#trustBox1)" />
+                            <rect x="170" y="50" width="100" height="80" rx="8" fill="url(#trustBox2)" />
+                            <!-- Connection link bridge -->
+                            <path d="M 130 90 L 170 90" stroke="#00f0ff" stroke-width="4" stroke-dasharray="5 5"
+                                class="beacon-halo" />
+                            <circle cx="150" cy="90" r="10" fill="#ff007f" />
+                        </g>
+                        <defs>
+                            <linearGradient id="trustBox1" x1="30" y1="50" x2="130" y2="130">
+                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
+                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
+                            </linearGradient>
+                            <linearGradient id="trustBox2" x1="170" y1="50" x2="270" y2="130">
+                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.4)" />
+                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.1)" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. OUR IMPACT SECTION -->
+    <section class="stats-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-badge">IMPACT METRICS</span>
+                <h2 class="section-title">OUR GLOBAL IMPACT</h2>
+                <p class="section-subtitle">Examine our deployment metrics, corporate client retention, and technical
+                    expert resource caps.</p>
+            </div>
+
+            <div class="stats-infographic-grid">
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="500">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Projects Delivered</h3>
+                    <p class="stat-desc">Successfully deployed enterprise platforms worldwide.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="120">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Enterprise Clients</h3>
+                    <p class="stat-desc">Trusted technology partnerships with sector giants.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="30">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Countries Served</h3>
+                    <p class="stat-desc">Global architectural deployments and local scaling.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="98">0</span><span class="counter-suffix">%</span>
+                    </div>
+                    <h3 class="stat-heading">Client Satisfaction</h3>
+                    <p class="stat-desc">Commitment to scalable performance and deep partnerships.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="50">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Technology Experts</h3>
+                    <p class="stat-desc">Highly skilled technical specialists and researchers.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="15">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Years Experience</h3>
+                    <p class="stat-desc">Deep integration support with key infrastructure creators.</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number-wrapper">
+                        <span class="counter-num" data-target="25">0</span><span class="counter-suffix">+</span>
+                    </div>
+                    <h3 class="stat-heading">Global Partners</h3>
+                    <p class="stat-desc">Direct technical integrations with core framework developers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FINAL CALL TO ACTION (CTA Banner) -->
+    <section class="cta-banner-section section-padding reveal-on-scroll">
+        <div class="section-container">
+            <div class="cta-banner-card">
+                <div class="cta-aurora-bg"></div>
+                <div class="cta-noise-overlay"></div>
+                <div class="card-glow-border"></div>
+
+                <div class="cta-content">
+                    <h2 class="cta-heading">READY TO BUILD THE FUTURE WITH IT SERVICE?</h2>
+                    <p class="cta-paragraph">
+                        Engage our cognitive technology teams to audit your software systems, optimize cluster setups,
+                        and implement modern cloud architectures. Let's orchestrate tomorrow.
+                    </p>
+
+                    <div class="cta-button-group">
+                        <a href="contact.html" class="btn btn-primary btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">
+                                START YOUR PROJECT
+                                <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                    <polyline points="12 5 19 12 12 19" />
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">BOOK CONSULTATION</span>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline btn-magnetic">
+                            <span class="btn-ripple-container"></span>
+                            <span class="btn-inner">CONTACT US</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL CONTAINER -->
+    <div id="galleryLightbox" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-caption" id="lightboxCaption">Caption Text</div>
+        <div class="lightbox-content-wrapper" id="lightboxContent"></div>
+    </div>
+
+   <!-- 13. PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-noise"></div>
+        <div class="section-container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                <a href="#" class="logo-link footer-logo">
+                       <a href="#" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                </a>
+                <p class="footer-desc">
+                    Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
+                    hyper-scalable multi-cloud architectures.
+                </p>
+                <!-- Social Icons -->
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Capabilities</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Enterprise Software</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Cloud Integration</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">UI UX Consulting</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+<div class="footer-links-col">
+    <h4>Contact Information</h4>
+
+    <ul class="contact-info">
+        <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@stacklyroboticsautomation.com">
+                📧 info@stacklyITSERVICE.com
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+919876543210">
+               📞 +91 98765 43210
+            </a>
+        </li>
+
+        <li>
+            <i data-lucide="map-pin"></i>
+           📍 Bengaluru, Tamil Nadu, India
+        </li>
+    </ul>
+</div>
+
+            <!-- Newsletter -->
+            <div class="footer-news-col">
+                <h4>Subscribe</h4>
+                <p>Stay informed with our latest research and cognitive breakthroughs.</p>
+                <form class="footer-news-form" onsubmit="event.preventDefault(); alert('Subscribed to insights.');">
+                    <input type="email" class="news-input" placeholder="name@company.com" required>
+                    <button type="submit" class="btn btn-primary news-btn" aria-label="Subscribe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sub-footer -->
+        <div class="sub-footer">
+            <div class="section-container sub-footer-container">
+                <span class="copyright">© 2026 Stackly IT Service. All rights reserved.</span>
+                <div class="sub-footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div class="auth-modal" id="loginModal">
+
+        <div class="auth-box">
+
+            <div class="auth-left">
+
+                <span class="close" onclick="closeAuth()">&times;</span>
+
+                <h2>Welcome Back</h2>
+
+                <!-- LOGIN -->
+                <div id="loginBox">
+
+                    <select id="loginRole">
+                        <option value="Client">Client</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+
+                    <input type="email" id="loginEmail" placeholder="Email Address">
+
+                    <input type="password" id="loginPassword" placeholder="Password">
+
+                    <div class="remember-wrap">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button onclick="loginUser()">
+                        Log In
+                    </button>
+
+                    <p onclick="showForgot()">
+                        Forgot Password?
+                    </p>
+
+                    <p onclick="showSignup()">
+                        Don't have an account? Sign Up
+                    </p>
+
+                </div>
+
+                <!-- SIGNUP -->
+                <div id="signupBox" style="display:none;">
+
+                    <input type="text" id="signupName" placeholder="Full Name">
+
+                    <input type="email" id="signupEmail" placeholder="Email Address">
+
+                    <input type="password" id="signupPassword" placeholder="Password">
+
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+                    <select id="signupRole">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+
+                    <button onclick="signupUser()">
+                        Create Account
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+                <!-- FORGOT PASSWORD -->
+                <div id="forgotBox" style="display:none;">
+
+                    <input type="email" id="forgotEmail" placeholder="Enter Your Email">
+
+                    <button onclick="forgotPassword()">
+                        Reset Password
+                    </button>
+
+                    <p onclick="showLogin()">
+                        Back To Login
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript Bundle -->
+    <script src="script.js"></script>
+</body>
+
+</html>
