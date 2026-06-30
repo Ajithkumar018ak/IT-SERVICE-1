@@ -2258,29 +2258,7 @@ button {
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bg-proj-1 {
-    background-image: url('project1.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project1_ai_command_center_1782829553582.png'), linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-}
 
-.bg-proj-2 {
-    background-image: url('project2.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project2_cloud_infrastructure_1782829749672.png'), linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
-}
-
-.bg-proj-3 {
-    background-image: url('project3.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project3_cyber_security_1782829792302.png'), linear-gradient(135deg, #f12711 0%, #f5af19 100%);
-}
-
-.bg-proj-4 {
-    background-image: url('project4.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project4_retail_analytics_1782829869541.png'), linear-gradient(135deg, #654ea3 0%, #eaafc8 100%);
-}
-
-.bg-proj-5 {
-    background-image: url('project5.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project5_fintech_platform_1782829901517.png'), linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-}
-
-.bg-proj-6 {
-    background-image: url('project6.png'), url('file:///C:/Users/ASUS/.gemini/antigravity-ide/brain/6dbeb3d4-259d-4392-8dea-da962ee3e993/project6_luxury_automotive_1782829922964.png'), linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-}
 
 .project-card:hover .project-gradient-bg {
     transform: scale(1.1) rotate(1deg);
@@ -2770,23 +2748,7 @@ button {
     overflow: hidden;
 }
 
-.insight-gradient {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
-.bg-ins-1 {
-    background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
-}
-
-.bg-ins-2 {
-    background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%);
-}
-
-.bg-ins-3 {
-    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
-}
 
 .insight-card:hover .insight-gradient {
     transform: scale(1.05);
@@ -7644,3 +7606,149 @@ width:100%;
         height: 60px;
     }
 }
+
+
+.about-image-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    height:550px;
+
+    background:#08101f;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.about-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+
+}
+
+.about-image-card:hover .about-image{
+
+    transform:scale(1.08);
+
+}
+
+.card-glow-border{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    pointer-events:none;
+
+    border:1px solid rgba(0,240,255,.18);
+
+    box-shadow:
+
+    0 0 40px rgba(0,240,255,.12),
+
+    0 0 80px rgba(138,43,226,.08);
+
+    z-index:2;
+
+}
+
+
+/* ==========================
+   Why Choose Us Image
+========================== */
+
+.why-image-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    height:580px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#08111f;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.why-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+
+}
+
+.why-image-card:hover .why-image{
+
+    transform:scale(1.08);
+
+}
+
+.card-glow-border{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    border:1px solid rgba(0,240,255,.18);
+
+    pointer-events:none;
+
+    box-shadow:
+    0 0 40px rgba(0,240,255,.15),
+    0 0 80px rgba(138,43,226,.08);
+
+}
+
+
+.project-image-wrapper{
+    position:relative;
+    width:100%;
+    height:260px;
+    overflow:hidden;
+    border-radius:24px 24px 0 0;
+}
+
+.project-image{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.project-image-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:18px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.35),
+        transparent
+    );
+}
+

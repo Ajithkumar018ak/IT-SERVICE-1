@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 | Stackly IT Services</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Inter,Segoe UI,sans-serif;
+
+background:#050816;
+
+overflow:hidden;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+position:relative;
+
+}
+
+/* Background */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at 20% 20%,rgba(0,240,255,.18),transparent 40%),
+
+radial-gradient(circle at 80% 70%,rgba(138,43,226,.18),transparent 40%),
+
+linear-gradient(135deg,#050816,#081126,#050816);
+
+animation:bgMove 12s ease infinite alternate;
+
+z-index:-3;
+
+}
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+opacity:.25;
+
+z-index:-2;
+
+}
+
+@keyframes bgMove{
+
+0%{filter:hue-rotate(0deg);}
+
+100%{filter:hue-rotate(40deg);}
+
+}
+
+/* Floating Blur */
+
+.blur1{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+background:#00f0ff;
+
+filter:blur(150px);
+
+opacity:.12;
+
+top:-80px;
+
+left:-80px;
+
+animation:float1 8s infinite ease-in-out;
+
+}
+
+.blur2{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+background:#8a2be2;
+
+filter:blur(150px);
+
+opacity:.14;
+
+right:-120px;
+
+bottom:-100px;
+
+animation:float2 10s infinite ease-in-out;
+
+}
+
+@keyframes float1{
+
+50%{
+
+transform:translateY(40px);
+
+}
+
+}
+
+@keyframes float2{
+
+50%{
+
+transform:translateX(-40px);
+
+}
+
+}
+
+/* Card */
+
+.error-box{
+
+width:min(1000px,92%);
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+padding:70px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+animation:fadeIn 1s ease;
+
+}
+
+/* Left */
+
+.left{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.circle{
+
+width:280px;
+
+height:280px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,#00f0ff 0%,transparent 70%);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+animation:pulse 3s infinite;
+
+}
+
+.circle h1{
+
+font-size:110px;
+
+background:linear-gradient(135deg,#00f0ff,#8a2be2);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+/* Right */
+
+.tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:rgba(0,240,255,.12);
+
+border:1px solid rgba(0,240,255,.25);
+
+margin-bottom:20px;
+
+color:#00f0ff;
+
+font-size:14px;
+
+}
+
+h2{
+
+font-size:48px;
+
+line-height:1.2;
+
+margin-bottom:18px;
+
+}
+
+p{
+
+color:#bfc7d8;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.primary{
+
+background:linear-gradient(135deg,#00f0ff,#8a2be2);
+
+color:#fff;
+
+}
+
+.secondary{
+
+border:1px solid rgba(255,255,255,.18);
+
+color:#fff;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 12px 30px rgba(0,240,255,.3);
+
+}
+
+/* Footer Links */
+
+.quick-links{
+
+margin-top:40px;
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+}
+
+.quick-links a{
+
+color:#9fb5d8;
+
+text-decoration:none;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.quick-links a:hover{
+
+color:#00f0ff;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.error-box{
+
+grid-template-columns:1fr;
+
+padding:45px 30px;
+
+text-align:center;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.quick-links{
+
+justify-content:center;
+
+}
+
+.circle{
+
+width:220px;
+
+height:220px;
+
+}
+
+.circle h1{
+
+font-size:82px;
+
+}
+
+h2{
+
+font-size:34px;
+
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="blur1"></div>
+<div class="blur2"></div>
+
+<div class="error-box">
+
+<div class="left">
+
+<div class="circle">
+
+<h1>404</h1>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<span class="tag">STACKLY IT SERVICES</span>
+
+<h2>Oops! The Page You're Looking For Doesn't Exist.</h2>
+
+<p>
+The requested page may have been moved, deleted, or is temporarily unavailable.
+Explore our enterprise IT solutions or return safely to the homepage.
+</p>
+
+<div class="buttons">
+
+<a href="index.html" class="btn primary">
+Back to Home
+</a>
+
+<a href="services.html" class="btn secondary">
+Explore Services
+</a>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>
