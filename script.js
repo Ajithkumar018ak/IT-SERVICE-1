@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     if (mobileMenuToggle && mobileOverlay) {
-        
+
         const getScrollbarWidth = () => {
             return window.innerWidth - document.documentElement.clientWidth;
         };
@@ -905,13 +905,24 @@ document.addEventListener("keydown", function (e) {
 
 
 function loginUser() {
-
     const role = document.getElementById("loginRole").value;
     const email = document.getElementById("loginEmail").value.trim();
     const password = document.getElementById("loginPassword").value.trim();
 
     if (email === "" || password === "") {
-        alert("Please enter Email & Password");
+
+        return;
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+
+        return;
+    }
+
+    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+    if (!pwdRegex.test(password)) {
+
         return;
     }
 
@@ -920,83 +931,76 @@ function loginUser() {
     localStorage.setItem("userRole", role);
 
     if (role === "Admin") {
-
         window.location.href = "admin-dashboard.html";
-
     } else {
-
         window.location.href = "client-dashboard.html";
-
     }
-
 }
 
 function signupUser() {
-
-    const name = document.getElementById("signupName").value;
-    const email = document.getElementById("signupEmail").value;
-    const password = document.getElementById("signupPassword").value;
-    const confirm = document.getElementById("confirmPassword").value;
+    const name = document.getElementById("signupName").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value.trim();
+    const confirm = document.getElementById("confirmPassword").value.trim();
     const role = document.getElementById("signupRole").value;
 
     if (name == "" || email == "" || password == "" || confirm == "") {
-        alert("Fill all fields");
+
+        return;
+    }
+
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(name)) {
+
+        return;
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+
+        return;
+    }
+
+    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+    if (!pwdRegex.test(password)) {
+
         return;
     }
 
     if (password !== confirm) {
-        alert("Password not matched");
+
         return;
     }
 
-    alert("Account Created Successfully");
 
     showLogin();
-
 }
 
 function forgotPassword() {
-
-    const email = document.getElementById("forgotEmail").value;
-
-    if (email == "") {
-        alert("Enter Email");
-        return;
-    }
-
-    alert("Password Reset Link Sent");
-
+    window.location.href = "404.html";
 }
 
 // ==========================
 // SHOW LOGIN
 // ==========================
 function showLogin() {
-
     document.getElementById("loginBox").style.display = "block";
     document.getElementById("signupBox").style.display = "none";
     document.getElementById("forgotBox").style.display = "none";
-
 }
 
 // ==========================
 // SHOW SIGNUP
 // ==========================
 function showSignup() {
-
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("signupBox").style.display = "block";
     document.getElementById("forgotBox").style.display = "none";
-
 }
 
 // ==========================
 function showForgot() {
-
-    document.getElementById("loginBox").style.display = "none";
-    document.getElementById("signupBox").style.display = "none";
-    document.getElementById("forgotBox").style.display = "block";
-
+    window.location.href = "404.html";
 }
 
 // ==========================================================================
@@ -1023,14 +1027,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 // Reveal section container/background
                 entry.target.classList.add('visible');
-                
+
                 // Stagger card reveals
                 projectCards.forEach((card, idx) => {
                     setTimeout(() => {
                         card.classList.add('revealed');
                     }, idx * 120);
                 });
-                
+
                 observer.unobserve(entry.target);
             }
         });
@@ -1051,7 +1055,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
 
@@ -1075,7 +1079,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sectionTop < viewportHeight && sectionTop > -projectSection.offsetHeight) {
             const scrollPercent = (viewportHeight - sectionTop) / (viewportHeight + projectSection.offsetHeight);
-            
+
             projectCards.forEach((card, idx) => {
                 const img = card.querySelector('.project-gradient-bg');
                 if (img) {
@@ -1086,4 +1090,221 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // ==========================================
+    // CAREERS PAGE INTERACTIVE CANVAS ANIMATION
+    // ==========================================
+    function initCareersCanvas() {
+        const canvas = document.getElementById('careersCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = canvas.offsetWidth || 500;
+        let height = canvas.height = canvas.offsetHeight || 500;
+
+        const particles = [];
+        const maxParticles = 40;
+        const connectionDist = 100;
+
+        window.addEventListener('resize', () => {
+            if (!canvas) return;
+            width = canvas.width = canvas.offsetWidth || 500;
+            height = canvas.height = canvas.offsetHeight || 500;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.8;
+                this.vy = (Math.random() - 0.5) * 0.8;
+                this.radius = Math.random() * 2.5 + 1.5;
+                this.glowColor = '#00f0ff';
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = this.glowColor;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = this.glowColor;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        for (let i = 0; i < maxParticles; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Draw particles
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            // Draw connecting lines
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const p1 = particles[i];
+                    const p2 = particles[j];
+                    const dx = p1.x - p2.x;
+                    const dy = p1.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < connectionDist) {
+                        ctx.beginPath();
+                        ctx.moveTo(p1.x, p1.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        const opacity = 1 - (dist / connectionDist);
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${opacity * 0.25})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
+    initCareersCanvas();
+
+    // ==========================================
+    // INTERACTIVE FORM VALIDATIONS
+    // ==========================================
+    function setupFormLiveValidations() {
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const phoneRegex = /^[0-9]+$/;
+        const companyRegex = /^[A-Za-z0-9\s]+$/;
+        const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+
+        function showInputError(input, message) {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+            if (input.parentNode && input.parentNode.classList.contains('input-group')) {
+                let errorSpan = input.parentNode.querySelector('.error-msg');
+                if (!errorSpan) {
+                    errorSpan = document.createElement('span');
+                    errorSpan.className = 'error-msg';
+                    input.parentNode.appendChild(errorSpan);
+                }
+                errorSpan.innerText = message;
+                input.parentNode.classList.add('has-error');
+            }
+        }
+
+        function clearInputError(input) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+            if (input.parentNode && input.parentNode.classList.contains('input-group')) {
+                input.parentNode.classList.remove('has-error');
+                const errorSpan = input.parentNode.querySelector('.error-msg');
+                if (errorSpan) {
+                    errorSpan.remove();
+                }
+            }
+        }
+
+        // Live checking helper
+        function setupField(id, regex, errorMsg) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.addEventListener('input', () => {
+                const val = el.value.trim();
+                if (val === '') {
+                    el.classList.remove('is-valid', 'is-invalid');
+                    if (el.parentNode && el.parentNode.classList.contains('input-group')) {
+                        el.parentNode.classList.remove('has-error');
+                        const err = el.parentNode.querySelector('.error-msg');
+                        if (err) err.remove();
+                    }
+                } else if (!regex.test(val)) {
+                    showInputError(el, errorMsg);
+                } else {
+                    clearInputError(el);
+                }
+            });
+        }
+
+        // Setup Contact Form fields
+        setupField('fullName', nameRegex, 'Only letters and spaces are allowed.');
+        setupField('companyName', companyRegex, 'Only letters, numbers, and spaces.');
+        setupField('businessEmail', emailRegex, 'Invalid email structure.');
+        setupField('phoneNumber', phoneRegex, 'Digits only. No spaces or symbols.');
+        setupField('country', nameRegex, 'Only letters and spaces.');
+
+        // Setup Modal Form fields
+        setupField('signupName', nameRegex, 'Letters and spaces only.');
+        setupField('signupEmail', emailRegex, 'Invalid email structure.');
+        setupField('signupPassword', pwdRegex, 'Requires 8+ chars, upper, lower, digit, special.');
+        setupField('loginEmail', emailRegex, 'Invalid email structure.');
+        setupField('loginPassword', pwdRegex, 'Requires 8+ chars, upper, lower, digit, special.');
+
+        // Confirm Password validation link
+        const signupPassword = document.getElementById('signupPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+        if (signupPassword && confirmPassword) {
+            confirmPassword.addEventListener('input', () => {
+                const pVal = signupPassword.value.trim();
+                const cVal = confirmPassword.value.trim();
+                if (cVal === '') {
+                    confirmPassword.classList.remove('is-valid', 'is-invalid');
+                } else if (pVal !== cVal) {
+                    confirmPassword.classList.remove('is-valid');
+                    confirmPassword.classList.add('is-invalid');
+                } else {
+                    confirmPassword.classList.remove('is-invalid');
+                    confirmPassword.classList.add('is-valid');
+                }
+            });
+        }
+
+        // Intercept contactForm submission for final checks
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                const fields = [
+                    { id: 'fullName', regex: nameRegex, msg: 'Name must contain letters and spaces only.' },
+                    { id: 'companyName', regex: companyRegex, msg: 'Company Name must contain letters and numbers only.' },
+                    { id: 'businessEmail', regex: emailRegex, msg: 'Please enter a valid business email address.' },
+                    { id: 'phoneNumber', regex: phoneRegex, msg: 'Phone Number must contain digits only.' },
+                    { id: 'country', regex: nameRegex, msg: 'Country must contain letters and spaces only.' }
+                ];
+
+                let formValid = true;
+                fields.forEach(field => {
+                    const el = document.getElementById(field.id);
+                    if (el) {
+                        const val = el.value.trim();
+                        if (!field.regex.test(val)) {
+                            showInputError(el, field.msg);
+                            formValid = false;
+                        }
+                    }
+                });
+
+                if (!formValid) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    alert('Please correct the highlighted fields before submitting.');
+                }
+            });
+        }
+    }
+    setupFormLiveValidations();
 });
+

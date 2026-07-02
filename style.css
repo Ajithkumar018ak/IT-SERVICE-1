@@ -4887,7 +4887,7 @@ button {
 
 .form-input {
     width: 100%;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(252, 251, 251, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     padding: 1.25rem 1rem;
@@ -4901,7 +4901,7 @@ button {
 .form-input:focus {
     outline: none;
     border-color: var(--clr-cyan);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgb(81, 72, 72);
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
 
@@ -8168,10 +8168,12 @@ textarea {
         /* Border on the left */
         border-right: none !important;
         box-shadow: -10px 0 35px rgba(0, 0, 0, 0.6) !important;
-        padding: 1.5rem 1.25rem 2rem 1.25rem !important; /* Spacing adjusted to prevent vertical scroll */
+        padding: 1.5rem 1.25rem 2rem 1.25rem !important;
+        /* Spacing adjusted to prevent vertical scroll */
         display: flex !important;
         flex-direction: column !important;
-        justify-content: space-between !important; /* Space header, nav, actions */
+        justify-content: space-between !important;
+        /* Space header, nav, actions */
         align-items: stretch !important;
         gap: 1.25rem !important;
         box-sizing: border-box !important;
@@ -8254,7 +8256,8 @@ textarea {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
-        gap: 6px !important; /* Tighter gap to fit all elements */
+        gap: 6px !important;
+        /* Tighter gap to fit all elements */
         padding: 0 !important;
         margin: 0 !important;
         list-style: none !important;
@@ -8269,7 +8272,8 @@ textarea {
 
     .mobile-link {
         font-family: var(--font-heading) !important;
-        font-size: 1.15rem !important; /* Reduced font size to fit vertical layout */
+        font-size: 1.15rem !important;
+        /* Reduced font size to fit vertical layout */
         font-weight: 700 !important;
         color: var(--text-secondary) !important;
         letter-spacing: 0.05rem !important;
@@ -8278,7 +8282,8 @@ textarea {
         align-items: center !important;
         text-align: left !important;
         width: 100% !important;
-        min-height: 44px !important; /* Complies with touch targets at least 44px high */
+        min-height: 44px !important;
+        /* Complies with touch targets at least 44px high */
         padding: 0 !important;
         box-sizing: border-box !important;
     }
@@ -8301,7 +8306,8 @@ textarea {
 
     .mobile-actions .btn {
         width: 100% !important;
-        min-height: 44px !important; /* Button targets min-height 44px */
+        min-height: 44px !important;
+        /* Button targets min-height 44px */
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
@@ -8317,23 +8323,30 @@ textarea {
             padding: 10px 15px !important;
             gap: 0.5rem !important;
         }
+
         .mobile-sidebar-header {
             margin-bottom: 0 !important;
         }
+
         .mobile-logo-wrapper .site-logo {
             max-width: 90px !important;
         }
+
         .mobile-list {
             gap: 2px !important;
         }
+
         .mobile-link {
-            min-height: 38px !important; /* Scale down touch target height slightly in short height context */
+            min-height: 38px !important;
+            /* Scale down touch target height slightly in short height context */
             font-size: 1rem !important;
         }
+
         .mobile-actions {
             flex-direction: row !important;
             gap: 0.5rem !important;
         }
+
         .mobile-actions .btn {
             flex: 1 !important;
             min-height: 38px !important;
@@ -8730,4 +8743,488 @@ img.office-image {
 /* Ensure round avatar frames are maintained */
 .member-image-wrapper img {
     border-radius: 50% !important;
+}
+
+.footer-logo-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.site-logo {
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+
+@media (max-width:768px) {
+
+    .footer-brand-col {
+        position: relative;
+        z-index: 100;
+    }
+
+    .footer-logo-link {
+        display: inline-block;
+        position: relative;
+        z-index: 101;
+    }
+
+}
+
+
+/* ==========================
+   TESTIMONIALS ALIGNMENT FIX
+   ========================== */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+}
+
+.testimonial-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 340px;
+    padding: 30px;
+}
+
+.testimonial-text {
+    flex: 1;
+    margin: 20px 0 30px;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.author-avatar-svg {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.author-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author-meta h4 {
+    margin: 0 0 5px;
+}
+
+.author-meta span {
+    margin: 0;
+}
+
+/* Tablet */
+@media (max-width:991px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .testimonial-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .testimonial-author {
+        align-items: center;
+    }
+}
+
+/* ==========================================
+   AUDIT & ENHANCEMENTS FIXES
+   ========================================== */
+
+/* Careers Page Canvas Layout */
+#careersCanvas {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    background: transparent;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    #careersCanvas {
+        height: 300px;
+    }
+}
+
+/* Tablet (768px - 991px) Parallax scaling to prevent collision */
+@media (max-width: 991px) and (min-width: 769px) {
+    .hero-graphic-wrapper {
+        transform: scale(0.8) !important;
+    }
+}
+
+/* Scroll indicator visibility controls to prevent overlaps */
+@media (max-width: 768px),
+(max-height: 750px) {
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
+/* Eye Icon color override to match cyber-cyan branding */
+.password-toggle-btn {
+    color: var(--clr-cyan) !important;
+}
+
+/* Responsive improvements for input forms & layout grids */
+@media (max-width: 480px) {
+    .enterprise-contact-form {
+        padding: 1.5rem !important;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .input-group.full-width {
+        grid-column: span 1 !important;
+    }
+}
+
+
+.map-dark-canvas {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #050913;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.world-map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   INDIVIDUAL MOBILE IMAGE LAYOUT FIXES (Below 992px)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    /* 1. HOME PAGE IMAGE SECTIONS */
+    .about-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .about-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .why-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .why-section .why-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 2. ABOUT PAGE IMAGE SECTIONS */
+    .about-story-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .about-story-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .who-we-are-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .who-we-are-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .exist-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .exist-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .innovation-lab-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .innovation-lab-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .trust-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .trust-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 3. SERVICES PAGE IMAGE SECTIONS */
+    .featured-ai-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .featured-ai-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .showcase-block.grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .showcase-block .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .why-section .why-left .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 4. PORTFOLIO PAGE IMAGE SECTIONS */
+    .featured-case-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .featured-case-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* 5. CAREERS PAGE IMAGE SECTIONS */
+    .life-section .grid-two-col {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .life-section .about-image-card {
+        height: 320px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ==========================================================================
+   HOLOGRAPHIC RIGHT SIDE VISUAL STYLES
+   ========================================================================== */
+
+/* Holographic Card Layout and Design */
+.holographic-card {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.01) !important;
+    border: 1px solid rgba(0, 240, 255, 0.15) !important;
+    border-radius: 24px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.05), inset 0 0 15px rgba(0, 240, 255, 0.03) !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    transform-style: preserve-3d;
+    transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.holographic-card:hover {
+    border-color: rgba(0, 240, 255, 0.35) !important;
+    box-shadow: 0 0 45px rgba(0, 240, 255, 0.15), inset 0 0 25px rgba(0, 240, 255, 0.08) !important;
+}
+
+/* Digital Scan Line Animation */
+.holo-scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.6), transparent);
+    animation: holoScan 4s linear infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* SVGs inside the Holographic Cards */
+.holo-globe-svg, .holo-cloud-svg, .holo-careers-svg, .holo-contact-svg {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+/* Orbiting Rings */
+.ring-outer-slow {
+    transform-origin: center;
+    animation: holoRotateCW 30s linear infinite;
+}
+
+.ring-mid-reverse {
+    transform-origin: center;
+    animation: holoRotateCCW 22s linear infinite;
+}
+
+.ring-inner-fast {
+    transform-origin: center;
+    animation: holoRotateCW 12s linear infinite;
+}
+
+/* Floating Elements (Hexagons & Cubes) */
+.floating-hex, .floating-cube {
+    transform-origin: center;
+    animation: holoFloat 5s ease-in-out infinite;
+}
+
+.hex-1, .cube-1 { animation-delay: 0s; }
+.hex-2, .cube-2 { animation-delay: 1.5s; }
+.hex-3, .cube-3 { animation-delay: 3s; }
+
+/* India boundary map glow */
+.india-outline {
+    animation: holoGlow 4s ease-in-out infinite;
+}
+
+/* Map markers and connections */
+.office-marker {
+    transform-origin: center;
+}
+
+.pulsing-marker {
+    animation: pulseSignal 2s infinite alternate;
+}
+
+.contact-icon-floating {
+    transform-origin: center;
+    animation: holoFloat 6s ease-in-out infinite;
+}
+
+.icon-email { animation-delay: 0.5s; }
+.icon-phone { animation-delay: 2.5s; }
+
+/* Career node and line animation */
+.careers-growth-path {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: careersDraw 6s linear infinite;
+}
+
+.career-node {
+    transform-origin: center;
+    animation: holoFloat 4s ease-in-out infinite;
+}
+
+.node-1 { animation-delay: 0.5s; }
+.node-2 { animation-delay: 1.5s; }
+.node-3 { animation-delay: 2.5s; }
+
+/* ==========================================================
+   KEYFRAME ANIMATIONS (60 FPS GPU ACCELERATED)
+   ========================================================== */
+
+@keyframes holoFloat {
+    0% { transform: translate3d(0, 0, 0) rotate(0.01deg); }
+    50% { transform: translate3d(0, -8px, 0) rotate(0.01deg); }
+    100% { transform: translate3d(0, 0, 0) rotate(0.01deg); }
+}
+
+@keyframes holoRotateCW {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes holoRotateCCW {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes holoGlow {
+    0% { opacity: 0.5; filter: brightness(1); }
+    50% { opacity: 0.95; filter: brightness(1.25) drop-shadow(0 0 10px rgba(0, 240, 255, 0.4)); }
+    100% { opacity: 0.5; filter: brightness(1); }
+}
+
+@keyframes holoScan {
+    0% { transform: translate3d(0, 0, 0); opacity: 0.2; }
+    50% { opacity: 0.8; }
+    100% { transform: translate3d(0, 320px, 0); opacity: 0.2; }
+}
+
+@keyframes careersDraw {
+    0% { stroke-dashoffset: 600; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -600; }
+}
+
+/* ==========================================================
+   MOBILE ALIGNMENT AND SCALING
+   ========================================================== */
+
+@media (max-width: 991px) {
+    .holographic-card {
+        width: 260px !important;
+        height: 260px !important;
+        margin: 2.5rem auto 0 auto !important;
+    }
+    
+    .hero-right {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Make sure careers canvas overlays correctly inside card */
+    #careersCanvas {
+        max-width: 100% !important;
+        height: 100% !important;
+    }
 }

@@ -221,6 +221,28 @@ document.querySelectorAll(".menu-item").forEach(item => {
                 return;
             }
 
+            const nameRegex = /^[A-Za-z\s]+$/;
+            if (!nameRegex.test(newName)) {
+                alert("Full Name must contain letters and spaces only.");
+                return;
+            }
+
+            if (newPhone !== "") {
+                const phoneRegex = /^[0-9]+$/;
+                if (!phoneRegex.test(newPhone)) {
+                    alert("Phone Number must contain digits only.");
+                    return;
+                }
+            }
+
+            if (newCompany !== "") {
+                const companyRegex = /^[A-Za-z0-9\s]+$/;
+                if (!companyRegex.test(newCompany)) {
+                    alert("Company Name must contain letters and numbers only.");
+                    return;
+                }
+            }
+
             // Save details to Local Storage
             localStorage.setItem('userName', newName);
             localStorage.setItem('userPhone', newPhone);
@@ -246,6 +268,12 @@ document.querySelectorAll(".menu-item").forEach(item => {
 
             if (newPass === "" || confirmPass === "") {
                 alert("Passphrases cannot be empty!");
+                return;
+            }
+
+            const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+            if (!pwdRegex.test(newPass)) {
+                alert("Password must contain: Minimum 8 characters, at least 1 Uppercase, 1 Lowercase, 1 Number, and 1 Special Character.");
                 return;
             }
 

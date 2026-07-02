@@ -72,8 +72,8 @@
     <header class="navbar" id="mainNavbar">
         <div class="navbar-container">
             <a href="index.html" class="logo-link">
-              <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
-</a>
+                <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+            </a>
             </a>
 
             <nav class="nav-menu">
@@ -146,7 +146,8 @@
                     <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
                     <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
                     <li class="mobile-item"><a href="contact.html" class="mobile-link active">Contact</a></li>
-                    <li class="mobile-item"><a href="javascript:void(0)" class="mobile-link" onclick="openAuthMobile(event)">Login</a></li>
+                    <li class="mobile-item"><a href="javascript:void(0)" class="mobile-link"
+                            onclick="openAuthMobile(event)">Login</a></li>
                 </ul>
             </nav>
             <div class="mobile-actions">
@@ -227,9 +228,69 @@
                         <span class="btn-inner">TALK WITH EXPERTS</span>
                     </a>
                 </div>
+                </div>
             </div>
 
-           
+            <!-- Right Side interactive graphic with Holographic India Map & Offices -->
+            <div class="hero-right">
+                <div class="hero-graphic-wrapper" id="parallaxContainer">
+                    <div class="hero-main-card holographic-card">
+                        <div class="card-glow-border"></div>
+                        <div class="card-reflection"></div>
+                        <div class="holo-scan-line"></div>
+                        <!-- Holographic Map SVG -->
+                        <div class="hero-core-graphic">
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="holo-contact-svg">
+                                <defs>
+                                    <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.3" />
+                                        <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+                                    </radialGradient>
+                                    <filter id="neonGlowContact" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="6" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+                                <circle cx="200" cy="200" r="150" fill="url(#mapGlow)" />
+                                <path d="M 160,110 
+                                         L 180,95 L 205,100 L 220,90 L 210,120 L 225,130 L 245,120 L 255,140 L 240,165 
+                                         L 255,185 L 270,185 L 285,210 L 250,225 L 240,240 L 235,275 L 220,295 L 200,320 
+                                         L 192,320 L 195,290 L 180,265 L 183,240 L 175,225 L 160,220 L 155,200 L 140,185 
+                                         L 155,160 L 145,150 L 160,140 Z" 
+                                      stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.5" fill="rgba(0, 240, 255, 0.03)" filter="url(#neonGlowContact)" class="india-outline" />
+                                <path d="M 195,290 L 215,280 L 200,260 Z" stroke="#8a2be2" stroke-width="1" stroke-dasharray="3 3" class="office-connect-lines" />
+                                <g class="office-marker marker-chennai" transform="translate(215, 280)">
+                                    <circle cx="0" cy="0" r="5" fill="#ff007f" filter="url(#neonGlowContact)" class="pulsing-marker" />
+                                    <circle cx="0" cy="0" r="2" fill="#fff" />
+                                    <text x="8" y="3" fill="#fff" font-size="8" font-family="monospace" font-weight="bold">CHENNAI</text>
+                                </g>
+                                <g class="office-marker marker-salem" transform="translate(195, 290)">
+                                    <circle cx="0" cy="0" r="7" fill="#00f0ff" filter="url(#neonGlowContact)" class="pulsing-marker" />
+                                    <circle cx="0" cy="0" r="3" fill="#fff" />
+                                    <text x="-48" y="14" fill="#00f0ff" font-size="9" font-family="monospace" font-weight="bold">SALEM (HQ)</text>
+                                </g>
+                                <g class="office-marker marker-bengaluru" transform="translate(200, 260)">
+                                    <circle cx="0" cy="0" r="5" fill="#8a2be2" filter="url(#neonGlowContact)" class="pulsing-marker" />
+                                    <circle cx="0" cy="0" r="2" fill="#fff" />
+                                    <text x="-70" y="0" fill="#fff" font-size="8" font-family="monospace" font-weight="bold">BENGALURU</text>
+                                </g>
+                                <g class="contact-icon-floating icon-email" transform="translate(70, 140)">
+                                    <circle cx="15" cy="15" r="15" fill="rgba(5, 8, 22, 0.85)" stroke="#00f0ff" stroke-width="1" />
+                                    <path d="M 7,10 L 23,10 L 23,20 L 7,20 Z M 7,10 L 15,15 L 23,10" stroke="#00f0ff" stroke-width="1" fill="none" />
+                                </g>
+                                <g class="contact-icon-floating icon-phone" transform="translate(300, 150)">
+                                    <circle cx="15" cy="15" r="15" fill="rgba(5, 8, 22, 0.85)" stroke="#8a2be2" stroke-width="1" />
+                                    <path d="M 10,8 A 3,3 0 0,1 14,8 L 14,11 L 12,13 L 13,15 L 15,14 L 18,14 A 3,3 0 0,1 18,18 L 15,18 C 11,18 8,15 8,11 Z" stroke="#8a2be2" stroke-width="1.2" fill="none" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- CONTACT INFORMATION Section -->
@@ -251,9 +312,7 @@
                             <circle cx="12" cy="10" r="3" />
                         </svg>
                     </div>
-                    <img src="assets/contact1.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact1.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Head Office</h3>
                     <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
                     <span class="info-details">Singapore HQ</span>
@@ -268,9 +327,7 @@
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                     </div>
-                    <img src="assets/contact2.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact2.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Phone Support</h3>
                     <p>Access our high-priority support hotlines around the clock.</p>
                     <span class="info-details">+65 6789 0122</span>
@@ -285,9 +342,7 @@
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
                     </div>
-                    <img src="assets/contact3.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact3.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Business Email</h3>
                     <p>Send details of your database schemas or request direct RFPs.</p>
                     <span class="info-details">solutions@antigravity.io</span>
@@ -302,9 +357,7 @@
                             <polyline points="12 6 12 12 16 14" />
                         </svg>
                     </div>
-                    <img src="assets/contact4.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact4.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Working Hours</h3>
                     <p>Our engineering support and sales hubs operate continuously.</p>
                     <span class="info-details">Mon - Fri: 24 Hours</span>
@@ -320,9 +373,7 @@
                                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                     </div>
-                <img src="assets/contact5.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact5.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Global Offices</h3>
                     <p>6 international offices located across major technological centers.</p>
                     <span class="info-details">Singapore, Dubai, London</span>
@@ -338,9 +389,7 @@
                             <line x1="12" y1="17" x2="12.01" y2="17" />
                         </svg>
                     </div>
-                    <img src="assets/contact6.webp"
-     alt="Office Location"
-     class="card-image-placeholder">
+                    <img src="assets/contact6.webp" alt="Office Location" class="card-image-placeholder">
                     <h3>Emergency Support</h3>
                     <p>High-priority security response coordinates and system hot-patches.</p>
                     <span class="info-details">24/7 Security Hotline</span>
@@ -404,13 +453,15 @@
                         <div class="form-grid">
                             <!-- Full Name -->
                             <div class="input-group">
-                                <input type="text" id="fullName" class="form-input" required placeholder=" ">
+                                <input type="text" id="fullName" class="form-input" required placeholder=" "
+                                    oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'');">
                                 <label for="fullName" class="form-label">Full Name</label>
                             </div>
 
                             <!-- Company Name -->
                             <div class="input-group">
-                                <input type="text" id="companyName" class="form-input" required placeholder=" ">
+                                <input type="text" id="companyName" class="form-input" required placeholder=" "
+                                    oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'');">
                                 <label for="companyName" class="form-label">Company Name</label>
                             </div>
 
@@ -422,13 +473,15 @@
 
                             <!-- Phone Number -->
                             <div class="input-group">
-                                <input type="tel" id="phoneNumber" class="form-input" required placeholder=" ">
+                                <input type="tel" id="phoneNumber" class="form-input" required placeholder=" "
+                                    oninput="this.value=this.value.replace(/[^0-9]/g,'');">
                                 <label for="phoneNumber" class="form-label">Phone Number</label>
                             </div>
 
                             <!-- Country -->
                             <div class="input-group">
-                                <input type="text" id="country" class="form-input" required placeholder=" ">
+                                <input type="text" id="country" class="form-input" required placeholder=" "
+                                    oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'');">
                                 <label for="country" class="form-label">Country</label>
                             </div>
 
@@ -538,9 +591,7 @@
                                 d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
                         </svg>
                     </div>
-                  <img src="assets/contact7.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact7.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>AI Development</h3>
                     <p>Private vector LLMs and classification networks integration.</p>
                 </div>
@@ -554,9 +605,7 @@
                             <polyline points="8 6 2 12 8 18" />
                         </svg>
                     </div>
-                             <img src="assets/contact8.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact8.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Software Engineering</h3>
                     <p>High-throughput backend architectures and transactional pipelines.</p>
                 </div>
@@ -571,9 +620,7 @@
                             <line x1="9" y1="21" x2="9" y2="9" />
                         </svg>
                     </div>
-                             <img src="assets/contact9.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact9.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Web Development</h3>
                     <p>Modern luxury web apps using responsive React/Next setups.</p>
                 </div>
@@ -587,9 +634,7 @@
                             <line x1="12" y1="18" x2="12.01" y2="18" />
                         </svg>
                     </div>
-                             <img src="assets/contact10.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact10.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Mobile Applications</h3>
                     <p>Native Flutter and Swift applications with biometric safety keys.</p>
                 </div>
@@ -602,9 +647,7 @@
                             <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
                         </svg>
                     </div>
-                             <img src="assets/contact11.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact11.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Cloud Solutions</h3>
                     <p>Highly available multi-region Kubernetes configurations.</p>
                 </div>
@@ -618,9 +661,7 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
                     </div>
-                             <img src="assets/contact12.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact12.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Cyber Security</h3>
                     <p>Zero-trust encrypted database tunnels and compliance audits.</p>
                 </div>
@@ -634,9 +675,7 @@
                             <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
                         </svg>
                     </div>
-                             <img src="assets/contact13.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact13.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>UI/UX Design</h3>
                     <p>Luxury typography scales and interactive layouts mockups.</p>
                 </div>
@@ -650,9 +689,7 @@
                             <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
                     </div>
-                           <img src="assets/contact14.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact14.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>DevOps</h3>
                     <p>Automated CI/CD Jenkins systems and container metrics pipelines.</p>
                 </div>
@@ -688,9 +725,7 @@
             <div class="locations-grid">
                 <!-- Chennai -->
                 <div class="office-card" id="officeChennai">
-                      <img src="assets/c7.webp"
-         alt="Chennai Office"
-         class="office-image">
+                    <img src="assets/c7.webp" alt="Chennai Office" class="office-image">
                     <div class="office-card-content">
                         <h3>Chennai</h3>
                         <p>100 Mount Road, Guindy, Chennai, Tamil Nadu 600032</p>
@@ -704,9 +739,7 @@
 
                 <!-- Bengaluru -->
                 <div class="office-card" id="officeBengaluru">
-                                 <img src="assets/c8.webp"
-         alt="Bengaluru Office"
-         class="office-image">
+                    <img src="assets/c8.webp" alt="Bengaluru Office" class="office-image">
                     <div class="office-card-content">
                         <h3>Bengaluru</h3>
                         <p>80 Feet Road, Koramangala, Bengaluru, Karnataka 560034</p>
@@ -720,9 +753,7 @@
 
                 <!-- Hyderabad -->
                 <div class="office-card" id="officeHyderabad">
-                                 <img src="assets/c9.webp"
-         alt="Chennai Office"
-         class="office-image">
+                    <img src="assets/c9.webp" alt="Chennai Office" class="office-image">
                     <div class="office-card-content">
                         <h3>Hyderabad</h3>
                         <p>Hitec City Phase II, Madhapur, Hyderabad, Telangana 500081</p>
@@ -736,9 +767,7 @@
 
                 <!-- Dubai -->
                 <div class="office-card" id="officeDubai">
-                                 <img src="assets/c10.webp"
-         alt="Chennai Office"
-         class="office-image">
+                    <img src="assets/c10.webp" alt="Chennai Office" class="office-image">
                     <div class="office-card-content">
                         <h3>Dubai</h3>
                         <p>The Gate District, DIFC, Dubai, United Arab Emirates, PO Box 50021</p>
@@ -752,9 +781,7 @@
 
                 <!-- Singapore -->
                 <div class="office-card" id="officeSingapore">
-                                <img src="assets/c11.webp"
-         alt="Chennai Office"
-         class="office-image">
+                    <img src="assets/c11.webp" alt="Chennai Office" class="office-image">
                     <div class="office-card-content">
                         <h3>Singapore</h3>
                         <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
@@ -768,9 +795,7 @@
 
                 <!-- London -->
                 <div class="office-card" id="officeLondon">
-                                 <img src="assets/c12.webp"
-         alt="Chennai Office"
-         class="office-image">
+                    <img src="assets/c12.webp" alt="Chennai Office" class="office-image">
                     <div class="office-card-content">
                         <h3>London</h3>
                         <p>30 St Mary Axe (The Gherkin), London EC3A 8EP, United Kingdom</p>
@@ -804,81 +829,8 @@
     <section class="map-section reveal-on-scroll" id="mapSection">
         <div class="map-container-wrapper">
             <div class="map-dark-canvas" id="interactiveMap">
-                <!-- Custom World Map Sketch using clean background SVGs -->
-                <svg viewBox="0 0 1000 500" fill="none" class="map-svg-world" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Subtle outline grids -->
-                    <rect width="1000" height="500" fill="#070a1a" />
-                    <path
-                        d="M0 100 H1000 M0 200 H1000 M0 300 H1000 M0 400 H1000 M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500 M800 0 V500 M900 0 V500"
-                        stroke="rgba(255,255,255,0.01)" stroke-width="1" />
+                <img src="assets/location.webp" alt="Stackly Office Locations" class="world-map-image">
 
-                    <!-- Abstract continents grid blocks shapes representing world coordinates maps -->
-                    <!-- Americas -->
-                    <path d="M80 100 Q120 120 150 180 T160 280 T140 380 Q100 450 120 480 M180 320 Q220 380 250 450"
-                        stroke="rgba(255,255,255,0.03)" stroke-width="2" />
-                    <!-- Eurasia / Africa -->
-                    <path
-                        d="M420 80 Q500 120 580 100 T680 120 T780 150 Q850 200 880 250 M450 200 Q500 280 480 350 T540 420 Q600 450 620 470"
-                        stroke="rgba(255,255,255,0.03)" stroke-width="2" />
-                    <!-- Australia -->
-                    <path d="M820 350 Q880 380 920 410 T850 460 Z" stroke="rgba(255,255,255,0.03)" stroke-width="2" />
-                </svg>
-
-                <!-- Location Markers (Absolute Coordinates) -->
-                <!-- London -->
-                <div class="map-marker-node" id="nodeLondon" style="top: 28%; left: 48%;"
-                    onclick="showMapCard('london');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">London</span>
-                </div>
-
-                <!-- Dubai -->
-                <div class="map-marker-node" id="nodeDubai" style="top: 45%; left: 59%;"
-                    onclick="showMapCard('dubai');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">Dubai</span>
-                </div>
-
-                <!-- Chennai -->
-                <div class="map-marker-node" id="nodeChennai" style="top: 55%; left: 69%;"
-                    onclick="showMapCard('chennai');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">Chennai</span>
-                </div>
-
-                <!-- Bengaluru -->
-                <div class="map-marker-node" id="nodeBengluru" style="top: 53%; left: 67%;"
-                    onclick="showMapCard('bengluru');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">Bengaluru</span>
-                </div>
-
-                <!-- Hyderabad -->
-                <div class="map-marker-node" id="nodeHyderabad" style="top: 51%; left: 68%;"
-                    onclick="showMapCard('hyderabad');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">Hyderabad</span>
-                </div>
-
-                <!-- Singapore -->
-                <div class="map-marker-node" id="nodeSingapore" style="top: 60%; left: 74%;"
-                    onclick="showMapCard('singapore');">
-                    <div class="marker-pulse"></div>
-                    <div class="marker-core"></div>
-                    <span class="marker-label">Singapore</span>
-                </div>
-
-                <!-- Map Info Overlays Card -->
-                <div class="map-info-overlay-card" id="mapOverlayCard">
-                    <h4 id="mapOverlayTitle">Singapore HQ</h4>
-                    <p id="mapOverlayAddress">Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
-                    <span id="mapOverlayPhone">+65 6789 0122</span>
-                </div>
             </div>
         </div>
     </section>
@@ -903,9 +855,7 @@
                             <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
                     </div>
-                                  <img src="assets/contact15.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact15.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Enterprise Experience</h3>
                     <p>Over a decade of scaling database query nodes and orchestrating multi-region servers.</p>
                 </div>
@@ -920,9 +870,7 @@
                                 d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
                         </svg>
                     </div>
-                              <img src="assets/contact16.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact16.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>AI Innovation</h3>
                     <p>Fine-tuning private large language model weights to automate secure document classifications.</p>
                 </div>
@@ -936,9 +884,7 @@
                             <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
                         </svg>
                     </div>
-                              <img src="assets/contact17.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact17.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Certified Engineers</h3>
                     <p>Our architects hold active AWS, Kubernetes, and corporate security certifications.</p>
                 </div>
@@ -952,9 +898,7 @@
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                     </div>
-                                  <img src="assets/contact18.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact18.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>24/7 Support</h3>
                     <p>Direct communication tunnels to database teams for continuous support diagnostics.</p>
                 </div>
@@ -969,9 +913,7 @@
                                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                     </div>
-                                  <img src="assets/contact19.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact19.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Global Delivery</h3>
                     <p>Coordinated workflows across Singapore, London, Dubai, and Indian technology hubs.</p>
                 </div>
@@ -985,9 +927,7 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
                     </div>
-                                 <img src="assets/contact20.webp"
-     alt="Contact Us"
-     class="card-image-placeholder">
+                    <img src="assets/contact20.webp" alt="Contact Us" class="card-image-placeholder">
                     <h3>Security First</h3>
                     <p>Continuous database encryption check audits matching global SOC 2 standards.</p>
                 </div>
@@ -1478,9 +1418,8 @@
         <div class="section-container footer-grid">
             <!-- Brand Column -->
             <div class="footer-brand-col">
-                <a href="#" class="logo-link footer-logo">
-                        <a href="#" class="logo-link">
-    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
                 </a>
                 <p class="footer-desc">
                     Engineering tomorrow's global enterprise software, cognitive intelligence systems, and
@@ -1488,19 +1427,19 @@
                 </p>
                 <!-- Social Icons -->
                 <div class="footer-socials">
-                    <a href="#" class="social-link" aria-label="Twitter">
+                    <a href="404.html" class="social-link" aria-label="Twitter">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                     </a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">
+                    <a href="404.html" class="social-link" aria-label="LinkedIn">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                     </a>
-                    <a href="#" class="social-link" aria-label="GitHub">
+                    <a href="404.html" class="social-link" aria-label="GitHub">
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1534,30 +1473,30 @@
             </div>
 
             <!-- Contact Information -->
-<div class="footer-links-col">
-    <h4>Contact Information</h4>
+            <div class="footer-links-col">
+                <h4>Contact Information</h4>
 
-    <ul class="contact-info">
-        <li>
-            <i data-lucide="mail"></i>
-            <a href="mailto:info@stacklyroboticsautomation.com">
-                📧 info@stacklyITSERVICE.com
-            </a>
-        </li>
+                <ul class="contact-info">
+                    <li>
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:info@stacklyroboticsautomation.com">
+                            📧 info@stacklyITSERVICE.com
+                        </a>
+                    </li>
 
-        <li>
-            <i data-lucide="phone"></i>
-            <a href="tel:+919876543210">
-               📞 +91 98765 43210
-            </a>
-        </li>
+                    <li>
+                        <i data-lucide="phone"></i>
+                        <a href="tel:+919876543210">
+                            📞 +91 98765 43210
+                        </a>
+                    </li>
 
-        <li>
-            <i data-lucide="map-pin"></i>
-           📍 Bengaluru, Tamil Nadu, India
-        </li>
-    </ul>
-</div>
+                    <li>
+                        <i data-lucide="map-pin"></i>
+                        📍 Bengaluru, Tamil Nadu, India
+                    </li>
+                </ul>
+            </div>
 
             <!-- Newsletter -->
             <div class="footer-news-col">
