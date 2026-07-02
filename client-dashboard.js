@@ -1,6 +1,3 @@
-/* ==========================================================================
-   STACKLY IT SERVICE - CLIENT DASHBOARD CORE CONTROLLER
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. SESSION ACCESS LOCK GUARD
@@ -92,22 +89,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. MOBILE SIDEBAR DRAWER TOGGLER
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const sidebarPanel = document.getElementById('sidebarPanel');
+ // 5. MOBILE SIDEBAR
+const hamburger = document.getElementById("hamburgerBtn");
+const sidebar = document.getElementById("sidebarPanel");
+const overlay = document.querySelector(".sidebar-overlay");
 
-    if (hamburgerBtn && sidebarPanel) {
-        hamburgerBtn.addEventListener('click', () => {
-            sidebarPanel.classList.toggle('active');
-        });
+function openSidebar() {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
 
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', (e) => {
-            if (!sidebarPanel.contains(e.target) && !hamburgerBtn.contains(e.target) && sidebarPanel.classList.contains('active')) {
-                sidebarPanel.classList.remove('active');
-            }
-        });
+    document.body.classList.add("no-scroll");
+    document.documentElement.classList.add("no-scroll");
+}
+
+function closeSidebar() {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
+}
+
+hamburger.onclick = function () {
+
+    if (sidebar.classList.contains("active")) {
+        closeSidebar();
+    } else {
+        openSidebar();
     }
 
+};
+
+overlay.onclick = closeSidebar;
+
+document.querySelectorAll(".menu-item").forEach(item => {
+    item.onclick = function () {
+        closeSidebar();
+    };
+});
     // 6. STATS COUNTER ANIMATION ENGINE
     function animateCounters() {
         const counters = document.querySelectorAll('.counter-val');
@@ -327,3 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+

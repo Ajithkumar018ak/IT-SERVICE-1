@@ -88,7 +88,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-ripple-container"></span>
                     <span class="btn-inner">
                         <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -124,7 +124,20 @@
     <!-- MOBILE OVERLAY MENU -->
     <div class="mobile-overlay" id="mobileOverlay">
         <div class="mobile-overlay-noise"></div>
-        <div class="mobile-overlay-container">
+        <div class="mobile-overlay-container" id="mobileSidebar">
+            <div class="mobile-sidebar-header">
+                <div class="mobile-logo-wrapper">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                    </a>
+                </div>
+                <button class="close-sidebar-btn" id="closeSidebar" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
             <nav class="mobile-nav">
                 <ul class="mobile-list">
                     <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
@@ -133,10 +146,11 @@
                     <li class="mobile-item"><a href="portfolio.html" class="mobile-link active">Portfolio</a></li>
                     <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
                     <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                    <li class="mobile-item"><a href="javascript:void(0)" class="mobile-link" onclick="openAuthMobile(event)">Login</a></li>
                 </ul>
             </nav>
             <div class="mobile-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-inner">
                         <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -161,6 +175,7 @@
         </div>
     </div>
 
+   
     <!-- PORTFOLIO HERO -->
     <main class="hero-section" id="heroSection">
         <div class="hero-aurora-bg"></div>
@@ -456,26 +471,9 @@
             <div class="lab-left">
                 <div class="about-image-card">
                     <div class="card-glow-border"></div>
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
-                            stroke-width="2" />
-                        <g class="svg-orbit-ring ring-outer">
-                            <rect x="150" y="100" width="200" height="200" rx="100" stroke="rgba(0, 240, 255, 0.2)"
-                                stroke-width="2" />
-                        </g>
-                        <circle cx="250" cy="200" r="40" fill="url(#caseSpotlightGlow)" />
-                        <!-- Core link mesh -->
-                        <line x1="250" y1="200" x2="120" y2="120" stroke="#00f0ff" stroke-width="2" />
-                        <line x1="250" y1="200" x2="380" y2="120" stroke="#8a2be2" stroke-width="2" />
-                        <circle cx="120" cy="120" r="6" fill="#00f0ff" />
-                        <circle cx="380" cy="120" r="6" fill="#8a2be2" />
-                        <defs>
-                            <radialGradient id="caseSpotlightGlow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
-                                <stop offset="100%" stop-color="transparent" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
+                     <img src="assets/portfolio.webp"
+                 alt="Digital Transformation"
+                 class="about-image">
                 </div>
             </div>
 

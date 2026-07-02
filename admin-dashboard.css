@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    STACKLY IT SERVICE - ADMIN DASHBOARD STYLE SUITE
    ========================================================================== */
@@ -160,28 +161,35 @@ body {
 }
 
 /* Sidebar Navigation */
-.sidebar-panel {
-    width: 260px;
-    background: var(--bg-sidebar);
-    border-right: 1px solid var(--glass-border);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+.sidebar-panel{
+    width:260px;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    flex-direction:column;
+
+    background:var(--bg-sidebar);
+    border-right:1px solid var(--glass-border);
+
+    padding:0;
+    overflow:hidden;
 }
 
-.sidebar-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 3rem;
+.sidebar-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:15px 12px 10px;
+
+    margin:0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    flex-shrink:0;
 }
 
 .sidebar-logo-icon {
@@ -199,11 +207,19 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.sidebar-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    flex-grow: 1;
+.sidebar-menu{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:5px;
+
+    padding:8px 10px;
+
+    margin-top:5px;
+
+    overflow-y:auto;
 }
 
 .menu-item {
@@ -243,9 +259,10 @@ body {
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.08);
 }
 
-.menu-item.logout-item {
-    color: var(--clr-pink);
-    margin-top: auto;
+.menu-item.logout-item{
+   
+    margin-bottom:15px;
+    color:var(--clr-pink);
 }
 
 .menu-item.logout-item:hover {
@@ -1152,4 +1169,257 @@ body {
         gap: 1rem;
         text-align: center;
     }
+}
+
+
+/* =========================
+   SIDEBAR LOGO
+========================= */
+
+
+
+.logo-link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    text-decoration:none;
+}
+
+.site-logo{
+    width:180px;      /* 160px / 180px / 200px change pannalam */
+    max-width:100%;
+    height:auto;
+    display:block;
+    object-fit:contain;
+
+    transition:all .3s ease;
+}
+
+.site-logo:hover{
+    transform:scale(1.05);
+    filter:drop-shadow(0 0 15px rgba(0,240,255,.6));
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+    .sidebar-logo{
+        padding:20px 0;
+        margin-bottom:15px;
+    }
+
+    .site-logo{
+        width:160px;
+    }
+
+}
+
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+==================================*/
+
+@media (max-width:991px){
+
+.dashboard-wrapper{
+    display:block;
+}
+
+/* Sidebar */
+
+.sidebar-panel{
+    position:fixed;
+    top:0;
+    left:-300px;
+    width:270px;
+    height:100vh;
+    z-index:9999;
+    transition:.35s;
+    overflow-y:auto;
+}
+
+.sidebar-panel.active{
+    left:0;
+}
+
+/* Main */
+
+.main-panel{
+    width:100%;
+    margin-left:0;
+    padding:80px 15px 20px;
+}
+
+/* Header */
+
+.top-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+    padding:15px;
+}
+
+.menu-hamburger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.header-welcome h1{
+    font-size:22px;
+}
+
+.header-welcome span{
+    font-size:13px;
+}
+
+/* Hero */
+
+.hero-banner{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-banner-content{
+    width:100%;
+}
+
+.banner-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+
+.banner-actions button{
+    width:100%;
+}
+
+/* Stats */
+
+.stats-grid-ten{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.stat-card-premium{
+    width:100%;
+}
+
+/* Dashboard */
+
+.dashboard-content-split{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.split-left,
+.split-right{
+    width:100%;
+}
+
+/* Tables */
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+.custom-table{
+    min-width:850px;
+}
+
+/* Financial */
+
+.financial-split{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* Ticket */
+
+.tickets-grid{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.ticket-card{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.ticket-card button{
+    width:100%;
+    margin-top:12px;
+}
+
+/* Modal */
+
+.admin-modal-box{
+    width:95%;
+    max-height:90vh;
+    overflow:auto;
+}
+
+}
+
+
+/* ===============================
+SMALL MOBILE
+==================================*/
+
+@media (max-width:576px){
+
+.stats-grid-ten{
+    grid-template-columns:1fr;
+}
+
+.header-welcome h1{
+    font-size:18px;
+}
+
+.hero-banner h2{
+    font-size:24px;
+}
+
+.hero-banner p{
+    font-size:14px;
+}
+
+.stat-card-middle h3{
+    font-size:26px;
+}
+
+.btn-quick{
+    width:100%;
+}
+
+.site-logo{
+    width:170px;
+}
+
+}
+
+
+body.sidebar-open{
+    overflow:hidden;
+    height:100vh;
+    touch-action:none;
+}
+
+.sidebar-panel{
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
 }

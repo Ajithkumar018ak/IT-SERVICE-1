@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Client Dashboard | STACKLY IT SERVICE</title>
+    <title> Client </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
@@ -21,50 +21,40 @@
         <!-- ========================== LEFT SIDEBAR ========================== -->
         <aside class="sidebar-panel" id="sidebarPanel">
             <div class="sidebar-logo">
-                <svg class="sidebar-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 20L80 72H20L50 20Z" stroke="url(#sidebarLogoGrad)" stroke-width="6" stroke-linejoin="round" />
-                    <circle cx="50" cy="55" r="10" fill="#00f0ff" />
-                    <defs>
-                        <linearGradient id="sidebarLogoGrad" x1="20" y1="20" x2="80" y2="72" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#00f0ff" />
-                            <stop offset="100%" stop-color="#8a2be2" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <h2>STACKLY</h2>
+                           <a href="" class="logo-link">
+    <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+</a>
+
             </div>
 
             <nav class="sidebar-menu">
                 <a href="#" class="menu-item active" data-tab="dashboardSection">
-                    <i>🏠</i>
+                    <i></i>
                     <span>Dashboard</span>
                 </a>
                 <a href="#" class="menu-item" data-tab="projectsSection">
-                    <i>📂</i>
+                    <i></i>
                     <span>My Projects</span>
                 </a>
                 <a href="#" class="menu-item" data-tab="requestsSection">
-                    <i>📝</i>
+                    <i></i>
                     <span>My Requests</span>
                 </a>
                 <a href="#" class="menu-item" data-tab="documentsSection">
-                    <i>📄</i>
+                    <i></i>
                     <span>Documents</span>
                 </a>
                 <a href="#" class="menu-item" data-tab="billingSection">
-                    <i>💳</i>
+                    <i></i>
                     <span>Billing</span>
                 </a>
                 <a href="#" class="menu-item" data-tab="supportSection">
-                    <i>💬</i>
+                    <i></i>
                     <span>Support</span>
                 </a>
-                <a href="#" class="menu-item" data-tab="profileSection">
-                    <i>⚙</i>
-                    <span>Profile</span>
-                </a>
+               
                 <a href="#" class="menu-item logout-item" id="logoutBtn">
-                    <i>🚪</i>
+                    <i></i>
                     <span>Logout</span>
                 </a>
             </nav>
@@ -76,34 +66,14 @@
             <!-- TOP HEADER -->
             <header class="top-header">
                 <div class="menu-hamburger" id="hamburgerBtn">☰</div>
+                <div class="sidebar-overlay"></div>
                 
                 <div class="header-welcome">
                     <h1>Welcome Back, <span class="client-name-display">Client</span></h1>
-                    <span>Secure Gateway Node Active</span>
+                    
                 </div>
 
-                <div class="header-actions">
-                    <!-- Search Wrapper -->
-                    <div class="search-wrapper">
-                        <span class="search-icon">🔍</span>
-                        <input type="text" class="search-input" id="dashboardSearch" placeholder="Search system...">
-                    </div>
-
-                    <!-- Notification Button -->
-                    <button class="icon-badge-btn" id="notifyBtn">
-                        <span>🔔</span>
-                        <div class="badge-dot"></div>
-                    </button>
-
-                    <!-- User Profile Quick Link -->
-                    <div class="header-profile" id="headerProfile">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client User">
-                        <div class="header-profile-info">
-                            <h4 class="client-name-display">John Client</h4>
-                            <span class="client-company-display">Enterprise Partner</span>
-                        </div>
-                    </div>
-                </div>
+               
             </header>
 
             <!-- ========================== SPA TAB SECTIONS ========================== -->

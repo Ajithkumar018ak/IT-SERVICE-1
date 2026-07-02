@@ -88,7 +88,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-ripple-container"></span>
                     <span class="btn-inner">
                         <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -124,7 +124,20 @@
     <!-- MOBILE OVERLAY MENU -->
     <div class="mobile-overlay" id="mobileOverlay">
         <div class="mobile-overlay-noise"></div>
-        <div class="mobile-overlay-container">
+        <div class="mobile-overlay-container" id="mobileSidebar">
+            <div class="mobile-sidebar-header">
+                <div class="mobile-logo-wrapper">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                    </a>
+                </div>
+                <button class="close-sidebar-btn" id="closeSidebar" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
             <nav class="mobile-nav">
                 <ul class="mobile-list">
                     <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
@@ -133,10 +146,11 @@
                     <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
                     <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
                     <li class="mobile-item"><a href="contact.html" class="mobile-link active">Contact</a></li>
+                    <li class="mobile-item"><a href="javascript:void(0)" class="mobile-link" onclick="openAuthMobile(event)">Login</a></li>
                 </ul>
             </nav>
             <div class="mobile-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-inner">
                         <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -215,40 +229,7 @@
                 </div>
             </div>
 
-            <div class="hero-right">
-                <div class="hero-graphic-wrapper" id="parallaxContainer">
-                    <div class="hero-main-card">
-                        <div class="card-glow-border"></div>
-                        <div class="card-reflection"></div>
-
-                        <div class="hero-core-graphic">
-                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                class="quantum-node-svg">
-                                <circle cx="200" cy="200" r="110" stroke="url(#contactHeroGrad)" stroke-width="2" />
-                                <circle cx="200" cy="200" r="80" stroke="url(#contactHeroGrad)" stroke-width="1"
-                                    stroke-dasharray="8 4" />
-                                <line x1="90" y1="200" x2="310" y2="200" stroke="rgba(0, 240, 255, 0.2)"
-                                    stroke-width="2" />
-                                <line x1="200" y1="90" x2="200" y2="310" stroke="rgba(123, 44, 255, 0.2)"
-                                    stroke-width="2" />
-                                <circle cx="200" cy="200" r="16" fill="#00f0ff" class="logo-core" />
-                                <circle cx="90" cy="200" r="8" fill="#8a2be2" />
-                                <circle cx="310" cy="200" r="8" fill="#8a2be2" />
-                                <circle cx="200" cy="90" r="8" fill="#ff007f" />
-                                <circle cx="200" cy="310" r="8" fill="#ff007f" />
-                                <defs>
-                                    <linearGradient id="contactHeroGrad" x1="90" y1="90" x2="310" y2="310">
-                                        <stop offset="0%" stop-color="#00f0ff" />
-                                        <stop offset="50%" stop-color="#8a2be2" />
-                                        <stop offset="100%" stop-color="#ff007f" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+           
     </main>
 
     <!-- CONTACT INFORMATION Section -->
@@ -270,9 +251,9 @@
                             <circle cx="12" cy="10" r="3" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad1)" />
-                    </svg>
+                    <img src="assets/contact1.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Head Office</h3>
                     <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
                     <span class="info-details">Singapore HQ</span>
@@ -287,9 +268,9 @@
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad2)" />
-                    </svg>
+                    <img src="assets/contact2.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Phone Support</h3>
                     <p>Access our high-priority support hotlines around the clock.</p>
                     <span class="info-details">+65 6789 0122</span>
@@ -304,9 +285,9 @@
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad3)" />
-                    </svg>
+                    <img src="assets/contact3.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Business Email</h3>
                     <p>Send details of your database schemas or request direct RFPs.</p>
                     <span class="info-details">solutions@antigravity.io</span>
@@ -321,9 +302,9 @@
                             <polyline points="12 6 12 12 16 14" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad1)" />
-                    </svg>
+                    <img src="assets/contact4.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Working Hours</h3>
                     <p>Our engineering support and sales hubs operate continuously.</p>
                     <span class="info-details">Mon - Fri: 24 Hours</span>
@@ -339,9 +320,9 @@
                                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad2)" />
-                    </svg>
+                <img src="assets/contact5.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Global Offices</h3>
                     <p>6 international offices located across major technological centers.</p>
                     <span class="info-details">Singapore, Dubai, London</span>
@@ -357,9 +338,9 @@
                             <line x1="12" y1="17" x2="12.01" y2="17" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#infoGrad3)" />
-                    </svg>
+                    <img src="assets/contact6.webp"
+     alt="Office Location"
+     class="card-image-placeholder">
                     <h3>Emergency Support</h3>
                     <p>High-priority security response coordinates and system hot-patches.</p>
                     <span class="info-details">24/7 Security Hotline</span>
@@ -557,9 +538,9 @@
                                 d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
-                    </svg>
+                  <img src="assets/contact7.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>AI Development</h3>
                     <p>Private vector LLMs and classification networks integration.</p>
                 </div>
@@ -573,9 +554,9 @@
                             <polyline points="8 6 2 12 8 18" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
-                    </svg>
+                             <img src="assets/contact8.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Software Engineering</h3>
                     <p>High-throughput backend architectures and transactional pipelines.</p>
                 </div>
@@ -590,9 +571,9 @@
                             <line x1="9" y1="21" x2="9" y2="9" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad3)" />
-                    </svg>
+                             <img src="assets/contact9.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Web Development</h3>
                     <p>Modern luxury web apps using responsive React/Next setups.</p>
                 </div>
@@ -606,9 +587,9 @@
                             <line x1="12" y1="18" x2="12.01" y2="18" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
-                    </svg>
+                             <img src="assets/contact10.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Mobile Applications</h3>
                     <p>Native Flutter and Swift applications with biometric safety keys.</p>
                 </div>
@@ -621,9 +602,9 @@
                             <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
-                    </svg>
+                             <img src="assets/contact11.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Cloud Solutions</h3>
                     <p>Highly available multi-region Kubernetes configurations.</p>
                 </div>
@@ -637,9 +618,9 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad3)" />
-                    </svg>
+                             <img src="assets/contact12.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Cyber Security</h3>
                     <p>Zero-trust encrypted database tunnels and compliance audits.</p>
                 </div>
@@ -653,9 +634,9 @@
                             <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad1)" />
-                    </svg>
+                             <img src="assets/contact13.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>UI/UX Design</h3>
                     <p>Luxury typography scales and interactive layouts mockups.</p>
                 </div>
@@ -669,9 +650,9 @@
                             <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#inqGrad2)" />
-                    </svg>
+                           <img src="assets/contact14.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>DevOps</h3>
                     <p>Automated CI/CD Jenkins systems and container metrics pipelines.</p>
                 </div>
@@ -707,9 +688,9 @@
             <div class="locations-grid">
                 <!-- Chennai -->
                 <div class="office-card" id="officeChennai">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad1)" />
-                    </svg>
+                      <img src="assets/c7.webp"
+         alt="Chennai Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>Chennai</h3>
                         <p>100 Mount Road, Guindy, Chennai, Tamil Nadu 600032</p>
@@ -723,9 +704,9 @@
 
                 <!-- Bengaluru -->
                 <div class="office-card" id="officeBengaluru">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad2)" />
-                    </svg>
+                                 <img src="assets/c8.webp"
+         alt="Bengaluru Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>Bengaluru</h3>
                         <p>80 Feet Road, Koramangala, Bengaluru, Karnataka 560034</p>
@@ -739,9 +720,9 @@
 
                 <!-- Hyderabad -->
                 <div class="office-card" id="officeHyderabad">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad3)" />
-                    </svg>
+                                 <img src="assets/c9.webp"
+         alt="Chennai Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>Hyderabad</h3>
                         <p>Hitec City Phase II, Madhapur, Hyderabad, Telangana 500081</p>
@@ -755,9 +736,9 @@
 
                 <!-- Dubai -->
                 <div class="office-card" id="officeDubai">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad1)" />
-                    </svg>
+                                 <img src="assets/c10.webp"
+         alt="Chennai Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>Dubai</h3>
                         <p>The Gate District, DIFC, Dubai, United Arab Emirates, PO Box 50021</p>
@@ -771,9 +752,9 @@
 
                 <!-- Singapore -->
                 <div class="office-card" id="officeSingapore">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad2)" />
-                    </svg>
+                                <img src="assets/c11.webp"
+         alt="Chennai Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>Singapore</h3>
                         <p>Level 28, Marina Bay Sands, Tower 3, Singapore 018971</p>
@@ -787,9 +768,9 @@
 
                 <!-- London -->
                 <div class="office-card" id="officeLondon">
-                    <svg viewBox="0 0 300 150" fill="none" class="office-svg-image" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="300" height="150" rx="12" fill="url(#officeInGrad3)" />
-                    </svg>
+                                 <img src="assets/c12.webp"
+         alt="Chennai Office"
+         class="office-image">
                     <div class="office-card-content">
                         <h3>London</h3>
                         <p>30 St Mary Axe (The Gherkin), London EC3A 8EP, United Kingdom</p>
@@ -922,9 +903,9 @@
                             <polyline points="22 4 12 14.01 9 11.01" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad1)" />
-                    </svg>
+                                  <img src="assets/contact15.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Enterprise Experience</h3>
                     <p>Over a decade of scaling database query nodes and orchestrating multi-region servers.</p>
                 </div>
@@ -939,9 +920,9 @@
                                 d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M6.34 17.66l2.83-2.83M17.66 6.34l-2.83 2.83" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad2)" />
-                    </svg>
+                              <img src="assets/contact16.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>AI Innovation</h3>
                     <p>Fine-tuning private large language model weights to automate secure document classifications.</p>
                 </div>
@@ -955,9 +936,9 @@
                             <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad3)" />
-                    </svg>
+                              <img src="assets/contact17.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Certified Engineers</h3>
                     <p>Our architects hold active AWS, Kubernetes, and corporate security certifications.</p>
                 </div>
@@ -971,9 +952,9 @@
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad1)" />
-                    </svg>
+                                  <img src="assets/contact18.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>24/7 Support</h3>
                     <p>Direct communication tunnels to database teams for continuous support diagnostics.</p>
                 </div>
@@ -988,9 +969,9 @@
                                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad2)" />
-                    </svg>
+                                  <img src="assets/contact19.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Global Delivery</h3>
                     <p>Coordinated workflows across Singapore, London, Dubai, and Indian technology hubs.</p>
                 </div>
@@ -1004,9 +985,9 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
                     </div>
-                    <svg viewBox="0 0 200 100" class="card-svg-placeholder">
-                        <rect width="200" height="100" rx="8" fill="url(#chooseGrad3)" />
-                    </svg>
+                                 <img src="assets/contact20.webp"
+     alt="Contact Us"
+     class="card-image-placeholder">
                     <h3>Security First</h3>
                     <p>Continuous database encryption check audits matching global SOC 2 standards.</p>
                 </div>

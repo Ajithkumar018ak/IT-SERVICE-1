@@ -67,21 +67,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. MOBILE HAMBURGER
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const sidebarPanel = document.getElementById('sidebarPanel');
+ const hamburgerBtn = document.getElementById("hamburgerBtn");
+const sidebarPanel = document.getElementById("sidebarPanel");
 
-    if (hamburgerBtn && sidebarPanel) {
-        hamburgerBtn.addEventListener('click', () => {
-            sidebarPanel.classList.toggle('active');
-        });
+if (hamburgerBtn && sidebarPanel) {
 
-        // Close sidebar when clicking outside on mobile
-        document.addEventListener('click', (e) => {
-            if (!sidebarPanel.contains(e.target) && !hamburgerBtn.contains(e.target) && sidebarPanel.classList.contains('active')) {
-                sidebarPanel.classList.remove('active');
+    hamburgerBtn.addEventListener("click", () => {
+
+        sidebarPanel.classList.toggle("active");
+
+        if (sidebarPanel.classList.contains("active")) {
+            document.body.classList.add("sidebar-open");
+        } else {
+            document.body.classList.remove("sidebar-open");
+        }
+    });
+
+    document.addEventListener("click", (e) => {
+
+        if (
+            !sidebarPanel.contains(e.target) &&
+            !hamburgerBtn.contains(e.target) &&
+            sidebarPanel.classList.contains("active")
+        ) {
+            sidebarPanel.classList.remove("active");
+            document.body.classList.remove("sidebar-open");
+        }
+
+    });
+
+    
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            if (window.innerWidth < 992) {
+                sidebarPanel.classList.remove("active");
+                document.body.classList.remove("sidebar-open");
             }
         });
-    }
+    });
+
+}
 
     // 5. STATS ANIMATED COUNTERS
     function animateCounters() {
@@ -307,30 +334,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 10. SYSTEM LOGOUT
-    const logoutBtn = document.getElementById('logoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (confirm("Disconnect admin terminal session and clear authentication tokens?")) {
-                const usersData = localStorage.getItem('users');
-                localStorage.clear();
-                sessionStorage.clear();
-                
-                // Re-seed original user data
-                if (usersData) {
-                    localStorage.setItem('users', usersData);
-                } else {
-                    // Seed defaults
-                    localStorage.setItem('users', JSON.stringify([{
-                        name: "System Administrator",
-                        email: "admin@antigravity.io",
-                        password: "AdminSecure2026!",
-                        role: "admin"
-                    }]));
-                }
+  const logoutBtn = document.getElementById("logoutBtn");
 
-                window.location.href = 'index.html';
-            }
-        });
-    }
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "index.html";
+    });
+}
+
+});
+
+const menuItems = document.querySelectorAll(".menu-item");
+
+menuItems.forEach(item=>{
+    item.addEventListener("click",()=>{
+        if(window.innerWidth<992){
+            sidebarPanel.classList.remove("active");
+        }
+    });
 });

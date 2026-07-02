@@ -95,7 +95,7 @@
 
             <!-- Action Buttons (Right) -->
             <div class="nav-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-ripple-container"></span>
                     <span class="btn-inner">
                         <svg class="icon-login" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -129,10 +129,23 @@
         </div>
     </header>
 
-    <!-- MOBILE FULLSCREEN OVERLAY MENU -->
+    <!-- MOBILE OVERLAY MENU -->
     <div class="mobile-overlay" id="mobileOverlay">
         <div class="mobile-overlay-noise"></div>
-        <div class="mobile-overlay-container">
+        <div class="mobile-overlay-container" id="mobileSidebar">
+            <div class="mobile-sidebar-header">
+                <div class="mobile-logo-wrapper">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+                    </a>
+                </div>
+                <button class="close-sidebar-btn" id="closeSidebar" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
             <nav class="mobile-nav">
                 <ul class="mobile-list">
                     <li class="mobile-item"><a href="index.html" class="mobile-link">Home</a></li>
@@ -141,10 +154,11 @@
                     <li class="mobile-item"><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
                     <li class="mobile-item"><a href="careers.html" class="mobile-link">Careers</a></li>
                     <li class="mobile-item"><a href="contact.html" class="mobile-link">Contact</a></li>
+                    <li class="mobile-item"><a href="javascript:void(0)" class="mobile-link" onclick="openAuthMobile(event)">Login</a></li>
                 </ul>
             </nav>
             <div class="mobile-actions">
-                <a href="login.html" class="btn btn-login btn-magnetic">
+                <a href="javascript:void(0)" class="btn btn-login btn-magnetic" onclick="openAuth()">
                     <span class="btn-inner">
                         <svg class="icon-login" width="18" height="18" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -166,29 +180,10 @@
                     </span>
                 </a>
             </div>
-            <!-- Social Icons -->
-            <div class="mobile-socials">
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="GitHub">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                </a>
-            </div>
         </div>
     </div>
+
+    
 
     <!-- ABOUT HERO SECTION -->
     <main class="hero-section" id="heroSection">
@@ -268,31 +263,16 @@
     <section class="about-story-section section-padding reveal-on-scroll">
         <div class="section-container grid-two-col">
             <!-- Left: Graphic Placeholder -->
-            <div class="story-left">
-                <div class="about-image-card">
-                    <div class="card-glow-border"></div>
-                    <!-- Strategy meeting vector graphic -->
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
-                            stroke-width="2" />
-                        <!-- Concentric Wave Graphs -->
-                        <path d="M100 250 C 150 150, 200 150, 250 250 S 350 350, 400 250" stroke="url(#storyGrad)"
-                            stroke-width="3" fill="none" />
-                        <circle cx="250" cy="250" r="10" fill="#00f0ff" />
-                        <circle cx="175" cy="200" r="6" fill="#8a2be2" />
-                        <circle cx="325" cy="300" r="6" fill="#ff007f" />
-                        <defs>
-                            <linearGradient id="storyGrad" x1="100" y1="250" x2="400" y2="250"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#00f0ff" />
-                                <stop offset="50%" stop-color="#8a2be2" />
-                                <stop offset="100%" stop-color="#ff007f" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
+                           <div class="story-left">
+    <div class="about-image-card">
+        <div class="card-glow-border"></div>
 
+        <img src="assets/about1.webp"
+             alt="About Antigravity"
+             class="about-image">
+    </div>
+</div>
+           
             <!-- Right: Content -->
             <div class="story-right">
                 <span class="section-badge">OUR HISTORY</span>
@@ -380,55 +360,13 @@
             <div class="who-left">
                 <div class="about-image-card">
                     <div class="card-glow-border"></div>
-                    <!-- Team graphic -->
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
-                            stroke-width="2" />
-                        <g transform="translate(100, 100)">
-                            <!-- Abstract node network of business team -->
-                            <circle cx="50" cy="50" r="25" fill="url(#teamNode1)" />
-                            <circle cx="150" cy="50" r="25" fill="url(#teamNode2)" />
-                            <circle cx="250" cy="50" r="25" fill="url(#teamNode3)" />
-                            <circle cx="100" cy="150" r="30" fill="url(#teamNode4)" />
-                            <circle cx="200" cy="150" r="30" fill="url(#teamNode5)" />
-                            <!-- Connections -->
-                            <line x1="50" y1="50" x2="100" y2="150" stroke="rgba(0, 240, 255, 0.3)"
-                                stroke-width="1.5" />
-                            <line x1="150" y1="50" x2="100" y2="150" stroke="rgba(0, 240, 255, 0.3)"
-                                stroke-width="1.5" />
-                            <line x1="150" y1="50" x2="200" y2="150" stroke="rgba(138, 43, 226, 0.3)"
-                                stroke-width="1.5" />
-                            <line x1="250" y1="50" x2="200" y2="150" stroke="rgba(138, 43, 226, 0.3)"
-                                stroke-width="1.5" />
-                            <line x1="100" y1="150" x2="200" y2="150" stroke="rgba(255, 0, 127, 0.3)"
-                                stroke-width="1.5" />
-                        </g>
-                        <defs>
-                            <linearGradient id="teamNode1" x1="25" y1="25" x2="75" y2="75">
-                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.5)" />
-                                <stop offset="100%" stop-color="rgba(0, 240, 255, 0.1)" />
-                            </linearGradient>
-                            <linearGradient id="teamNode2" x1="125" y1="25" x2="175" y2="75">
-                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.5)" />
-                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
-                            </linearGradient>
-                            <linearGradient id="teamNode3" x1="225" y1="25" x2="275" y2="75">
-                                <stop offset="0%" stop-color="rgba(255, 0, 127, 0.5)" />
-                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.1)" />
-                            </linearGradient>
-                            <linearGradient id="teamNode4" x1="70" y1="120" x2="130" y2="180">
-                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.7)" />
-                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.2)" />
-                            </linearGradient>
-                            <linearGradient id="teamNode5" x1="170" y1="120" x2="230" y2="180">
-                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.7)" />
-                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.2)" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-        </div>
+                   <div class="about-image-card">
+    <div class="card-glow-border"></div>
+
+    <img src="assets/about2.webp"
+         alt="Antigravity Team"
+         class="about-image">
+</div>
     </section>
 
     <!-- MISSION & VISION SECTION -->
@@ -607,27 +545,13 @@
                 <div class="about-image-card">
                     <div class="card-glow-border"></div>
                     <!-- Innovation center visual -->
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255, 255, 255, 0.03)"
-                            stroke-width="2" />
-                        <!-- Abstract Research Node Network -->
-                        <g class="svg-orbit-ring ring-mid">
-                            <circle cx="250" cy="200" r="100" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1.5" />
-                        </g>
-                        <!-- Grid Lines inside sphere -->
-                        <line x1="250" y1="100" x2="250" y2="300" stroke="rgba(138, 43, 226, 0.4)" stroke-width="2" />
-                        <line x1="150" y1="200" x2="350" y2="200" stroke="rgba(138, 43, 226, 0.4)" stroke-width="2" />
-                        <circle cx="250" cy="200" r="40" fill="url(#existCore)" filter="url(#glowFilter)" />
-                        <defs>
-                            <radialGradient id="existCore" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#ff007f" />
-                                <stop offset="100%" stop-color="transparent" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-        </div>
+                    <div class="about-image-card">
+    <div class="card-glow-border"></div>
+
+    <img src="assets/about3.webp"
+         alt="Innovation Center"
+         class="about-image">
+</div>
     </section>
 
     <!-- COMPANY TIMELINE SECTION -->
@@ -969,71 +893,11 @@
                     guarantees low-latency global delivery.</p>
             </div>
 
-            <!-- Custom High-Fidelity SVG World Map containing beacon pulsators -->
-            <div class="world-map-wrapper">
-                <svg viewBox="0 0 1000 500" fill="none" class="world-map-svg" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Abstract dotted continent structures -->
-                    <rect x="50" y="50" width="900" height="400" rx="20" stroke="rgba(255,255,255,0.02)"
-                        stroke-width="2" />
-                    <!-- Grid vectors -->
-                    <line x1="250" y1="50" x2="250" y2="450" stroke="rgba(255,255,255,0.01)" />
-                    <line x1="500" y1="50" x2="500" y2="450" stroke="rgba(255,255,255,0.01)" />
-                    <line x1="750" y1="50" x2="750" y2="450" stroke="rgba(255,255,255,0.01)" />
-                    <line x1="50" y1="150" x2="950" y2="150" stroke="rgba(255,255,255,0.01)" />
-                    <line x1="50" y1="300" x2="950" y2="300" stroke="rgba(255,255,255,0.01)" />
-
-                    <!-- Dotted outline points representing continents -->
-                    <!-- North America -->
-                    <circle cx="200" cy="180" r="40" fill="rgba(255,255,255,0.02)" />
-                    <!-- Europe -->
-                    <circle cx="480" cy="160" r="35" fill="rgba(255,255,255,0.02)" />
-                    <!-- Asia -->
-                    <circle cx="750" cy="180" r="60" fill="rgba(255,255,255,0.02)" />
-                    <!-- Australia -->
-                    <circle cx="850" cy="360" r="40" fill="rgba(255,255,255,0.02)" />
-                    <!-- Africa -->
-                    <circle cx="530" cy="300" r="45" fill="rgba(255,255,255,0.02)" />
-                    <!-- South America -->
-                    <circle cx="320" cy="340" r="40" fill="rgba(255,255,255,0.02)" />
-
-                    <!-- Blinking beacons (Pulsing halo rings) -->
-                    <!-- NY -->
-                    <g class="map-beacon beacon-ny">
-                        <circle cx="220" cy="180" r="8" fill="#00f0ff" class="beacon-core" />
-                        <circle cx="220" cy="180" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- London -->
-                    <g class="map-beacon beacon-london">
-                        <circle cx="470" cy="155" r="8" fill="#8a2be2" class="beacon-core" />
-                        <circle cx="470" cy="155" r="16" stroke="#8a2be2" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- Dubai -->
-                    <g class="map-beacon beacon-dubai">
-                        <circle cx="590" cy="200" r="8" fill="#ff007f" class="beacon-core" />
-                        <circle cx="590" cy="200" r="16" stroke="#ff007f" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- Singapore -->
-                    <g class="map-beacon beacon-singapore">
-                        <circle cx="740" cy="260" r="8" fill="#00f0ff" class="beacon-core" />
-                        <circle cx="740" cy="260" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- Sydney -->
-                    <g class="map-beacon beacon-sydney">
-                        <circle cx="860" cy="360" r="8" fill="#8a2be2" class="beacon-core" />
-                        <circle cx="860" cy="360" r="16" stroke="#8a2be2" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- Cape Town -->
-                    <g class="map-beacon beacon-capetown">
-                        <circle cx="530" cy="350" r="8" fill="#ff007f" class="beacon-core" />
-                        <circle cx="530" cy="350" r="16" stroke="#ff007f" stroke-width="1" class="beacon-halo" />
-                    </g>
-                    <!-- Sao Paulo -->
-                    <g class="map-beacon beacon-saopaulo">
-                        <circle cx="330" cy="330" r="8" fill="#00f0ff" class="beacon-core" />
-                        <circle cx="330" cy="330" r="16" stroke="#00f0ff" stroke-width="1" class="beacon-halo" />
-                    </g>
-                </svg>
-            </div>
+          <div class="world-map-wrapper">
+    <img src="assets/Global.webp"
+         alt="Global Presence"
+         class="world-map-image">
+</div>
 
             <p class="global-presence-desc">
                 Our global systems architecture distributes resource loads across local server clusters dynamically,
@@ -1046,36 +910,16 @@
     <!-- 3. INNOVATION LAB SECTION -->
     <section class="innovation-lab-section section-padding reveal-on-scroll">
         <div class="section-container grid-two-col">
-            <!-- Left: Graphic Placeholder -->
-            <div class="lab-left">
-                <div class="about-image-card">
-                    <div class="card-glow-border"></div>
-                    <!-- Custom SVG representing tech robotics/ML automation nodes -->
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
-                            stroke-width="2" />
-                        <!-- Robotics node structure -->
-                        <g class="svg-orbit-ring ring-outer">
-                            <rect x="150" y="100" width="200" height="200" rx="100" stroke="rgba(0, 240, 255, 0.2)"
-                                stroke-width="2" />
-                        </g>
-                        <circle cx="250" cy="200" r="50" fill="url(#labCore)" filter="url(#glowFilter)" />
-                        <!-- Intersecting tech rays -->
-                        <line x1="250" y1="200" x2="100" y2="100" stroke="#00f0ff" stroke-width="1" />
-                        <line x1="250" y1="200" x2="400" y2="100" stroke="#8a2be2" stroke-width="1" />
-                        <line x1="250" y1="200" x2="250" y2="350" stroke="#ff007f" stroke-width="1" />
-                        <circle cx="100" cy="100" r="8" fill="#00f0ff" />
-                        <circle cx="400" cy="100" r="8" fill="#8a2be2" />
-                        <circle cx="250" cy="350" r="8" fill="#ff007f" />
-                        <defs>
-                            <radialGradient id="labCore" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#00f0ff" />
-                                <stop offset="100%" stop-color="transparent" />
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
+           <!-- Left: Image -->
+<div class="lab-left">
+    <div class="about-image-card">
+        <div class="card-glow-border"></div>
+
+        <img src="assets/about4.webp"
+             alt="AI Robotics Lab"
+             class="about-image">
+    </div>
+</div>
 
             <!-- Right: Content -->
             <div class="lab-right">
@@ -1388,32 +1232,13 @@
             <div class="trust-right">
                 <div class="about-image-card">
                     <div class="card-glow-border"></div>
-                    <svg viewBox="0 0 500 400" fill="none" class="about-svg-graphic" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="50" y="50" width="400" height="300" rx="16" stroke="rgba(255,255,255,0.02)"
-                            stroke-width="2" />
-                        <g transform="translate(100, 100)">
-                            <!-- Handshake abstract nodes vector connection -->
-                            <rect x="30" y="50" width="100" height="80" rx="8" fill="url(#trustBox1)" />
-                            <rect x="170" y="50" width="100" height="80" rx="8" fill="url(#trustBox2)" />
-                            <!-- Connection link bridge -->
-                            <path d="M 130 90 L 170 90" stroke="#00f0ff" stroke-width="4" stroke-dasharray="5 5"
-                                class="beacon-halo" />
-                            <circle cx="150" cy="90" r="10" fill="#ff007f" />
-                        </g>
-                        <defs>
-                            <linearGradient id="trustBox1" x1="30" y1="50" x2="130" y2="130">
-                                <stop offset="0%" stop-color="rgba(0, 240, 255, 0.4)" />
-                                <stop offset="100%" stop-color="rgba(138, 43, 226, 0.1)" />
-                            </linearGradient>
-                            <linearGradient id="trustBox2" x1="170" y1="50" x2="270" y2="130">
-                                <stop offset="0%" stop-color="rgba(138, 43, 226, 0.4)" />
-                                <stop offset="100%" stop-color="rgba(255, 0, 127, 0.1)" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-        </div>
+                    <div class="about-image-card">
+    <div class="card-glow-border"></div>
+
+    <img src="assets/about5.webp"
+         alt="AI Robotics Lab"
+         class="about-image">
+</div>
     </section>
 
     <!-- 8. OUR IMPACT SECTION -->

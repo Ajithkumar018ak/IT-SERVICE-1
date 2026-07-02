@@ -150,27 +150,87 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     if (mobileMenuToggle && mobileOverlay) {
-        mobileMenuToggle.addEventListener('click', () => {
-            const isActive = mobileOverlay.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
+        
+        const getScrollbarWidth = () => {
+            return window.innerWidth - document.documentElement.clientWidth;
+        };
 
-            if (isActive) {
-                body.style.overflow = 'hidden';
+        const preventTouchScroll = (e) => {
+            if (mobileSidebar && !mobileSidebar.contains(e.target)) {
+                e.preventDefault();
+            }
+        };
+
+        const openMenu = () => {
+            const scrollbarWidth = getScrollbarWidth();
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+                const navbar = document.getElementById('mainNavbar');
+                if (navbar) {
+                    navbar.style.paddingRight = `${scrollbarWidth}px`;
+                }
+            }
+
+            mobileOverlay.classList.add('active');
+            mobileMenuToggle.classList.add('active');
+            if (mobileSidebar) mobileSidebar.classList.add('active');
+            document.body.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            document.addEventListener('touchmove', preventTouchScroll, { passive: false });
+        };
+
+        const closeMenu = () => {
+            mobileOverlay.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            if (mobileSidebar) mobileSidebar.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            document.body.style.paddingRight = '';
+            const navbar = document.getElementById('mainNavbar');
+            if (navbar) {
+                navbar.style.paddingRight = '';
+            }
+
+            document.removeEventListener('touchmove', preventTouchScroll);
+        };
+
+        mobileMenuToggle.addEventListener('click', () => {
+            if (mobileOverlay.classList.contains('active')) {
+                closeMenu();
             } else {
-                body.style.overflow = '';
+                openMenu();
+            }
+        });
+
+        if (closeSidebar) {
+            closeSidebar.addEventListener('click', closeMenu);
+        }
+
+        // Close menu when clicking the overlay backdrop itself
+        mobileOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileOverlay) {
+                closeMenu();
             }
         });
 
         // Close mobile overlay on clicking links
         mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileOverlay.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close mobile overlay when pressing the Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileOverlay.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
 
@@ -249,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (parallaxContainer && heroMainCard) {
         document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth <= 768) return;
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
 
@@ -784,6 +845,10 @@ function openAuth() {
         modal.classList.add("active");
     }, 10);
 
+    // Lock body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
     showLogin();
 
 }
@@ -796,8 +861,23 @@ function closeAuth() {
 
     setTimeout(() => {
         modal.style.display = "none";
+        // Unlock body scrolling when modal is closed
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
     }, 300);
 
+}
+
+function openAuthMobile(event) {
+    if (event) {
+        event.stopImmediatePropagation();
+        event.preventDefault();
+    }
+    const closeSidebar = document.getElementById('closeSidebar');
+    if (closeSidebar) {
+        closeSidebar.click();
+    }
+    openAuth();
 }
 
 window.addEventListener("click", function (e) {
