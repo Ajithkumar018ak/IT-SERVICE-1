@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (parallaxContainer && heroMainCard) {
         document.addEventListener('mousemove', (e) => {
-            if (window.innerWidth <= 768) return;
+            if (window.innerWidth <= 1024) return;
             const windowWidth = window.innerWidth;
             const windowHeight = window.innerHeight;
 
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const progressPercent = (maxActiveStepNum / timelineSteps.length) * 100;
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 1024) {
                 progressLine.style.height = `${progressPercent}%`;
                 progressLine.style.width = '4px';
             } else {
@@ -835,6 +835,139 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// ==========================================
+// CUSTOM PREMIUM TOAST AND VALIDATION ERRORS
+// ==========================================
+function showToast(title, message, type = 'success') {
+    let container = document.getElementById('customToastContainer');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'customToastContainer';
+        container.className = 'custom-toast-container';
+        document.body.appendChild(container);
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = `custom-toast custom-toast-${type}`;
+    
+    const iconSvg = type === 'success' ? 
+        `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>` :
+        `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
+        
+    toast.innerHTML = `
+        <div class="custom-toast-icon">${iconSvg}</div>
+        <div class="custom-toast-content">
+            <div class="custom-toast-title">${title}</div>
+            <div class="custom-toast-message">${message}</div>
+        </div>
+        <div class="custom-toast-close">&times;</div>
+    `;
+    
+    container.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    const autoRemoveTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 400);
+    }, 4000);
+    
+    toast.querySelector('.custom-toast-close').addEventListener('click', () => {
+        clearTimeout(autoRemoveTimeout);
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 400);
+    });
+}
+
+function showInputError(input, message) {
+    input.classList.remove('is-valid');
+    input.classList.add('is-invalid');
+    
+    let container = input;
+    if (input.parentNode && input.parentNode.classList.contains('password-toggle-wrapper')) {
+        container = input.parentNode;
+    }
+    
+    let errorSpan = container.parentNode.querySelector(`.error-msg[data-for="${input.id}"]`);
+    if (!errorSpan) {
+        errorSpan = document.createElement('span');
+        errorSpan.className = 'error-msg';
+        errorSpan.setAttribute('data-for', input.id);
+        container.parentNode.insertBefore(errorSpan, container.nextSibling);
+    }
+    errorSpan.innerText = message;
+    
+    if (input.parentNode && input.parentNode.classList.contains('input-group')) {
+        input.parentNode.classList.add('has-error');
+    }
+}
+
+function clearInputError(input) {
+    input.classList.remove('is-invalid');
+    input.classList.add('is-valid');
+    
+    let container = input;
+    if (input.parentNode && input.parentNode.classList.contains('password-toggle-wrapper')) {
+        container = input.parentNode;
+    }
+    
+    const errorSpan = container.parentNode.querySelector(`.error-msg[data-for="${input.id}"]`);
+    if (errorSpan) {
+        errorSpan.remove();
+    }
+    
+    if (input.parentNode && input.parentNode.classList.contains('input-group')) {
+        input.parentNode.classList.remove('has-error');
+    }
+}
+
+// Global Password Visibility Toggle Helper
+function togglePasswordVisibility(btn) {
+    const input = btn.parentNode.querySelector('input');
+    if (!input) return;
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = `
+            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+            </svg>
+        `;
+    } else {
+        input.type = 'password';
+        btn.innerHTML = `
+            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+        `;
+    }
+}
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.password-toggle-btn');
+    if (!btn) return;
+    
+    e.preventDefault();
+    togglePasswordVisibility(btn);
+});
+
+document.addEventListener('keydown', (e) => {
+    const btn = e.target.closest('.password-toggle-btn');
+    if (!btn) return;
+    
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        togglePasswordVisibility(btn);
+    }
+});
+
 function openAuth() {
 
     const modal = document.getElementById("loginModal");
@@ -904,76 +1037,250 @@ document.addEventListener("keydown", function (e) {
 });
 
 
+let loginInProgress = false;
+let signupInProgress = false;
+
 function loginUser() {
-    const role = document.getElementById("loginRole").value;
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
+    if (loginInProgress) return;
 
-    if (email === "" || password === "") {
+    const emailEl = document.getElementById("loginEmail");
+    const passwordEl = document.getElementById("loginPassword");
+    const roleEl = document.getElementById("loginRole");
 
+    const email = emailEl.value.trim();
+    const password = passwordEl.value.trim();
+    const role = roleEl.value;
+
+    let formValid = true;
+
+    if (email === "") {
+        showInputError(emailEl, "Email is required.");
+        formValid = false;
+    }
+    if (password === "") {
+        showInputError(passwordEl, "Password is required.");
+        formValid = false;
+    }
+
+    if (!formValid) {
+        showToast("Validation Failed", "Please enter both email and password.", "error");
         return;
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
-
-        return;
+        showInputError(emailEl, "Please enter a valid email address.");
+        formValid = false;
     }
 
     const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
     if (!pwdRegex.test(password)) {
+        showInputError(passwordEl, "Requires 8+ chars, upper, lower, digit, special.");
+        formValid = false;
+    }
 
+    if (!formValid) {
+        showToast("Validation Failed", "Credentials do not meet security requirements.", "error");
         return;
     }
 
-    localStorage.setItem("isLoggedIn", "true");
-    localStorage.setItem("userEmail", email);
-    localStorage.setItem("userRole", role);
-
-    if (role === "Admin") {
-        window.location.href = "admin-dashboard.html";
-    } else {
-        window.location.href = "client-dashboard.html";
+    loginInProgress = true;
+    const submitBtn = document.querySelector("#loginBox button[type='submit']");
+    const originalText = submitBtn ? submitBtn.innerHTML : "Log In";
+    if (submitBtn) {
+        submitBtn.innerHTML = "Verifying Credentials...";
+        submitBtn.disabled = true;
     }
+
+    // Seed default users in localStorage if empty
+    let users = [];
+    try {
+        users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+        if (!Array.isArray(users)) users = [];
+    } catch(e) {
+        users = [];
+    }
+
+    if (users.length === 0) {
+        users = [
+            { name: "System Administrator", email: "admin@stackly.com", password: "Admin@1234", role: "admin" },
+            { name: "John Client", email: "client@stackly.com", password: "Client@1234", role: "user" }
+        ];
+        localStorage.setItem("registeredUsers", JSON.stringify(users));
+    }
+
+    const matchedUser = users.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password === password);
+
+    setTimeout(() => {
+        if (!matchedUser) {
+            showToast("Login Failed", "Invalid email or password.", "error");
+            showInputError(emailEl, "Invalid credentials.");
+            showInputError(passwordEl, "Invalid credentials.");
+            loginInProgress = false;
+            if (submitBtn) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+            return;
+        }
+
+        const selectedRole = role.toLowerCase();
+        const userRoleNormalized = matchedUser.role.toLowerCase();
+
+        const isRoleMatch = (selectedRole === "admin" && userRoleNormalized === "admin") ||
+                            (selectedRole === "client" && (userRoleNormalized === "client" || userRoleNormalized === "user"));
+
+        if (!isRoleMatch) {
+            showToast("Role Mismatch", `No account associated with role ${role} found.`, "error");
+            showInputError(roleEl, "Role mismatch.");
+            loginInProgress = false;
+            if (submitBtn) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+            return;
+        }
+
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", matchedUser.email);
+        localStorage.setItem("userName", matchedUser.name);
+        
+        const finalRole = selectedRole === "admin" ? "Admin" : "Client";
+        localStorage.setItem("userRole", finalRole);
+
+        showToast("Welcome Back", `Successfully authenticated as ${matchedUser.name}.`, "success");
+
+        setTimeout(() => {
+            if (finalRole === "Admin") {
+                window.location.href = "admin-dashboard.html";
+            } else {
+                window.location.href = "client-dashboard.html";
+            }
+        }, 500);
+
+    }, 1000);
 }
 
 function signupUser() {
-    const name = document.getElementById("signupName").value.trim();
-    const email = document.getElementById("signupEmail").value.trim();
-    const password = document.getElementById("signupPassword").value.trim();
-    const confirm = document.getElementById("confirmPassword").value.trim();
-    const role = document.getElementById("signupRole").value;
+    if (signupInProgress) return;
 
-    if (name == "" || email == "" || password == "" || confirm == "") {
+    const nameEl = document.getElementById("signupName");
+    const emailEl = document.getElementById("signupEmail");
+    const passwordEl = document.getElementById("signupPassword");
+    const confirmEl = document.getElementById("confirmPassword");
+    const roleEl = document.getElementById("signupRole");
 
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const password = passwordEl.value.trim();
+    const confirm = confirmEl.value.trim();
+    const role = roleEl.value;
+
+    let formValid = true;
+
+    if (name === "") {
+        showInputError(nameEl, "Full Name is required.");
+        formValid = false;
+    }
+    if (email === "") {
+        showInputError(emailEl, "Email Address is required.");
+        formValid = false;
+    }
+    if (password === "") {
+        showInputError(passwordEl, "Password is required.");
+        formValid = false;
+    }
+    if (confirm === "") {
+        showInputError(confirmEl, "Confirm Password is required.");
+        formValid = false;
+    }
+
+    if (!formValid) {
+        showToast("Validation Failed", "Please fill in all mandatory fields.", "error");
         return;
     }
 
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!nameRegex.test(name)) {
-
-        return;
+        showInputError(nameEl, "Full Name must contain letters and spaces only.");
+        formValid = false;
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
-
-        return;
+        showInputError(emailEl, "Please enter a valid email address.");
+        formValid = false;
     }
 
     const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
     if (!pwdRegex.test(password)) {
-
-        return;
+        showInputError(passwordEl, "Requires 8+ chars, upper, lower, digit, special.");
+        formValid = false;
     }
 
     if (password !== confirm) {
+        showInputError(confirmEl, "Passwords do not match.");
+        formValid = false;
+    }
 
+    if (!formValid) {
+        showToast("Validation Failed", "Please correct form validation issues.", "error");
         return;
     }
 
+    signupInProgress = true;
+    const submitBtn = document.querySelector("#signupBox button[type='submit']");
+    const originalText = submitBtn ? submitBtn.innerHTML : "Create Account";
+    if (submitBtn) {
+        submitBtn.innerHTML = "Creating Account...";
+        submitBtn.disabled = true;
+    }
 
-    showLogin();
+    let users = [];
+    try {
+        users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
+        if (!Array.isArray(users)) users = [];
+    } catch(e) {
+        users = [];
+    }
+
+    const userExists = users.some(u => u.email.toLowerCase() === email.toLowerCase());
+    if (userExists) {
+        setTimeout(() => {
+            showInputError(emailEl, "An account with this email already exists.");
+            showToast("Registration Failed", "Email is already registered.", "error");
+            signupInProgress = false;
+            if (submitBtn) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        }, 800);
+        return;
+    }
+
+    users.push({ name, email, password, role });
+    localStorage.setItem("registeredUsers", JSON.stringify(users));
+
+    setTimeout(() => {
+        showToast("Success", "Account created successfully! Please log in.", "success");
+        nameEl.value = "";
+        emailEl.value = "";
+        passwordEl.value = "";
+        confirmEl.value = "";
+        
+        nameEl.classList.remove('is-valid', 'is-invalid');
+        emailEl.classList.remove('is-valid', 'is-invalid');
+        passwordEl.classList.remove('is-valid', 'is-invalid');
+        confirmEl.classList.remove('is-valid', 'is-invalid');
+
+        signupInProgress = false;
+        if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
+
+        showLogin();
+    }, 1000);
 }
 
 function forgotPassword() {
@@ -1000,7 +1307,9 @@ function showSignup() {
 
 // ==========================
 function showForgot() {
-    window.location.href = "404.html";
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("signupBox").style.display = "none";
+    document.getElementById("forgotBox").style.display = "block";
 }
 
 // ==========================================================================
@@ -1192,31 +1501,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const companyRegex = /^[A-Za-z0-9\s]+$/;
         const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
 
-        function showInputError(input, message) {
-            input.classList.remove('is-valid');
-            input.classList.add('is-invalid');
-            if (input.parentNode && input.parentNode.classList.contains('input-group')) {
-                let errorSpan = input.parentNode.querySelector('.error-msg');
-                if (!errorSpan) {
-                    errorSpan = document.createElement('span');
-                    errorSpan.className = 'error-msg';
-                    input.parentNode.appendChild(errorSpan);
-                }
-                errorSpan.innerText = message;
-                input.parentNode.classList.add('has-error');
-            }
-        }
+        // Trim on blur
+        const allTextInputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]');
+        allTextInputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                input.value = input.value.trim();
+            });
+        });
 
-        function clearInputError(input) {
-            input.classList.remove('is-invalid');
-            input.classList.add('is-valid');
-            if (input.parentNode && input.parentNode.classList.contains('input-group')) {
-                input.parentNode.classList.remove('has-error');
-                const errorSpan = input.parentNode.querySelector('.error-msg');
-                if (errorSpan) {
-                    errorSpan.remove();
+        // Restrict signupName to letters and spaces only
+        const signupName = document.getElementById('signupName');
+        if (signupName) {
+            signupName.addEventListener('input', () => {
+                const originalVal = signupName.value;
+                const cleanedVal = originalVal.replace(/[^A-Za-z\s]/g, '');
+                if (originalVal !== cleanedVal) {
+                    signupName.value = cleanedVal;
+                    showInputError(signupName, 'Full Name must contain letters and spaces only.');
+                } else if (cleanedVal.trim() === '') {
+                    signupName.classList.remove('is-valid', 'is-invalid');
+                    const err = document.querySelector(`.error-msg[data-for="signupName"]`);
+                    if (err) err.remove();
+                } else {
+                    clearInputError(signupName);
                 }
-            }
+            });
         }
 
         // Live checking helper
@@ -1227,10 +1536,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const val = el.value.trim();
                 if (val === '') {
                     el.classList.remove('is-valid', 'is-invalid');
+                    const err = document.querySelector(`.error-msg[data-for="${id}"]`);
+                    if (err) err.remove();
                     if (el.parentNode && el.parentNode.classList.contains('input-group')) {
                         el.parentNode.classList.remove('has-error');
-                        const err = el.parentNode.querySelector('.error-msg');
-                        if (err) err.remove();
                     }
                 } else if (!regex.test(val)) {
                     showInputError(el, errorMsg);
@@ -1248,7 +1557,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setupField('country', nameRegex, 'Only letters and spaces.');
 
         // Setup Modal Form fields
-        setupField('signupName', nameRegex, 'Letters and spaces only.');
         setupField('signupEmail', emailRegex, 'Invalid email structure.');
         setupField('signupPassword', pwdRegex, 'Requires 8+ chars, upper, lower, digit, special.');
         setupField('loginEmail', emailRegex, 'Invalid email structure.');
@@ -1300,7 +1608,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!formValid) {
                     e.preventDefault();
                     e.stopImmediatePropagation();
-                    alert('Please correct the highlighted fields before submitting.');
+                    showToast("Form Error", "Please correct the highlighted fields before submitting.", "error");
                 }
             });
         }

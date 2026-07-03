@@ -235,13 +235,16 @@
                         <div class="card-glow-border"></div>
                         <div class="card-reflection"></div>
                         <div class="holo-scan-line"></div>
-                        
+
                         <!-- Interactive node particle canvas -->
-                        <canvas id="careersCanvas" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
+                        <canvas id="careersCanvas"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
 
                         <!-- Holographic Hiring UI SVG Overlay -->
-                        <div class="hero-core-graphic" style="position: relative; z-index: 2; width: 100%; height: 100%;">
-                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="holo-careers-svg">
+                        <div class="hero-core-graphic"
+                            style="position: relative; z-index: 2; width: 100%; height: 100%;">
+                            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="holo-careers-svg">
                                 <defs>
                                     <filter id="neonGlowCareers" x="-20%" y="-20%" width="140%" height="140%">
                                         <feGaussianBlur stdDeviation="5" result="blur" />
@@ -252,32 +255,44 @@
                                     </filter>
                                 </defs>
                                 <!-- Career Growth Graph Line -->
-                                <path d="M 50,300 C 120,280 160,200 220,180 C 280,160 310,100 350,80" stroke="#00f0ff" stroke-width="2.5" filter="url(#neonGlowCareers)" class="careers-growth-path" />
-                                <path d="M 50,300 C 120,280 160,200 220,180 C 280,160 310,100 350,80 L 350,320 L 50,320 Z" fill="rgba(0, 240, 255, 0.03)" />
-                                
+                                <path d="M 50,300 C 120,280 160,200 220,180 C 280,160 310,100 350,80" stroke="#00f0ff"
+                                    stroke-width="2.5" filter="url(#neonGlowCareers)" class="careers-growth-path" />
+                                <path
+                                    d="M 50,300 C 120,280 160,200 220,180 C 280,160 310,100 350,80 L 350,320 L 50,320 Z"
+                                    fill="rgba(0, 240, 255, 0.03)" />
+
                                 <!-- Floating Career Nodes/Resume cards -->
                                 <g class="career-node node-1" transform="translate(220, 180)">
                                     <circle cx="0" cy="0" r="8" fill="#8a2be2" filter="url(#neonGlowCareers)" />
-                                    <rect x="15" y="-25" width="80" height="35" rx="6" fill="rgba(5, 8, 22, 0.85)" stroke="#8a2be2" stroke-width="1" />
-                                    <text x="25" y="-12" fill="#00f0ff" font-size="8" font-family="monospace">Node: DevOps</text>
-                                    <text x="25" y="-2" fill="#fff" font-size="7" font-family="sans-serif">MATCH: 98%</text>
+                                    <rect x="15" y="-25" width="80" height="35" rx="6" fill="rgba(5, 8, 22, 0.85)"
+                                        stroke="#8a2be2" stroke-width="1" />
+                                    <text x="25" y="-12" fill="#00f0ff" font-size="8" font-family="monospace">Node:
+                                        DevOps</text>
+                                    <text x="25" y="-2" fill="#fff" font-size="7" font-family="sans-serif">MATCH:
+                                        98%</text>
                                 </g>
 
                                 <g class="career-node node-2" transform="translate(140, 230)">
                                     <circle cx="0" cy="0" r="6" fill="#00f0ff" />
-                                    <rect x="-95" y="-20" width="80" height="30" rx="6" fill="rgba(5, 8, 22, 0.85)" stroke="#00f0ff" stroke-width="1" />
-                                    <text x="-85" y="-8" fill="#00f0ff" font-size="8" font-family="monospace">Node: SecOps</text>
+                                    <rect x="-95" y="-20" width="80" height="30" rx="6" fill="rgba(5, 8, 22, 0.85)"
+                                        stroke="#00f0ff" stroke-width="1" />
+                                    <text x="-85" y="-8" fill="#00f0ff" font-size="8" font-family="monospace">Node:
+                                        SecOps</text>
                                 </g>
 
                                 <g class="career-node node-3" transform="translate(300, 115)">
                                     <circle cx="0" cy="0" r="7" fill="#ff007f" filter="url(#neonGlowCareers)" />
-                                    <rect x="15" y="-20" width="80" height="30" rx="6" fill="rgba(5, 8, 22, 0.85)" stroke="#ff007f" stroke-width="1" />
-                                    <text x="25" y="-8" fill="#ff007f" font-size="8" font-family="monospace">Node: AI Arch</text>
+                                    <rect x="15" y="-20" width="80" height="30" rx="6" fill="rgba(5, 8, 22, 0.85)"
+                                        stroke="#ff007f" stroke-width="1" />
+                                    <text x="25" y="-8" fill="#ff007f" font-size="8" font-family="monospace">Node: AI
+                                        Arch</text>
                                 </g>
-                                
+
                                 <!-- Grid lines/interface guides -->
-                                <line x1="50" y1="80" x2="50" y2="320" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                                <line x1="50" y1="320" x2="350" y2="320" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                                <line x1="50" y1="80" x2="50" y2="320" stroke="rgba(255,255,255,0.08)"
+                                    stroke-width="1" />
+                                <line x1="50" y1="320" x2="350" y2="320" stroke="rgba(255,255,255,0.08)"
+                                    stroke-width="1" />
                             </svg>
                         </div>
                     </div>
@@ -1008,7 +1023,7 @@
                 <ul class="contact-info">
                     <li>
                         <i data-lucide="mail"></i>
-                        <a href="mailto:info@stacklyroboticsautomation.com">
+                        <a href="mailto:info@stacklyITSERVICE.com">
                             📧 info@stacklyITSERVICE.com
                         </a>
                     </li>
@@ -1068,7 +1083,7 @@
                 <h2>Welcome Back</h2>
 
                 <!-- LOGIN -->
-                <div id="loginBox">
+                <form id="loginBox" onsubmit="event.preventDefault(); loginUser();">
 
                     <select id="loginRole">
                         <option value="Client">Client</option>
@@ -1077,7 +1092,19 @@
 
                     <input type="email" id="loginEmail" placeholder="Email Address">
 
-                    <input type="password" id="loginPassword" placeholder="Password">
+                    <div class="password-toggle-wrapper">
+                        <input type="password" id="loginPassword" placeholder="Password" class="form-input">
+                        <span class="password-toggle-btn" tabindex="0" aria-label="Toggle password visibility"
+                            role="button">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+                    </div>
 
                     <div class="remember-wrap">
                         <label class="remember-me">
@@ -1086,7 +1113,7 @@
                         </label>
                     </div>
 
-                    <button onclick="loginUser()">
+                    <button type="submit">
                         Log In
                     </button>
 
@@ -1098,25 +1125,49 @@
                         Don't have an account? Sign Up
                     </p>
 
-                </div>
+                </form>
 
                 <!-- SIGNUP -->
-                <div id="signupBox" style="display:none;">
+                <form id="signupBox" style="display:none;" onsubmit="event.preventDefault(); signupUser();">
 
                     <input type="text" id="signupName" placeholder="Full Name">
 
                     <input type="email" id="signupEmail" placeholder="Email Address">
 
-                    <input type="password" id="signupPassword" placeholder="Password">
+                    <div class="password-toggle-wrapper">
+                        <input type="password" id="signupPassword" placeholder="Password" class="form-input">
+                        <span class="password-toggle-btn" tabindex="0" aria-label="Toggle password visibility"
+                            role="button">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+                    </div>
 
-                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+                    <div class="password-toggle-wrapper">
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" class="form-input">
+                        <span class="password-toggle-btn" tabindex="0" aria-label="Toggle password visibility"
+                            role="button">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" width="20" height="20">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </span>
+                    </div>
 
                     <select id="signupRole">
                         <option value="user">User</option>
                         <option value="admin">Admin</option>
                     </select>
 
-                    <button onclick="signupUser()">
+                    <button type="submit">
                         Create Account
                     </button>
 
@@ -1124,14 +1175,14 @@
                         Back To Login
                     </p>
 
-                </div>
+                </form>
 
                 <!-- FORGOT PASSWORD -->
-                <div id="forgotBox" style="display:none;">
+                <form id="forgotBox" style="display:none;" onsubmit="event.preventDefault(); forgotPassword();">
 
                     <input type="email" id="forgotEmail" placeholder="Enter Your Email">
 
-                    <button onclick="forgotPassword()">
+                    <button type="submit">
                         Reset Password
                     </button>
 
@@ -1139,7 +1190,7 @@
                         Back To Login
                     </p>
 
-                </div>
+                </form>
 
             </div>
 
