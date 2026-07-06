@@ -331,17 +331,15 @@ document.querySelectorAll(".menu-item").forEach(item => {
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            if (confirm("Shutdown encrypted session and terminate portal connection?")) {
-                localStorage.removeItem('isLoggedIn');
-                localStorage.removeItem('userEmail');
-                localStorage.removeItem('userRole');
-                localStorage.removeItem('userName');
-                localStorage.removeItem('loginTime');
-                localStorage.removeItem('rememberMe');
-                sessionStorage.removeItem('sessionActive');
-                
-                window.location.href = 'index.html';
-            }
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('userName');
+            localStorage.removeItem('loginTime');
+            localStorage.removeItem('rememberMe');
+            sessionStorage.removeItem('sessionActive');
+            
+            window.location.href = 'index.html';
         });
     }
 

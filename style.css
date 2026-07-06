@@ -8190,7 +8190,7 @@ textarea {
         /* Spacing adjusted to prevent vertical scroll */
         display: flex !important;
         flex-direction: column !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
         /* Space header, nav, actions */
         align-items: stretch !important;
         gap: 1.25rem !important;
@@ -8200,6 +8200,8 @@ textarea {
         /* Start completely offscreen to the right */
         transition: transform 0.35s ease-in-out !important;
         /* Slide in smoothly from right to left */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
     }
 
     @media (min-width: 768px) {
@@ -8262,12 +8264,14 @@ textarea {
 
     .mobile-nav {
         width: 100% !important;
-        flex: 1 1 auto !important;
+        flex: 0 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center !important;
+        justify-content: flex-start !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
         min-height: 0 !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     .mobile-list {
@@ -8318,7 +8322,8 @@ textarea {
         flex-direction: column !important;
         gap: 0.75rem !important;
         width: 100% !important;
-        margin-top: auto !important;
+        margin-top: 0 !important;
+        margin-bottom: 1.5rem !important;
         flex-shrink: 0 !important;
     }
 
@@ -9595,4 +9600,101 @@ img.office-image {
     margin-top: 0;
     transform: translateY(-20px);
     /* adjust -10px to -40px based on look */
+}
+
+
+
+.form-input {
+    width: 100%;
+    height: 52px;
+    margin-bottom: 18px;
+    padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 12px;
+    background: #18243a;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: #22d3ee;
+}
+
+.password-toggle-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.password-toggle-wrapper .form-input {
+    margin-bottom: 0;
+    padding-right: 50px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aab2c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Mobile Sidebar Contact Info */
+@media (max-width: 991px) {
+    .mobile-contact-info {
+        margin-top: auto !important;
+        padding-top: 1.5rem !important;
+        border-top: 1px solid var(--glass-border) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+    }
+    .mobile-contact-title {
+        font-family: var(--font-heading) !important;
+        font-size: 0.8rem !important;
+        font-weight: 700 !important;
+        color: var(--text-secondary) !important;
+        letter-spacing: 0.05rem !important;
+        text-transform: uppercase !important;
+    }
+    .mobile-contact-link {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        color: var(--text-primary) !important;
+        font-family: var(--font-body) !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: var(--transition-fast) !important;
+    }
+    .mobile-contact-link:hover {
+        color: var(--clr-cyan) !important;
+        text-shadow: 0 0 8px rgba(0, 240, 255, 0.5) !important;
+    }
+    .mobile-contact-icon {
+        width: 16px !important;
+        height: 16px !important;
+        stroke: currentColor !important;
+        fill: none !important;
+        stroke-width: 2 !important;
+        stroke-linecap: round !important;
+        stroke-linejoin: round !important;
+        flex-shrink: 0 !important;
+    }
 }

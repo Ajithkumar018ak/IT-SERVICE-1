@@ -846,14 +846,14 @@ function showToast(title, message, type = 'success') {
         container.className = 'custom-toast-container';
         document.body.appendChild(container);
     }
-    
+
     const toast = document.createElement('div');
     toast.className = `custom-toast custom-toast-${type}`;
-    
-    const iconSvg = type === 'success' ? 
+
+    const iconSvg = type === 'success' ?
         `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>` :
         `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
-        
+
     toast.innerHTML = `
         <div class="custom-toast-icon">${iconSvg}</div>
         <div class="custom-toast-content">
@@ -862,20 +862,20 @@ function showToast(title, message, type = 'success') {
         </div>
         <div class="custom-toast-close">&times;</div>
     `;
-    
+
     container.appendChild(toast);
-    
+
     setTimeout(() => {
         toast.classList.add('show');
     }, 10);
-    
+
     const autoRemoveTimeout = setTimeout(() => {
         toast.classList.remove('show');
         setTimeout(() => {
             toast.remove();
         }, 400);
     }, 4000);
-    
+
     toast.querySelector('.custom-toast-close').addEventListener('click', () => {
         clearTimeout(autoRemoveTimeout);
         toast.classList.remove('show');
@@ -888,12 +888,12 @@ function showToast(title, message, type = 'success') {
 function showInputError(input, message) {
     input.classList.remove('is-valid');
     input.classList.add('is-invalid');
-    
+
     let container = input;
     if (input.parentNode && input.parentNode.classList.contains('password-toggle-wrapper')) {
         container = input.parentNode;
     }
-    
+
     let errorSpan = container.parentNode.querySelector(`.error-msg[data-for="${input.id}"]`);
     if (!errorSpan) {
         errorSpan = document.createElement('span');
@@ -902,7 +902,7 @@ function showInputError(input, message) {
         container.parentNode.insertBefore(errorSpan, container.nextSibling);
     }
     errorSpan.innerText = message;
-    
+
     if (input.parentNode && input.parentNode.classList.contains('input-group')) {
         input.parentNode.classList.add('has-error');
     }
@@ -911,17 +911,17 @@ function showInputError(input, message) {
 function clearInputError(input) {
     input.classList.remove('is-invalid');
     input.classList.add('is-valid');
-    
+
     let container = input;
     if (input.parentNode && input.parentNode.classList.contains('password-toggle-wrapper')) {
         container = input.parentNode;
     }
-    
+
     const errorSpan = container.parentNode.querySelector(`.error-msg[data-for="${input.id}"]`);
     if (errorSpan) {
         errorSpan.remove();
     }
-    
+
     if (input.parentNode && input.parentNode.classList.contains('input-group')) {
         input.parentNode.classList.remove('has-error');
     }
@@ -931,7 +931,7 @@ function clearInputError(input) {
 function togglePasswordVisibility(btn) {
     const input = btn.parentNode.querySelector('input');
     if (!input) return;
-    
+
     if (input.type === 'password') {
         input.type = 'text';
         btn.innerHTML = `
@@ -953,7 +953,7 @@ function togglePasswordVisibility(btn) {
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('.password-toggle-btn');
     if (!btn) return;
-    
+
     e.preventDefault();
     togglePasswordVisibility(btn);
 });
@@ -961,7 +961,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     const btn = e.target.closest('.password-toggle-btn');
     if (!btn) return;
-    
+
     if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         togglePasswordVisibility(btn);
@@ -1040,64 +1040,13 @@ document.addEventListener("keydown", function (e) {
 let loginInProgress = false;
 let signupInProgress = false;
 
-function loginUser() {
-    if (loginInProgress) return;
-
-    const emailEl = document.getElementById("loginEmail");
-    const passwordEl = document.getElementById("loginPassword");
-    const roleEl = document.getElementById("loginRole");
-
-    const email = emailEl.value.trim();
-    const password = passwordEl.value.trim();
-    const role = roleEl.value;
-
-    let formValid = true;
-
-    if (email === "") {
-        showInputError(emailEl, "Email is required.");
-        formValid = false;
-    }
-    if (password === "") {
-        showInputError(passwordEl, "Password is required.");
-        formValid = false;
-    }
-
-    if (!formValid) {
-        showToast("Validation Failed", "Please enter both email and password.", "error");
-        return;
-    }
-
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-        showInputError(emailEl, "Please enter a valid email address.");
-        formValid = false;
-    }
-
-    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
-    if (!pwdRegex.test(password)) {
-        showInputError(passwordEl, "Requires 8+ chars, upper, lower, digit, special.");
-        formValid = false;
-    }
-
-    if (!formValid) {
-        showToast("Validation Failed", "Credentials do not meet security requirements.", "error");
-        return;
-    }
-
-    loginInProgress = true;
-    const submitBtn = document.querySelector("#loginBox button[type='submit']");
-    const originalText = submitBtn ? submitBtn.innerHTML : "Log In";
-    if (submitBtn) {
-        submitBtn.innerHTML = "Verifying Credentials...";
-        submitBtn.disabled = true;
-    }
-
-    // Seed default users in localStorage if empty
+// Helper to retrieve registered users and seed default accounts if empty
+function getRegisteredUsers() {
     let users = [];
     try {
         users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
         if (!Array.isArray(users)) users = [];
-    } catch(e) {
+    } catch (e) {
         users = [];
     }
 
@@ -1108,57 +1057,54 @@ function loginUser() {
         ];
         localStorage.setItem("registeredUsers", JSON.stringify(users));
     }
+    return users;
+}
 
-    const matchedUser = users.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password === password);
+function loginUser() {
+    if (loginInProgress) return;
+
+    const emailEl = document.getElementById("loginEmail");
+    const passwordEl = document.getElementById("loginPassword");
+    const roleEl = document.getElementById("loginRole");
+
+    const email = emailEl ? emailEl.value.trim() : "";
+    const password = passwordEl ? passwordEl.value.trim() : "";
+    const selectedRole = roleEl ? roleEl.value.trim() : "Client";
+
+    loginInProgress = true;
+
+    const submitBtn = document.querySelector("#loginBox button[type='submit']");
+    const originalText = submitBtn ? submitBtn.innerHTML : "Log In";
+
+    if (submitBtn) {
+        submitBtn.innerHTML = "Logging In...";
+        submitBtn.disabled = true;
+    }
+
+    // Set userRole based solely on the selected role dropdown value
+    const finalRole = selectedRole.toLowerCase() === "admin" ? "Admin" : "Client";
+    const displayName = email ? email.split('@')[0] : "Guest User";
+
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userEmail", email || "guest@stackly.com");
+    localStorage.setItem("userName", displayName);
+    localStorage.setItem("userRole", finalRole);
+
+    showToast("Success", "Login Successful!", "success");
 
     setTimeout(() => {
-        if (!matchedUser) {
-            showToast("Login Failed", "Invalid email or password.", "error");
-            showInputError(emailEl, "Invalid credentials.");
-            showInputError(passwordEl, "Invalid credentials.");
-            loginInProgress = false;
-            if (submitBtn) {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
-            return;
+        if (finalRole === "Admin") {
+            window.location.href = "admin-dashboard.html";
+        } else {
+            window.location.href = "client-dashboard.html";
         }
 
-        const selectedRole = role.toLowerCase();
-        const userRoleNormalized = matchedUser.role.toLowerCase();
-
-        const isRoleMatch = (selectedRole === "admin" && userRoleNormalized === "admin") ||
-                            (selectedRole === "client" && (userRoleNormalized === "client" || userRoleNormalized === "user"));
-
-        if (!isRoleMatch) {
-            showToast("Role Mismatch", `No account associated with role ${role} found.`, "error");
-            showInputError(roleEl, "Role mismatch.");
-            loginInProgress = false;
-            if (submitBtn) {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
-            return;
+        loginInProgress = false;
+        if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
         }
-
-        localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("userEmail", matchedUser.email);
-        localStorage.setItem("userName", matchedUser.name);
-        
-        const finalRole = selectedRole === "admin" ? "Admin" : "Client";
-        localStorage.setItem("userRole", finalRole);
-
-        showToast("Welcome Back", `Successfully authenticated as ${matchedUser.name}.`, "success");
-
-        setTimeout(() => {
-            if (finalRole === "Admin") {
-                window.location.href = "admin-dashboard.html";
-            } else {
-                window.location.href = "client-dashboard.html";
-            }
-        }, 500);
-
-    }, 1000);
+    }, 500);
 }
 
 function signupUser() {
@@ -1176,55 +1122,62 @@ function signupUser() {
     const confirm = confirmEl.value.trim();
     const role = roleEl.value;
 
-    let formValid = true;
+    // Reset previous styles
+    nameEl.classList.remove('is-invalid');
+    emailEl.classList.remove('is-invalid');
+    passwordEl.classList.remove('is-invalid');
+    confirmEl.classList.remove('is-invalid');
+    const signupErrors = document.querySelectorAll('.error-msg[data-for="signupName"], .error-msg[data-for="signupEmail"], .error-msg[data-for="signupPassword"], .error-msg[data-for="confirmPassword"]');
+    signupErrors.forEach(err => err.remove());
+
+    let hasEmptyField = false;
 
     if (name === "") {
         showInputError(nameEl, "Full Name is required.");
-        formValid = false;
+        hasEmptyField = true;
     }
     if (email === "") {
         showInputError(emailEl, "Email Address is required.");
-        formValid = false;
+        hasEmptyField = true;
     }
     if (password === "") {
         showInputError(passwordEl, "Password is required.");
-        formValid = false;
+        hasEmptyField = true;
     }
     if (confirm === "") {
         showInputError(confirmEl, "Confirm Password is required.");
-        formValid = false;
+        hasEmptyField = true;
     }
 
-    if (!formValid) {
-        showToast("Validation Failed", "Please fill in all mandatory fields.", "error");
+    if (hasEmptyField) {
+        showToast("Validation Failed", "Please fill in all required fields.", "error");
         return;
     }
 
     const nameRegex = /^[A-Za-z\s]+$/;
     if (!nameRegex.test(name)) {
         showInputError(nameEl, "Full Name must contain letters and spaces only.");
-        formValid = false;
+        showToast("Validation Failed", "Full Name must contain letters and spaces only.", "error");
+        return;
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
         showInputError(emailEl, "Please enter a valid email address.");
-        formValid = false;
+        showToast("Validation Failed", "Please enter a valid email address.", "error");
+        return;
     }
 
     const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
     if (!pwdRegex.test(password)) {
         showInputError(passwordEl, "Requires 8+ chars, upper, lower, digit, special.");
-        formValid = false;
+        showToast("Validation Failed", "Requires 8+ chars, upper, lower, digit, special.", "error");
+        return;
     }
 
     if (password !== confirm) {
         showInputError(confirmEl, "Passwords do not match.");
-        formValid = false;
-    }
-
-    if (!formValid) {
-        showToast("Validation Failed", "Please correct form validation issues.", "error");
+        showToast("Validation Failed", "Passwords do not match.", "error");
         return;
     }
 
@@ -1236,14 +1189,7 @@ function signupUser() {
         submitBtn.disabled = true;
     }
 
-    let users = [];
-    try {
-        users = JSON.parse(localStorage.getItem("registeredUsers")) || [];
-        if (!Array.isArray(users)) users = [];
-    } catch(e) {
-        users = [];
-    }
-
+    const users = getRegisteredUsers();
     const userExists = users.some(u => u.email.toLowerCase() === email.toLowerCase());
     if (userExists) {
         setTimeout(() => {
@@ -1262,12 +1208,12 @@ function signupUser() {
     localStorage.setItem("registeredUsers", JSON.stringify(users));
 
     setTimeout(() => {
-        showToast("Success", "Account created successfully! Please log in.", "success");
+        showToast("Registration Successful!", "Your account has been created successfully.", "success");
         nameEl.value = "";
         emailEl.value = "";
         passwordEl.value = "";
         confirmEl.value = "";
-        
+
         nameEl.classList.remove('is-valid', 'is-invalid');
         emailEl.classList.remove('is-valid', 'is-invalid');
         passwordEl.classList.remove('is-valid', 'is-invalid');
@@ -1280,7 +1226,7 @@ function signupUser() {
         }
 
         showLogin();
-    }, 1000);
+    }, 2500);
 }
 
 function forgotPassword() {
@@ -1559,8 +1505,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Setup Modal Form fields
         setupField('signupEmail', emailRegex, 'Invalid email structure.');
         setupField('signupPassword', pwdRegex, 'Requires 8+ chars, upper, lower, digit, special.');
-        setupField('loginEmail', emailRegex, 'Invalid email structure.');
-        setupField('loginPassword', pwdRegex, 'Requires 8+ chars, upper, lower, digit, special.');
 
         // Confirm Password validation link
         const signupPassword = document.getElementById('signupPassword');

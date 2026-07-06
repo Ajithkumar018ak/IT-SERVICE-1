@@ -334,23 +334,20 @@ if (hamburgerBtn && sidebarPanel) {
     });
 
     // 10. SYSTEM LOGOUT
-  const logoutBtn = document.getElementById("logoutBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
 
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.href = "index.html";
-    });
-}
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('userName');
+            localStorage.removeItem('loginTime');
+            localStorage.removeItem('rememberMe');
+            sessionStorage.removeItem('sessionActive');
+            window.location.href = "index.html";
+        });
+    }
 
-});
-
-const menuItems = document.querySelectorAll(".menu-item");
-
-menuItems.forEach(item=>{
-    item.addEventListener("click",()=>{
-        if(window.innerWidth<992){
-            sidebarPanel.classList.remove("active");
-        }
-    });
 });
